@@ -1,0 +1,18 @@
+body {
+    padding-top: 70px;
+}
+
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(120deg, #0d6efd, #6610f2);
+    color: white;
+}
+
+.section-padding {
+    padding: 80px 20px;
+}
+
+.about-text {
+    max-width: 700px;
+    font-size: 1.1rem;
+}
