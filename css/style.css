@@ -127,3 +127,18 @@
 .project-desc {
     min-height: 120px;
 }
+
+/* ===== CONTACT SECTION ===== */
+
+.contact-link {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.contact-buttons .btn {
+    min-width: 160px;
+}
