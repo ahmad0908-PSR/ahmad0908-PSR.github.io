@@ -1,21 +1,15 @@
-/* ===== GENERAL SECTIONS ===== */
+/* ================= GENERAL ================= */
 
 .section-padding {
     padding: 80px 20px;
 }
 
-.about-text {
-    max-width: 700px;
-    font-size: 1.1rem;
-    margin: 0 auto;
-}
-
-/* ===== HERO SECTION ===== */
+/* ================= HERO SECTION ================= */
 
 .hero-section {
     min-height: 100vh;
     padding-top: 80px; /* space for fixed navbar */
-    background-color: #0f172a; /* dark professional blue */
+    background-color: #0f172a;
     color: #ffffff;
 }
 
@@ -45,19 +39,7 @@
     color: #e5e7eb;
 }
 
-/* ===== ABOUT SECTION ===== */
-
-.skills-list li {
-    margin-bottom: 8px;
-    font-size: 1rem;
-}
-
-.skills-list li {
-    margin-bottom: 6px;
-    color: #334155;
-}
-
-/* ===== ABOUT SECTION ===== */
+/* ================= ABOUT SECTION ================= */
 
 .about-text {
     font-size: 1.05rem;
@@ -65,31 +47,42 @@
     color: #334155;
 }
 
-.tools-grid .tool-item {
+/* Tool icons grid */
+
+.tool-item {
     background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 20px 10px;
     text-align: center;
-    font-weight: 500;
-    color: #0f172a;
     transition: all 0.2s ease;
 }
 
-.tools-grid .tool-item:hover {
-    background-color: #0f172a;
-    color: #ffffff;
-    transform: translateY(-3px);
+.tool-item i {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: #2563eb;
 }
 
+.tool-item span {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #334155;
+}
 
-/* ===== PROJECTS SECTION ===== */
+.tool-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= PROJECTS SECTION ================= */
 
 .project-card {
     background: #ffffff;
     border: 1px solid #e5e7eb;
     border-radius: 10px;
-    padding: 20px;
+    padding: 22px;
     transition: all 0.2s ease;
 }
 
@@ -102,6 +95,7 @@
     font-size: 0.95rem;
     color: #475569;
     margin-bottom: 15px;
+    min-height: 120px;
 }
 
 .project-tech span {
@@ -120,15 +114,7 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-.project-card {
-    padding: 22px;
-}
-
-.project-desc {
-    min-height: 120px;
-}
-
-/* ===== CONTACT SECTION ===== */
+/* ================= CONTACT SECTION ================= */
 
 .contact-link {
     color: #38bdf8;
