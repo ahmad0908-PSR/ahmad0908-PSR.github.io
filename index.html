@@ -77,67 +77,130 @@
 
 
 <!-- ================= ABOUT SECTION ================= -->
-<section id="about" class="section-padding">
+<section id="about" class="section-padding bg-light">
     <div class="container">
-        <h2 class="text-center mb-4">About Me</h2>
-        <p class="text-center mx-auto about-text">
-            I’m a Computer Science student and software developer with hands-on experience in
-            Python, Django, data analytics, and offline business systems.
-            I’ve built ERP and POS solutions, worked with survey data, and love turning real-world
-            problems into clean, working software.
-        </p>
+        <h2 class="text-center mb-5">About Me</h2>
+
+        <div class="row g-5">
+            <!-- LEFT: Text -->
+            <div class="col-md-5">
+                <p class="about-text">
+                    I’m a Computer Science student and software developer focused on practical,
+                    real‑world software.
+                </p>
+
+                <p class="about-text">
+                    I build offline ERP and POS systems, data-driven dashboards, and applications
+                    using Python, Django, and modern data tools.
+                </p>
+
+                <p class="about-text">
+                    My strength lies in combining development with real M&E and field data workflows.
+                </p>
+            </div>
+
+            <!-- RIGHT: Tools Grid -->
+            <div class="col-md-7">
+                <h5 class="mb-3">Tools & Platforms I Use</h5>
+
+                <div class="row g-3 tools-grid">
+                    <div class="col-6 col-md-4 tool-item">Python</div>
+                    <div class="col-6 col-md-4 tool-item">Django</div>
+                    <div class="col-6 col-md-4 tool-item">PostgreSQL</div>
+
+                    <div class="col-6 col-md-4 tool-item">SurveyCTO</div>
+                    <div class="col-6 col-md-4 tool-item">KoboToolbox</div>
+                    <div class="col-6 col-md-4 tool-item">Power BI</div>
+
+                    <div class="col-6 col-md-4 tool-item">Looker Studio</div>
+                    <div class="col-6 col-md-4 tool-item">Streamlit</div>
+                    <div class="col-6 col-md-4 tool-item">Dash / Plotly</div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
+
 <!-- ================= PROJECTS SECTION ================= -->
-<section id="projects" class="bg-light section-padding">
+<section id="projects" class="section-padding">
     <div class="container">
         <h2 class="text-center mb-5">Projects</h2>
 
         <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Offline ERP System</h5>
-                        <p class="card-text">
-                            A Django-based ERP system with inventory, users, and role management.
-                        </p>
-                        <a href="#" class="btn btn-outline-primary btn-sm">
-                            View on GitHub
-                        </a>
-                    </div>
+
+            <!-- Project 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="project-card h-100">
+                    <h5>Offline / Online ERP System</h5>
+                    <p class="project-desc">
+                        A complete offline and online ERP system designed for small businesses,
+                        including inventory management, user roles, and secure data handling.
+                    </p>
+                    <p class="project-tech">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>SQLite</span>
+                        <span>PostgreSQL</span>
+                        <span>MySQL</span>
+                    </p>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">POS System</h5>
-                        <p class="card-text">
-                            Offline POS system supporting unit-based and weight-based products.
-                        </p>
-                        <a href="#" class="btn btn-outline-primary btn-sm">
-                            View on GitHub
-                        </a>
-                    </div>
+            <!-- Project 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="project-card h-100">
+                    <h5>Offline / Online POS System</h5>
+                    <p class="project-desc">
+                        A Point of Sale system supporting both unit‑based and weight‑based products,
+                        suitable for local shops and small businesses.
+                    </p>
+                    <p class="project-tech">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>SQLite</span>
+                        <span>PostgreSQL</span>
+                        <span>MySQL</span>
+                    </p>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Data Analytics Dashboards</h5>
-                        <p class="card-text">
-                            Data cleaning, QA, and dashboards using Python and spreadsheets.
-                        </p>
-                        <a href="#" class="btn btn-outline-primary btn-sm">
-                            View on GitHub
-                        </a>
-                    </div>
+            <!-- Project 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="project-card h-100">
+                    <h5>Data Analytics & Dynamic Dashboards</h5>
+                    <p class="project-desc">
+                        Interactive dashboards built for M&E reporting, data quality checks,
+                        and data‑driven decision‑making.
+                    </p>
+                    <p class="project-tech">
+                        <span>Power BI</span>
+                        <span>Looker Studio</span>
+                        <span>Plotly Dash</span>
+                    </p>
                 </div>
             </div>
+
+            <!-- Project 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="project-card h-100">
+                    <h5>Digital & Mobile Survey Data Collection</h5>
+                    <p class="project-desc">
+                        End‑to‑end data collection workflows for surveys, including form design,
+                        data cleaning, and analysis.
+                    </p>
+                    <p class="project-tech">
+                        <span>KoboToolbox</span>
+                        <span>SurveyCTO</span>
+                        <span>ODK</span>
+                        <span>Pandas</span>
+                        <span>Seaborn</span>
+                        <span>NumPy</span>
+                    </p>
+                </div>
+            </div>
+
         </div>
-
     </div>
 </section>
 
