@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Ahmad Akbary | Portfolio</title>
 
     <!-- Bootstrap CSS -->
@@ -19,17 +20,34 @@
 <!-- ================= NAVBAR ================= -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Ahmad Akbary</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarNav">
+        <a class="navbar-brand fw-bold" href="#home">Ahmad Akbary</a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -38,15 +56,25 @@
 <!-- ================= HERO SECTION ================= -->
 <section id="home" class="hero-section d-flex align-items-center">
     <div class="container text-center">
-        <h1 class="display-4 fw-bold">Hi, I'm Ahmad 👋</h1>
-        <p class="lead mt-3">
-            Python & Django Developer | Data Analyst | ERP & POS Systems Builder
+        <p class="hero-intro">Hello, my name is</p>
+
+        <h1 class="hero-name">Ahmad Akbary</h1>
+
+        <h2 class="hero-role">
+            Python & Django Developer
+        </h2>
+
+        <p class="hero-desc mt-3">
+            I build reliable ERP systems, offline POS solutions,
+            and data-driven applications that solve real problems.
         </p>
+
         <a href="#projects" class="btn btn-primary btn-lg mt-4">
-            View My Work
+            View My Projects
         </a>
     </div>
 </section>
+
 
 <!-- ================= ABOUT SECTION ================= -->
 <section id="about" class="section-padding">
@@ -65,8 +93,8 @@
 <section id="projects" class="bg-light section-padding">
     <div class="container">
         <h2 class="text-center mb-5">Projects</h2>
-        <div class="row g-4">
 
+        <div class="row g-4">
             <div class="col-md-4">
                 <div class="card h-100 shadow-sm">
                     <div class="card-body">
@@ -74,7 +102,9 @@
                         <p class="card-text">
                             A Django-based ERP system with inventory, users, and role management.
                         </p>
-                        <a href="#" class="btn btn-outline-primary btn-sm">View on GitHub</a>
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            View on GitHub
+                        </a>
                     </div>
                 </div>
             </div>
@@ -86,7 +116,9 @@
                         <p class="card-text">
                             Offline POS system supporting unit-based and weight-based products.
                         </p>
-                        <a href="#" class="btn btn-outline-primary btn-sm">View on GitHub</a>
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            View on GitHub
+                        </a>
                     </div>
                 </div>
             </div>
@@ -98,12 +130,14 @@
                         <p class="card-text">
                             Data cleaning, QA, and dashboards using Python and spreadsheets.
                         </p>
-                        <a href="#" class="btn btn-outline-primary btn-sm">View on GitHub</a>
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            View on GitHub
+                        </a>
                     </div>
                 </div>
             </div>
-
         </div>
+
     </div>
 </section>
 
@@ -113,8 +147,12 @@
         <h2 class="mb-4">Contact Me</h2>
         <p>Email: <strong>ahmadakbary0908@gmail.com</strong></p>
         <p>
-            <a href="#" class="me-3">GitHub</a>
-            <a href="#">LinkedIn</a>
+            <a href="https://github.com/yourusername" target="_blank" class="me-3">
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+                LinkedIn
+            </a>
         </p>
     </div>
 </section>

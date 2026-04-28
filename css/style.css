@@ -1,12 +1,4 @@
-body {
-    padding-top: 70px;
-}
-
-.hero-section {
-    height: 100vh;
-    background: linear-gradient(120deg, #0d6efd, #6610f2);
-    color: white;
-}
+/* ===== GENERAL SECTIONS ===== */
 
 .section-padding {
     padding: 80px 20px;
@@ -15,4 +7,40 @@ body {
 .about-text {
     max-width: 700px;
     font-size: 1.1rem;
+    margin: 0 auto;
+}
+
+/* ===== HERO SECTION ===== */
+
+.hero-section {
+    min-height: 100vh;
+    padding-top: 80px; /* space for fixed navbar */
+    background-color: #0f172a; /* dark professional blue */
+    color: #ffffff;
+}
+
+.hero-intro {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #94a3b8;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.hero-role {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #38bdf8;
+}
+
+.hero-desc {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #e5e7eb;
 }
