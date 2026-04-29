@@ -128,3 +128,20 @@
 .contact-buttons .btn {
     min-width: 160px;
 }
+
+/* ================= LIVE DASHBOARD SECTION ================= */
+
+.dashboard-dark {
+    background-color: #020617; /* deep dark (matches analytics theme) */
+    color: #e5e7eb;
+}
+
+.dashboard-dark h2,
+.dashboard-dark p {
+    color: #e5e7eb;
+}
+
+.dashboard-dark iframe {
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
