@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 460">
+  <!-- Teal paint stroke behind the hero portrait. A separate image (not
+       inline SVG) so the browser draws the rough-edge filter only once. -->
+  <defs>
+    <filter id="rough" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03 0.11" numOctaves="3" seed="7" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="26" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+  <g filter="url(#rough)">
+    <g fill="none" stroke="#2A6F63" stroke-linecap="round">
+      <path d="M58 300 C 150 230, 245 150, 352 62" stroke-width="64" />
+      <path d="M36 228 C 112 176, 190 118, 286 54" stroke-width="36" />
+      <path d="M92 392 C 190 318, 282 236, 386 160" stroke-width="54" />
+      <path d="M140 446 C 220 390, 300 330, 392 262" stroke-width="34" />
+      <path d="M30 164 L 168 76" stroke-width="18" />
+      <path d="M226 58 L 312 14" stroke-width="12" />
+      <path d="M318 318 L 400 252" stroke-width="12" />
+    </g>
+    <g fill="#2A6F63">
+      <circle cx="372" cy="40" r="7" /><circle cx="392" cy="96" r="4" />
+      <circle cx="22" cy="300" r="6" /><circle cx="48" cy="350" r="3.5" />
+      <circle cx="402" cy="210" r="5" />
+    </g>
+  </g>
+</svg>

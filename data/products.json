@@ -1,0 +1,2979 @@
+{
+  "_comment": "The product and service catalog. Each item gets its own page at product.html?id=<id>. HOW TO ADD ONE: copy an item, give it a unique 'id' (lowercase, dashes, used in page links), then edit. FIELDS: type = 'product' (a DEMO of a system I can build; visitors try it, then ask for their own) or 'service' (custom work on a platform). category = a key from 'categories' in i18n/en.json. audience = 'business', 'ngo', or both. status = 'live-demo', 'coming-soon', 'screenshots' (products: a demo shown only as screenshots, e.g. Power BI Desktop reports with no public link) or 'available' (services). order = position in lists (lower first). links.demo = live demo URL; links.repo = source code URL (shown under 'Under the hood'). MEDIA: media.cover = card and page image. media.screenshots = gallery images, either plain paths [\"assets/products/dental/1.jpg\"] or with captions [{\"src\": \"assets/products/dental/1.jpg\", \"caption\": {\"en\": \"Dental chart\", \"fa\": \"...\", \"ps\": \"...\"}}]. media.previewVideo = a short SILENT .mp4 loop (H.264, 5-15 seconds, ideally under 4 MB) shown in the page header. media.youtubeId = the full demo video: the part after v= in a YouTube link. content = the text in each language; leave 'fa' / 'ps' empty and English is shown instead. content.<lang>.demoNote (optional) = replaces the standard note under the 'Try live demo' button, e.g. to explain how to try the demo. tech = shown in the collapsed 'Under the hood' panel; leave empty to hide it. samples (services only) = example work: {\"title\", \"url\", \"image\"}; the url can be another site (opens in a new tab) or a page here, e.g. product.html?id=...",
+  "items": [
+    {
+      "id": "pos-inventory",
+      "type": "product",
+      "category": "retail",
+      "audience": [
+        "business"
+      ],
+      "status": "live-demo",
+      "featured": true,
+      "order": 1,
+      "links": {
+        "demo": "https://ahmad0908-psr.github.io/Meridian-POS-Inventory-Management-System/#/dashboard",
+        "repo": ""
+      },
+      "media": {
+        "cover": "assets/projects/pos-inventory/cover.jpg",
+        "screenshots": [
+          {
+            "src": "assets/projects/pos-inventory/pos_checkout.jpg",
+            "caption": {
+              "en": "POS checkout",
+              "fa": "صندوق فروش (POS)",
+              "ps": "د پلور صندوق (POS)"
+            }
+          },
+          {
+            "src": "assets/projects/pos-inventory/print_recept.jpg",
+            "caption": {
+              "en": "Printed receipt",
+              "fa": "رسید چاپی",
+              "ps": "چاپي رسید"
+            }
+          },
+          {
+            "src": "assets/projects/pos-inventory/products.jpg",
+            "caption": {
+              "en": "Products",
+              "fa": "محصولات",
+              "ps": "محصولات"
+            }
+          },
+          {
+            "src": "assets/projects/pos-inventory/inventory.jpg",
+            "caption": {
+              "en": "Inventory",
+              "fa": "ذخیره",
+              "ps": "زېرمه"
+            }
+          },
+          {
+            "src": "assets/projects/pos-inventory/stock_movement.jpg",
+            "caption": {
+              "en": "Stock movements",
+              "fa": "حرکات ذخیره",
+              "ps": "د زېرمې خوځښتونه"
+            }
+          },
+          {
+            "src": "assets/projects/pos-inventory/sales.jpg",
+            "caption": {
+              "en": "Sales history",
+              "fa": "تاریخچه فروش",
+              "ps": "د پلور تاریخچه"
+            }
+          },
+          {
+            "src": "assets/projects/pos-inventory/sales_report.jpg",
+            "caption": {
+              "en": "Sales report",
+              "fa": "گزارش فروش",
+              "ps": "د پلور راپور"
+            }
+          }
+        ],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "content": {
+        "en": {
+          "name": "POS and Inventory System",
+          "tagline": "Sell, restock and see your profit in one place.",
+          "summary": "A point-of-sale and back-office system where every sale updates stock automatically. The demo, Meridian POS, is set up as a small store with products, customers, suppliers and a month of sales.",
+          "problem": "When sales are written in notebooks and stock is counted by hand, items run out without warning and it's hard to know which products actually make money.",
+          "features": [
+            {
+              "title": "Fast checkout",
+              "text": "Search products by name or barcode, build the cart, apply discounts and tax, take cash or card, and print the receipt."
+            },
+            {
+              "title": "Live stock levels",
+              "text": "Every sale updates stock, with low and out-of-stock alerts and quick stock adjustments."
+            },
+            {
+              "title": "Stock movements",
+              "text": "A full log of stock received, adjusted, damaged, returned or transferred."
+            },
+            {
+              "title": "Products, customers and suppliers",
+              "text": "Manage your catalog with SKUs, barcodes, cost and selling prices, plus each customer's purchase history."
+            },
+            {
+              "title": "Sales and profit reports",
+              "text": "Daily, weekly and monthly sales, best sellers, category sales, low stock and estimated profit, all printable."
+            },
+            {
+              "title": "Dashboard",
+              "text": "Today's sales, inventory value and sales charts the moment you open it."
+            }
+          ],
+          "whoFor": "Shops, supermarkets, wholesalers and any business that sells products."
+        },
+        "fa": {
+          "tagline": "فروش کنید، ذخیره را تکمیل کنید و مفاد خود را در یک جا ببینید.",
+          "summary": "یک سیستم فروش و مدیریت که هر فروش به‌طور خودکار ذخیره را به‌روز می‌کند. دموی آن، Meridian POS، برای یک فروشگاه کوچک با محصولات، مشتریان، عرضه‌کنندگان و فروش یک ماه تنظیم شده است.",
+          "problem": "وقتی فروش در کتابچه نوشته می‌شود و ذخیره با دست شمرده می‌شود، اجناس بدون خبر تمام می‌شوند و دانستن اینکه کدام محصول واقعاً مفاد می‌دهد دشوار است.",
+          "features": [
+            {
+              "title": "فروش سریع",
+              "text": "محصولات را با نام یا بارکد جستجو کنید، سبد را بسازید، تخفیف و مالیات اعمال کنید، پول نقد یا کارت بگیرید و رسید را چاپ کنید."
+            },
+            {
+              "title": "سطح ذخیره به‌صورت زنده",
+              "text": "هر فروش ذخیره را به‌روز می‌کند، با هشدار برای اجناس کم یا تمام‌شده و تعدیل سریع ذخیره."
+            },
+            {
+              "title": "حرکات ذخیره",
+              "text": "ثبت کامل ذخیره دریافت‌شده، تعدیل‌شده، خراب‌شده، برگشتی یا انتقال‌یافته."
+            },
+            {
+              "title": "محصولات، مشتریان و عرضه‌کنندگان",
+              "text": "کتلاک خود را با کد محصول، بارکد، قیمت خرید و فروش مدیریت کنید، همراه با تاریخچه خرید هر مشتری."
+            },
+            {
+              "title": "گزارش فروش و مفاد",
+              "text": "فروش روزانه، هفته‌وار و ماهوار، پرفروش‌ترین اجناس، فروش بر اساس کتگوری، اجناس کم و مفاد تخمینی؛ همه قابل چاپ."
+            },
+            {
+              "title": "داشبورد",
+              "text": "فروش امروز، ارزش ذخیره و چارت‌های فروش به محض باز کردن."
+            }
+          ],
+          "whoFor": "دکان‌ها، سوپرمارکیت‌ها، عمده‌فروشان و هر کسب‌وکاری که جنس می‌فروشد."
+        },
+        "ps": {
+          "tagline": "وپلورئ، زېرمه بشپړه کړئ او خپله ګټه په یوه ځای کې وګورئ.",
+          "summary": "د پلور او دفتري کار یو سیسټم چې هر پلور په اتومات ډول زېرمه تازه کوي. د دې ډیمو، Meridian POS، د یو کوچني پلورنځي لپاره د محصولاتو، پېرودونکو، عرضه کوونکو او د یوې میاشتې پلور سره برابر شوی.",
+          "problem": "کله چې پلور په کتابچو کې لیکل کېږي او زېرمه په لاس شمېرل کېږي، توکي بې خبره خلاصېږي او دا معلومول ستونزمن وي چې کوم محصول په رښتیا ګټه کوي.",
+          "features": [
+            {
+              "title": "چټک پلور",
+              "text": "محصولات د نوم یا بارکوډ له مخې ولټوئ، ټوکرۍ جوړه کړئ، تخفیف او مالیه ولګوئ، نغدې یا کارت پیسې واخلئ او رسید چاپ کړئ."
+            },
+            {
+              "title": "د زېرمې ژوندۍ کچه",
+              "text": "هر پلور زېرمه تازه کوي، د کمو یا خلاصو شویو توکو خبرتیا او د زېرمې چټک سمون سره."
+            },
+            {
+              "title": "د زېرمې خوځښتونه",
+              "text": "د ترلاسه شوې، سمې شوې، خرابې شوې، بیرته راغلې یا لېږدول شوې زېرمې بشپړ ثبت."
+            },
+            {
+              "title": "محصولات، پېرودونکي او عرضه کوونکي",
+              "text": "خپل کټلاګ د SKU، بارکوډ، د پېرود او پلور بیو سره اداره کړئ، د هر پېرودونکي د پېرود تاریخچې سره."
+            },
+            {
+              "title": "د پلور او ګټې راپورونه",
+              "text": "ورځنی، اونیز او میاشتنی پلور، تر ټولو ډېر پلورل شوي توکي، د کټګورۍ پلور، کمه زېرمه او اټکلي ګټه؛ ټول د چاپ وړ."
+            },
+            {
+              "title": "ډشبورډ",
+              "text": "د نن ورځې پلور، د زېرمې ارزښت او د پلور چارټونه همدا چې یې پرانیزئ."
+            }
+          ],
+          "whoFor": "دوکانونه، سوپرمارکیټونه، عمده پلورونکي او هر هغه کاروبار چې توکي پلوري."
+        }
+      },
+      "tech": {
+        "stack": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JSON",
+          "localStorage",
+          "Chart.js"
+        ],
+        "notes": {
+          "en": "Runs entirely in your browser. Sample data loads from JSON files into your browser's local storage, so anything you add or change stays on your device. Use Reset Demo Data in Settings to start over.",
+          "fa": "به‌طور کامل در مرورگر شما اجرا می‌شود. معلومات نمونه از فایل‌های JSON در حافظه محلی مرورگر شما بارگذاری می‌شود، پس هر چیزی که اضافه یا تغییر دهید فقط در دستگاه شما می‌ماند. با گزینه Reset Demo Data در بخش Settings از نو شروع کنید.",
+          "ps": "په بشپړ ډول ستاسو په براوزر کې چلېږي. د نمونې معلومات له JSON فایلونو ستاسو د براوزر محلي حافظې ته بارېږي، نو هر څه چې زیات یا بدل کړئ یوازې ستاسو په وسیله کې پاتې کېږي. په Settings برخه کې د Reset Demo Data په انتخاب له سره پیل کړئ."
+        }
+      }
+    },
+    {
+      "id": "pharmacy-pos",
+      "type": "product",
+      "category": "health",
+      "audience": [
+        "business"
+      ],
+      "status": "live-demo",
+      "featured": true,
+      "order": 2,
+      "links": {
+        "demo": "https://ahmad0908-psr.github.io/Pharmacy-POS-Inventory-Management-System/#/dashboard",
+        "repo": ""
+      },
+      "media": {
+        "cover": "assets/projects/pharmacy-pos/cover.jpg",
+        "screenshots": [
+          {
+            "src": "assets/projects/pharmacy-pos/pos_checkout.jpg",
+            "caption": {
+              "en": "POS checkout",
+              "fa": "صندوق فروش (POS)",
+              "ps": "د پلور صندوق (POS)"
+            }
+          },
+          {
+            "src": "assets/projects/pharmacy-pos/receipt_print.jpg",
+            "caption": {
+              "en": "Printed receipt",
+              "fa": "رسید چاپی",
+              "ps": "چاپي رسید"
+            }
+          },
+          {
+            "src": "assets/projects/pharmacy-pos/batches.jpg",
+            "caption": {
+              "en": "Medicine batches",
+              "fa": "بچ‌های دوا",
+              "ps": "د درملو بیچونه"
+            }
+          },
+          {
+            "src": "assets/projects/pharmacy-pos/expiry.jpg",
+            "caption": {
+              "en": "Expiry dashboard",
+              "fa": "داشبورد انقضا",
+              "ps": "د تېرېدو نېټو ډشبورډ"
+            }
+          },
+          {
+            "src": "assets/projects/pharmacy-pos/purchases.jpg",
+            "caption": {
+              "en": "Purchases",
+              "fa": "خریدها",
+              "ps": "پېرودونه"
+            }
+          },
+          {
+            "src": "assets/projects/pharmacy-pos/reports.jpg",
+            "caption": {
+              "en": "Reports",
+              "fa": "گزارش‌ها",
+              "ps": "راپورونه"
+            }
+          }
+        ],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "content": {
+        "en": {
+          "name": "Pharmacy POS and Management",
+          "tagline": "Sales, medicine stock and expiry dates under control.",
+          "summary": "A pharmacy system for counter sales, medicine stock, batches and expiry dates. The demo, Wellspring Pharmacy, comes with fictional medicines, suppliers, sales and prescriptions.",
+          "problem": "Expired medicines mean lost money and risk to patients, and checking shelves by hand is slow and easy to get wrong.",
+          "features": [
+            {
+              "title": "Counter sales",
+              "text": "Search by brand name, generic name or barcode, then sell with discount, tax and a printed receipt. Stock is taken from the batch that expires first."
+            },
+            {
+              "title": "Batches and expiry dates",
+              "text": "Every batch has its own expiry date and price, with an expiry dashboard for expired and soon-to-expire stock."
+            },
+            {
+              "title": "Purchases and suppliers",
+              "text": "Record purchases from suppliers; each one creates new batches and increases stock."
+            },
+            {
+              "title": "Medicine catalog",
+              "text": "Generic and brand names, dosage form, strength, manufacturer, reorder level and a prescription-only flag."
+            },
+            {
+              "title": "Prescription records",
+              "text": "Keep a record of prescriptions and dosage instructions (record-keeping only, no medical advice)."
+            },
+            {
+              "title": "Pharmacy reports",
+              "text": "Sales, purchases, inventory, expiry, low stock, best sellers and estimated profit, all printable."
+            }
+          ],
+          "whoFor": "Pharmacies and medical stores of any size."
+        },
+        "fa": {
+          "tagline": "فروش، ذخیره دوا و تاریخ انقضا تحت کنترول.",
+          "summary": "یک سیستم دواخانه برای فروش پشت پیشخوان، ذخیره دوا، بچ‌ها و تاریخ انقضا. دموی آن، Wellspring Pharmacy، با دواها، عرضه‌کنندگان، فروش‌ها و نسخه‌های خیالی همراه است.",
+          "problem": "دواهای تاریخ‌گذشته یعنی ضرر مالی و خطر برای مریضان، و بررسی قفسه‌ها با دست کند است و به‌آسانی اشتباه می‌شود.",
+          "features": [
+            {
+              "title": "فروش پشت پیشخوان",
+              "text": "با نام تجارتی، نام جنریک یا بارکد جستجو کنید و با تخفیف، مالیات و رسید چاپی بفروشید. ذخیره از بچی کم می‌شود که زودتر منقضی می‌شود."
+            },
+            {
+              "title": "بچ‌ها و تاریخ انقضا",
+              "text": "هر بچ تاریخ انقضا و قیمت خود را دارد، با یک داشبورد برای دواهای منقضی و نزدیک به انقضا."
+            },
+            {
+              "title": "خریدها و عرضه‌کنندگان",
+              "text": "خریدها از عرضه‌کنندگان را ثبت کنید؛ هر خرید بچ‌های جدید می‌سازد و ذخیره را افزایش می‌دهد."
+            },
+            {
+              "title": "کتلاک دواها",
+              "text": "نام جنریک و تجارتی، شکل دوا، مقدار، تولیدکننده، حد سفارش مجدد و نشانی دواهای نسخه‌ای."
+            },
+            {
+              "title": "ثبت نسخه‌ها",
+              "text": "نسخه‌ها و رهنمود مصرف را ثبت کنید (فقط برای ثبت، بدون مشوره طبی)."
+            },
+            {
+              "title": "گزارش‌های دواخانه",
+              "text": "فروش، خرید، ذخیره، انقضا، اجناس کم، پرفروش‌ترین دواها و مفاد تخمینی؛ همه قابل چاپ."
+            }
+          ],
+          "whoFor": "دواخانه‌ها و فروشگاه‌های طبی در هر اندازه."
+        },
+        "ps": {
+          "tagline": "پلور، د درملو زېرمه او د تېرېدو نېټې تر کنټرول لاندې.",
+          "summary": "د درملتون یو سیسټم د کاونټر پلور، د درملو زېرمې، بیچونو او د تېرېدو نېټو لپاره. د دې ډیمو، Wellspring Pharmacy، له خیالي درملو، عرضه کوونکو، پلورونو او نسخو سره راځي.",
+          "problem": "تېر شوي درمل یعنې مالي زیان او ناروغانو ته خطر، او په لاس د المارۍ کتل ورو کار دی او تېروتنه پکې اسانه ده.",
+          "features": [
+            {
+              "title": "د کاونټر پلور",
+              "text": "د تجارتي نوم، جنریک نوم یا بارکوډ له مخې ولټوئ او له تخفیف، مالیې او چاپي رسید سره وپلورئ. زېرمه له هغه بیچ کمېږي چې لومړی تېرېږي."
+            },
+            {
+              "title": "بیچونه او د تېرېدو نېټې",
+              "text": "هر بیچ خپله د تېرېدو نېټه او بیه لري، د تېرو او نږدې تېرېدونکو درملو لپاره له یو ډشبورډ سره."
+            },
+            {
+              "title": "پېرودونه او عرضه کوونکي",
+              "text": "له عرضه کوونکو پېرودونه ثبت کړئ؛ هر پېرود نوي بیچونه جوړوي او زېرمه زیاتوي."
+            },
+            {
+              "title": "د درملو کټلاګ",
+              "text": "جنریک او تجارتي نومونه، د درمل بڼه، اندازه، جوړوونکی، د بیا فرمایش کچه او د نسخې اړتیا نښه."
+            },
+            {
+              "title": "د نسخو ثبت",
+              "text": "نسخې او د کارونې لارښوونې ثبت کړئ (یوازې د ثبت لپاره، پرته له طبي مشورې)."
+            },
+            {
+              "title": "د درملتون راپورونه",
+              "text": "پلور، پېرودونه، زېرمه، د تېرېدو نېټې، کمه زېرمه، تر ټولو ډېر پلورل شوي درمل او اټکلي ګټه؛ ټول د چاپ وړ."
+            }
+          ],
+          "whoFor": "په هره کچه درملتونونه او طبي پلورنځي."
+        }
+      },
+      "tech": {
+        "stack": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JSON",
+          "localStorage",
+          "Chart.js"
+        ],
+        "notes": {
+          "en": "Runs entirely in your browser. Sample data loads from JSON files into your browser's local storage, so anything you add or change stays on your device. Use Reset Demo Data in Settings to start over. All medicines, customers and prescriptions are fictional, and the demo gives no medical advice.",
+          "fa": "به‌طور کامل در مرورگر شما اجرا می‌شود. معلومات نمونه از فایل‌های JSON در حافظه محلی مرورگر شما بارگذاری می‌شود، پس هر چیزی که اضافه یا تغییر دهید فقط در دستگاه شما می‌ماند. با گزینه Reset Demo Data در بخش Settings از نو شروع کنید. همه دواها، مشتریان و نسخه‌ها خیالی هستند و این دمو هیچ مشوره طبی نمی‌دهد.",
+          "ps": "په بشپړ ډول ستاسو په براوزر کې چلېږي. د نمونې معلومات له JSON فایلونو ستاسو د براوزر محلي حافظې ته بارېږي، نو هر څه چې زیات یا بدل کړئ یوازې ستاسو په وسیله کې پاتې کېږي. په Settings برخه کې د Reset Demo Data په انتخاب له سره پیل کړئ. ټول درمل، پېرودونکي او نسخې خیالي دي، او دا ډیمو هېڅ طبي مشوره نه ورکوي."
+        }
+      }
+    },
+    {
+      "id": "warehouse-management",
+      "type": "product",
+      "category": "inventory",
+      "audience": [
+        "business",
+        "ngo"
+      ],
+      "status": "live-demo",
+      "featured": true,
+      "order": 3,
+      "links": {
+        "demo": "https://ahmad0908-psr.github.io/Warehouse-Management-System/#/dashboard",
+        "repo": ""
+      },
+      "media": {
+        "cover": "assets/projects/warehouse-management/cover.jpg",
+        "screenshots": [
+          {
+            "src": "assets/projects/warehouse-management/locations.jpg",
+            "caption": {
+              "en": "Storage locations",
+              "fa": "موقعیت‌های نگهداری",
+              "ps": "د ساتلو ځایونه"
+            }
+          },
+          {
+            "src": "assets/projects/warehouse-management/inventory.jpg",
+            "caption": {
+              "en": "Inventory",
+              "fa": "ذخیره",
+              "ps": "زېرمه"
+            }
+          },
+          {
+            "src": "assets/projects/warehouse-management/receiving.jpg",
+            "caption": {
+              "en": "Receiving",
+              "fa": "دریافت",
+              "ps": "ترلاسه کول"
+            }
+          },
+          {
+            "src": "assets/projects/warehouse-management/dispatch.jpg",
+            "caption": {
+              "en": "Dispatch",
+              "fa": "ارسال",
+              "ps": "لېږل"
+            }
+          },
+          {
+            "src": "assets/projects/warehouse-management/stock_count.jpg",
+            "caption": {
+              "en": "Stock count",
+              "fa": "شمارش ذخیره",
+              "ps": "د زېرمې شمېرنه"
+            }
+          }
+        ],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "content": {
+        "en": {
+          "name": "Warehouse Management System",
+          "tagline": "Know what's in stock, where it is and where it's going.",
+          "summary": "A warehouse system that tracks every product by location, from receiving to dispatch. The demo, Meridian Distribution Center, has four zones, 48 storage locations and two months of activity.",
+          "problem": "When stock is tracked on paper, nobody knows exactly what's on which shelf, orders get picked from empty locations, and counts never match the records.",
+          "features": [
+            {
+              "title": "Locations",
+              "text": "Zones, aisles, racks, shelves and bins, with how full each location is."
+            },
+            {
+              "title": "Receiving",
+              "text": "Receive supplier orders into the right locations, including partial deliveries."
+            },
+            {
+              "title": "Dispatch",
+              "text": "Stock is reserved as soon as an order is created, then picked, prepared and dispatched."
+            },
+            {
+              "title": "Transfers and adjustments",
+              "text": "Move stock between locations and record damage, loss, returns and corrections."
+            },
+            {
+              "title": "Stock counts",
+              "text": "Count a location, see the difference from the records instantly, and approve corrections."
+            },
+            {
+              "title": "Warehouse reports",
+              "text": "Inventory, movements, receiving, dispatch, space use, variances and valuation, all printable."
+            }
+          ],
+          "whoFor": "Warehouses, distributors, and NGO supply and logistics teams."
+        },
+        "fa": {
+          "tagline": "بدانید چه چیزی در ذخیره است، کجاست و به کجا می‌رود.",
+          "summary": "یک سیستم گدام که هر محصول را بر اساس موقعیت آن، از دریافت تا ارسال، پیگیری می‌کند. دموی آن، Meridian Distribution Center، چهار بخش، ۴۸ موقعیت نگهداری و فعالیت دو ماه را دارد.",
+          "problem": "وقتی ذخیره روی کاغذ پیگیری می‌شود، هیچ‌کس دقیقاً نمی‌داند در کدام قفسه چه چیزی است، سفارش‌ها از جاهای خالی برداشته می‌شوند و شمارش‌ها هرگز با ریکاردها برابر نمی‌شوند.",
+          "features": [
+            {
+              "title": "موقعیت‌ها",
+              "text": "بخش‌ها، راهروها، ریک‌ها، قفسه‌ها و خانه‌ها، همراه با میزان پر بودن هر موقعیت."
+            },
+            {
+              "title": "دریافت",
+              "text": "سفارش‌های عرضه‌کنندگان را در موقعیت‌های درست دریافت کنید، حتی تحویلی‌های ناقص."
+            },
+            {
+              "title": "ارسال",
+              "text": "ذخیره به محض ایجاد سفارش رزرو می‌شود، سپس جمع‌آوری، آماده و ارسال می‌گردد."
+            },
+            {
+              "title": "انتقال و تعدیل",
+              "text": "ذخیره را بین موقعیت‌ها انتقال دهید و خرابی، گم‌شدن، برگشت و اصلاحات را ثبت کنید."
+            },
+            {
+              "title": "شمارش ذخیره",
+              "text": "یک موقعیت را بشمارید، تفاوت با ریکاردها را فوراً ببینید و اصلاحات را تأیید کنید."
+            },
+            {
+              "title": "گزارش‌های گدام",
+              "text": "ذخیره، حرکات، دریافت، ارسال، استفاده از فضا، تفاوت‌ها و ارزش ذخیره؛ همه قابل چاپ."
+            }
+          ],
+          "whoFor": "گدام‌ها، توزیع‌کنندگان، و تیم‌های تدارکات و لوژستیک موسسات."
+        },
+        "ps": {
+          "tagline": "پوه شئ چې په زېرمه کې څه شته، چېرته دي او چېرته ځي.",
+          "summary": "د ګدام یو سیسټم چې هر محصول د هغه د ځای له مخې، له ترلاسه کولو تر لېږلو پورې، تعقیبوي. د دې ډیمو، Meridian Distribution Center، څلور برخې، ۴۸ د ساتلو ځایونه او د دوو میاشتو فعالیت لري.",
+          "problem": "کله چې زېرمه په کاغذ تعقیبېږي، هېڅوک دقیق نه پوهېږي چې په کومه المارۍ کې څه دي، فرمایشونه له تشو ځایونو اخیستل کېږي، او شمېرنې هېڅکله له ثبتونو سره سمې نه وي.",
+          "features": [
+            {
+              "title": "ځایونه",
+              "text": "برخې، دهلېزونه، ریکونه، المارۍ او خانې، له دې سره چې هر ځای څومره ډک دی."
+            },
+            {
+              "title": "ترلاسه کول",
+              "text": "د عرضه کوونکو فرمایشونه په سمو ځایونو کې ترلاسه کړئ، نیمګړې سپارنې هم."
+            },
+            {
+              "title": "لېږل",
+              "text": "زېرمه همدا چې فرمایش جوړ شي ساتل کېږي، بیا راټولېږي، چمتو کېږي او لېږل کېږي."
+            },
+            {
+              "title": "لېږد او سمون",
+              "text": "زېرمه د ځایونو ترمنځ ولېږدوئ او خرابي، ورکېدل، بیرته راګرځېدل او سمونونه ثبت کړئ."
+            },
+            {
+              "title": "د زېرمې شمېرنه",
+              "text": "یو ځای وشمېرئ، له ثبتونو سره توپیر سمدلاسه وګورئ او سمونونه تایید کړئ."
+            },
+            {
+              "title": "د ګدام راپورونه",
+              "text": "زېرمه، خوځښتونه، ترلاسه کول، لېږل، د ځای کارونه، توپیرونه او ارزښت؛ ټول د چاپ وړ."
+            }
+          ],
+          "whoFor": "ګدامونه، وېشونکي، او د موسسو د تدارکاتو او لوژستیک ټیمونه."
+        }
+      },
+      "tech": {
+        "stack": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JSON",
+          "localStorage",
+          "Chart.js"
+        ],
+        "notes": {
+          "en": "Runs entirely in your browser. Sample data loads from JSON files into your browser's local storage, so anything you add or change stays on your device. Use Reset Demo Data in Settings to start over.",
+          "fa": "به‌طور کامل در مرورگر شما اجرا می‌شود. معلومات نمونه از فایل‌های JSON در حافظه محلی مرورگر شما بارگذاری می‌شود، پس هر چیزی که اضافه یا تغییر دهید فقط در دستگاه شما می‌ماند. با گزینه Reset Demo Data در بخش Settings از نو شروع کنید.",
+          "ps": "په بشپړ ډول ستاسو په براوزر کې چلېږي. د نمونې معلومات له JSON فایلونو ستاسو د براوزر محلي حافظې ته بارېږي، نو هر څه چې زیات یا بدل کړئ یوازې ستاسو په وسیله کې پاتې کېږي. په Settings برخه کې د Reset Demo Data په انتخاب له سره پیل کړئ."
+        }
+      }
+    },
+    {
+      "id": "hr-management",
+      "type": "product",
+      "category": "people",
+      "audience": [
+        "business",
+        "ngo"
+      ],
+      "status": "coming-soon",
+      "featured": true,
+      "order": 4,
+      "links": {
+        "demo": "",
+        "repo": ""
+      },
+      "media": {
+        "cover": "",
+        "screenshots": [],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "content": {
+        "en": {
+          "name": "HR Management System",
+          "tagline": "Staff records, attendance, leave and payroll in one system.",
+          "summary": "Keeps every employee's details, contracts, attendance and leave organized, and prepares payroll from the same records.",
+          "problem": "Staff files scattered across folders and spreadsheets make it hard to track contracts, leave balances and salaries accurately.",
+          "features": [
+            {
+              "title": "Employee profiles",
+              "text": "Personal details, positions, contracts and documents in one place."
+            },
+            {
+              "title": "Attendance and leave",
+              "text": "Record attendance, request and approve leave, and see balances."
+            },
+            {
+              "title": "Payroll",
+              "text": "Calculate monthly salaries with allowances and deductions."
+            },
+            {
+              "title": "HR reports",
+              "text": "Headcount, staff turnover and upcoming contract end dates at a glance."
+            }
+          ],
+          "whoFor": "Companies and organizations with growing teams."
+        },
+        "fa": {
+          "tagline": "سوابق کارمندان، حاضری، رخصتی و معاشات در یک سیستم.",
+          "summary": "جزئیات، قراردادها، حاضری و رخصتی هر کارمند را منظم نگه می‌دارد و معاشات را از همین سوابق آماده می‌کند.",
+          "problem": "پرونده‌های پراکنده کارمندان در فولدرها و صفحات اکسل، پیگیری دقیق قراردادها، رخصتی‌های باقی‌مانده و معاشات را دشوار می‌سازد.",
+          "features": [
+            {
+              "title": "پروفایل کارمندان",
+              "text": "معلومات شخصی، بست‌ها، قراردادها و اسناد در یک جا."
+            },
+            {
+              "title": "حاضری و رخصتی",
+              "text": "حاضری را ثبت کنید، رخصتی درخواست و تأیید کنید و رخصتی‌های باقی‌مانده را ببینید."
+            },
+            {
+              "title": "معاشات",
+              "text": "معاشات ماهوار را با امتیازات و کسرات محاسبه کنید."
+            },
+            {
+              "title": "گزارش‌های منابع بشری",
+              "text": "تعداد کارمندان، تغییرات کارمندان و قراردادهایی که به‌زودی ختم می‌شوند را در یک نگاه ببینید."
+            }
+          ],
+          "whoFor": "شرکت‌ها و موسساتی که تیم‌های در حال رشد دارند."
+        },
+        "ps": {
+          "tagline": "د کارکوونکو ریکارډونه، حاضري، رخصتي او معاشونه په یوه سیسټم کې.",
+          "summary": "د هر کارکوونکي جزئیات، قراردادونه، حاضري او رخصتي منظم ساتي، او معاشونه له همدې ریکارډونو چمتو کوي.",
+          "problem": "په فولډرونو او ایکسل پاڼو کې ویشلې دوسیې د قراردادونو، پاتې رخصتیو او معاشونو دقیق تعقیب ستونزمن کوي.",
+          "features": [
+            {
+              "title": "د کارکوونکو پروفایلونه",
+              "text": "شخصي معلومات، بستونه، قراردادونه او اسناد په یوه ځای کې."
+            },
+            {
+              "title": "حاضري او رخصتي",
+              "text": "حاضري ثبت کړئ، رخصتي وغواړئ او تایید یې کړئ، او پاتې رخصتي وګورئ."
+            },
+            {
+              "title": "معاشونه",
+              "text": "میاشتني معاشونه د امتیازاتو او کسراتو سره محاسبه کړئ."
+            },
+            {
+              "title": "د بشري سرچینو راپورونه",
+              "text": "د کارکوونکو شمېر، بدلونونه او ژر پای ته رسېدونکي قراردادونه په یوه نظر وګورئ."
+            }
+          ],
+          "whoFor": "هغه شرکتونه او موسسې چې وده کوونکي ټیمونه لري."
+        }
+      },
+      "tech": {
+        "stack": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": "operations-management",
+      "type": "product",
+      "category": "operations",
+      "audience": [
+        "business",
+        "ngo"
+      ],
+      "status": "coming-soon",
+      "featured": false,
+      "order": 5,
+      "links": {
+        "demo": "",
+        "repo": ""
+      },
+      "media": {
+        "cover": "",
+        "screenshots": [],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "content": {
+        "en": {
+          "name": "Operations Management System",
+          "tagline": "Requests, approvals and daily operations, tracked from start to finish.",
+          "summary": "Brings day-to-day operational work, such as requests, approvals, assets and follow-up tasks, into one organized workflow.",
+          "problem": "When requests travel by email and phone, approvals get stuck and nobody knows what's pending or who is responsible.",
+          "features": [
+            {
+              "title": "Requests and approvals",
+              "text": "Submit requests and move them through clear approval steps."
+            },
+            {
+              "title": "Asset register",
+              "text": "Keep a record of equipment, vehicles and who is using them."
+            },
+            {
+              "title": "Task follow-up",
+              "text": "Assign operational tasks and track them until they're done."
+            },
+            {
+              "title": "Operations overview",
+              "text": "See what's pending, overdue and completed across teams."
+            }
+          ],
+          "whoFor": "Operations, admin and logistics teams in businesses and NGOs."
+        },
+        "fa": {
+          "tagline": "درخواست‌ها، تأییدها و عملیات روزمره، از آغاز تا پایان پیگیری می‌شوند.",
+          "summary": "کارهای عملیاتی روزمره مانند درخواست‌ها، تأییدها، دارایی‌ها و وظایف پیگیری را در یک روند منظم جمع می‌کند.",
+          "problem": "وقتی درخواست‌ها از طریق ایمیل و تلفن رد و بدل می‌شوند، تأییدها معطل می‌مانند و کسی نمی‌داند چه چیزی در انتظار است یا مسئول کیست.",
+          "features": [
+            {
+              "title": "درخواست‌ها و تأییدها",
+              "text": "درخواست ثبت کنید و آن را از مراحل روشن تأیید عبور دهید."
+            },
+            {
+              "title": "ثبت دارایی‌ها",
+              "text": "فهرست تجهیزات، وسایط نقلیه و استفاده‌کنندگان آن‌ها را نگه دارید."
+            },
+            {
+              "title": "پیگیری وظایف",
+              "text": "وظایف عملیاتی را تعیین کنید و تا تکمیل آن‌ها پیگیری کنید."
+            },
+            {
+              "title": "نمای کلی عملیات",
+              "text": "کارهای در انتظار، معطل و تکمیل‌شده را در همه تیم‌ها ببینید."
+            }
+          ],
+          "whoFor": "تیم‌های عملیات، اداری و لوژستیک در کسب‌وکارها و موسسات."
+        },
+        "ps": {
+          "tagline": "غوښتنې، تاییدونه او ورځني عملیات، له پیل تر پایه تعقیبېږي.",
+          "summary": "ورځني عملیاتي کارونه لکه غوښتنې، تاییدونه، شتمنۍ او تعقیبي دندې په یوه منظم بهیر کې راټولوي.",
+          "problem": "کله چې غوښتنې د برېښنالیک او تلیفون له لارې لېږدول کېږي، تاییدونه ځنډېږي او هېڅوک نه پوهېږي چې څه پاتې دي یا مسوول څوک دی.",
+          "features": [
+            {
+              "title": "غوښتنې او تاییدونه",
+              "text": "غوښتنه ثبت کړئ او د تایید له روښانه پړاوونو یې تېره کړئ."
+            },
+            {
+              "title": "د شتمنیو ثبت",
+              "text": "د تجهیزاتو، موټرو او د هغوی د کاروونکو لړلیک وساتئ."
+            },
+            {
+              "title": "د دندو تعقیب",
+              "text": "عملیاتي دندې وسپارئ او تر بشپړېدو یې تعقیب کړئ."
+            },
+            {
+              "title": "د عملیاتو عمومي کتنه",
+              "text": "په ټولو ټیمونو کې پاتې، ځنډېدلي او بشپړ شوي کارونه وګورئ."
+            }
+          ],
+          "whoFor": "په کاروبارونو او موسسو کې د عملیاتو، ادارې او لوژستیک ټیمونه."
+        }
+      },
+      "tech": {
+        "stack": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": "project-task-management",
+      "type": "product",
+      "category": "projects",
+      "audience": [
+        "business",
+        "ngo"
+      ],
+      "status": "live-demo",
+      "featured": true,
+      "order": 6,
+      "links": {
+        "demo": "https://ahmad0908-psr.github.io/Project-Task-Mangement-System/#/dashboard",
+        "repo": ""
+      },
+      "media": {
+        "cover": "assets/projects/project-task-management/cover.jpg",
+        "screenshots": [
+          {
+            "src": "assets/projects/project-task-management/projects.jpg",
+            "caption": {
+              "en": "Projects",
+              "fa": "پروژه‌ها",
+              "ps": "پروژې"
+            }
+          },
+          {
+            "src": "assets/projects/project-task-management/project_details.jpg",
+            "caption": {
+              "en": "Project details",
+              "fa": "جزئیات پروژه",
+              "ps": "د پروژې جزئیات"
+            }
+          },
+          {
+            "src": "assets/projects/project-task-management/tasks_kanaban.jpg",
+            "caption": {
+              "en": "Task board (Kanban)",
+              "fa": "تخته وظایف (کانبان)",
+              "ps": "د دندو تخته (کانبان)"
+            }
+          },
+          {
+            "src": "assets/projects/project-task-management/teams.jpg",
+            "caption": {
+              "en": "Teams",
+              "fa": "تیم‌ها",
+              "ps": "ټیمونه"
+            }
+          },
+          {
+            "src": "assets/projects/project-task-management/reports.jpg",
+            "caption": {
+              "en": "Reports",
+              "fa": "گزارش‌ها",
+              "ps": "راپورونه"
+            }
+          }
+        ],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "content": {
+        "en": {
+          "name": "Project and Task Management System",
+          "tagline": "Plan projects, assign tasks and see progress at a glance.",
+          "summary": "Organizes projects, tasks, milestones and team members, with a Kanban board and calendar to keep work moving.",
+          "problem": "Projects slip when tasks live in chat messages and spreadsheets, and managers can't see what's late until it's too late.",
+          "features": [
+            {
+              "title": "Projects and milestones",
+              "text": "Break work into projects and milestones with clear due dates."
+            },
+            {
+              "title": "Kanban board",
+              "text": "Move tasks between stages and see who is working on what."
+            },
+            {
+              "title": "Shared calendar",
+              "text": "See deadlines across every project in one calendar."
+            },
+            {
+              "title": "Progress reports",
+              "text": "Track completed and overdue work per project and per person."
+            }
+          ],
+          "whoFor": "Project, program and portfolio managers, and the teams they lead."
+        },
+        "fa": {
+          "tagline": "پروژه‌ها را برنامه‌ریزی کنید، وظایف را تقسیم کنید و پیشرفت را در یک نگاه ببینید.",
+          "summary": "پروژه‌ها، وظایف، مراحل کلیدی و اعضای تیم را با یک تخته کانبان و تقویم منظم می‌کند تا کار به پیش برود.",
+          "problem": "وقتی وظایف در پیام‌ها و صفحات اکسل پراکنده باشند، پروژه‌ها عقب می‌مانند و مدیران تا دیر نشده نمی‌فهمند چه چیزی معطل است.",
+          "features": [
+            {
+              "title": "پروژه‌ها و مراحل کلیدی",
+              "text": "کار را به پروژه‌ها و مراحل کلیدی با تاریخ‌های مشخص تقسیم کنید."
+            },
+            {
+              "title": "تخته کانبان",
+              "text": "وظایف را بین مراحل جابجا کنید و ببینید چه کسی روی چه کاری کار می‌کند."
+            },
+            {
+              "title": "تقویم مشترک",
+              "text": "مهلت‌های همه پروژه‌ها را در یک تقویم ببینید."
+            },
+            {
+              "title": "گزارش‌های پیشرفت",
+              "text": "کارهای تکمیل‌شده و معطل را برای هر پروژه و هر شخص پیگیری کنید."
+            }
+          ],
+          "whoFor": "مدیران پروژه، برنامه و پورتفولیو، و تیم‌هایی که رهبری می‌کنند."
+        },
+        "ps": {
+          "tagline": "پروژې پلان کړئ، دندې ووېشئ او پرمختګ په یوه نظر وګورئ.",
+          "summary": "پروژې، دندې، مهم پړاوونه او د ټیم غړي د کانبان تختې او کلیزې سره منظموي، څو کار مخ ته لاړ شي.",
+          "problem": "کله چې دندې په پیغامونو او ایکسل پاڼو کې ویشلې وي، پروژې وروسته پاتې کېږي او مدیران تر ناوخته نه پوهېږي چې څه ځنډېدلي دي.",
+          "features": [
+            {
+              "title": "پروژې او مهم پړاوونه",
+              "text": "کار په پروژو او مهمو پړاوونو ووېشئ چې روښانه نېټې ولري."
+            },
+            {
+              "title": "کانبان تخته",
+              "text": "دندې د پړاوونو ترمنځ ولېږدوئ او وګورئ چې څوک په کوم کار بوخت دی."
+            },
+            {
+              "title": "ګډه کلیزه",
+              "text": "د ټولو پروژو وروستۍ نېټې په یوه کلیزه کې وګورئ."
+            },
+            {
+              "title": "د پرمختګ راپورونه",
+              "text": "د هرې پروژې او هر کس بشپړ شوي او ځنډېدلي کارونه تعقیب کړئ."
+            }
+          ],
+          "whoFor": "د پروژو، پروګرامونو او پورټفولیو مدیران، او هغه ټیمونه چې رهبري یې کوي."
+        }
+      },
+      "tech": {
+        "stack": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JSON"
+        ],
+        "notes": {
+          "en": "The live demo runs entirely in your browser with sample data.",
+          "fa": "دموی زنده به‌طور کامل در مرورگر شما با معلومات نمونه اجرا می‌شود.",
+          "ps": "ژوندی ډیمو په بشپړ ډول ستاسو په براوزر کې د نمونې معلوماتو سره چلېږي."
+        }
+      }
+    },
+    {
+      "id": "dental-clinic",
+      "type": "product",
+      "category": "health",
+      "audience": [
+        "business"
+      ],
+      "status": "live-demo",
+      "featured": true,
+      "order": 7,
+      "links": {
+        "demo": "https://ahmad0908-psr.github.io/Dental-clinic-Management-System/#/dashboard",
+        "repo": ""
+      },
+      "media": {
+        "cover": "assets/projects/dental-clinic/cover.jpg",
+        "screenshots": [
+          {
+            "src": "assets/projects/dental-clinic/patients.jpg",
+            "caption": {
+              "en": "Patients",
+              "fa": "مریضان",
+              "ps": "ناروغان"
+            }
+          },
+          {
+            "src": "assets/projects/dental-clinic/appiontments.jpg",
+            "caption": {
+              "en": "Appointments",
+              "fa": "نوبت‌ها",
+              "ps": "نوبتونه"
+            }
+          },
+          {
+            "src": "assets/projects/dental-clinic/dental_chart.jpg",
+            "caption": {
+              "en": "Dental chart",
+              "fa": "چارت دندان",
+              "ps": "د غاښونو چارټ"
+            }
+          },
+          {
+            "src": "assets/projects/dental-clinic/treatment_plans.jpg",
+            "caption": {
+              "en": "Treatment plans",
+              "fa": "پلان‌های تداوی",
+              "ps": "د درملنې پلانونه"
+            }
+          },
+          {
+            "src": "assets/projects/dental-clinic/billing.jpg",
+            "caption": {
+              "en": "Billing",
+              "fa": "صورت‌حساب",
+              "ps": "بلونه"
+            }
+          }
+        ],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "content": {
+        "en": {
+          "name": "Dental Clinic Management System",
+          "tagline": "Patients, appointments, treatments and billing for your clinic.",
+          "summary": "Manages the full patient journey, from booking an appointment to the dental chart, treatment plan and final bill.",
+          "problem": "Paper files and appointment books make it hard to find a patient's history, and unpaid treatments are easy to lose track of.",
+          "features": [
+            {
+              "title": "Appointments",
+              "text": "Book and manage appointments for each dentist."
+            },
+            {
+              "title": "Dental chart",
+              "text": "Record the condition and treatment of every tooth."
+            },
+            {
+              "title": "Treatment plans",
+              "text": "Plan treatments and follow progress and cost per patient."
+            },
+            {
+              "title": "Billing and reports",
+              "text": "Invoices, payments, outstanding balances and clinic income."
+            }
+          ],
+          "whoFor": "Dental clinics with one or more dentists."
+        },
+        "fa": {
+          "tagline": "مریضان، وقت‌های ملاقات، تداوی‌ها و صورت‌حساب برای کلینیک شما.",
+          "summary": "مسیر کامل مریض را مدیریت می‌کند؛ از گرفتن وقت ملاقات تا چارت دندان، پلان تداوی و صورت‌حساب نهایی.",
+          "problem": "دوسیه‌های کاغذی و کتابچه‌های وقت ملاقات، پیدا کردن سابقه مریض را دشوار می‌سازند و تداوی‌های پرداخت‌نشده به‌آسانی فراموش می‌شوند.",
+          "features": [
+            {
+              "title": "وقت‌های ملاقات",
+              "text": "وقت‌های ملاقات هر داکتر دندان را تعیین و مدیریت کنید."
+            },
+            {
+              "title": "چارت دندان",
+              "text": "وضعیت و تداوی هر دندان را ثبت کنید."
+            },
+            {
+              "title": "پلان‌های تداوی",
+              "text": "تداوی را برنامه‌ریزی کنید و پیشرفت و هزینه هر مریض را پیگیری کنید."
+            },
+            {
+              "title": "صورت‌حساب و گزارش‌ها",
+              "text": "بل‌ها، پرداخت‌ها، باقی‌داری‌ها و عاید کلینیک."
+            }
+          ],
+          "whoFor": "کلینیک‌های دندان با یک یا چند داکتر دندان."
+        },
+        "ps": {
+          "tagline": "ناروغان، وختونه، درملنې او بلونه ستاسو د کلینیک لپاره.",
+          "summary": "د ناروغ بشپړه لار اداره کوي؛ د وخت نیولو څخه نیولې د غاښونو چارټ، د درملنې پلان او وروستي بل پورې.",
+          "problem": "کاغذي دوسیې او د وختونو کتابچې د ناروغ د تاریخچې موندل ستونزمن کوي، او نه ورکړل شوې درملنې په اسانۍ هېرېږي.",
+          "features": [
+            {
+              "title": "وختونه",
+              "text": "د هر غاښ ډاکټر لپاره وختونه وټاکئ او اداره یې کړئ."
+            },
+            {
+              "title": "د غاښونو چارټ",
+              "text": "د هر غاښ حالت او درملنه ثبت کړئ."
+            },
+            {
+              "title": "د درملنې پلانونه",
+              "text": "درملنه پلان کړئ او د هر ناروغ پرمختګ او لګښت تعقیب کړئ."
+            },
+            {
+              "title": "بلونه او راپورونه",
+              "text": "بلونه، تادیات، پاتې پیسې او د کلینیک عاید."
+            }
+          ],
+          "whoFor": "د غاښونو کلینیکونه چې یو یا څو ډاکټران لري."
+        }
+      },
+      "tech": {
+        "stack": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JSON"
+        ],
+        "notes": {
+          "en": "The live demo runs entirely in your browser with sample data.",
+          "fa": "دموی زنده به‌طور کامل در مرورگر شما با معلومات نمونه اجرا می‌شود.",
+          "ps": "ژوندی ډیمو په بشپړ ډول ستاسو په براوزر کې د نمونې معلوماتو سره چلېږي."
+        }
+      }
+    },
+    {
+      "id": "gym-management",
+      "type": "product",
+      "category": "health",
+      "audience": [
+        "business"
+      ],
+      "status": "live-demo",
+      "featured": false,
+      "order": 8,
+      "links": {
+        "demo": "https://ahmad0908-psr.github.io/Gym-Management-System/#/dashboard",
+        "repo": ""
+      },
+      "media": {
+        "cover": "assets/projects/gym-management/cover.jpg",
+        "screenshots": [
+          {
+            "src": "assets/projects/gym-management/members.jpg",
+            "caption": {
+              "en": "Members",
+              "fa": "اعضا",
+              "ps": "غړي"
+            }
+          },
+          {
+            "src": "assets/projects/gym-management/memberships.jpg",
+            "caption": {
+              "en": "Memberships",
+              "fa": "عضویت‌ها",
+              "ps": "غړیتوبونه"
+            }
+          },
+          {
+            "src": "assets/projects/gym-management/attendance.jpg",
+            "caption": {
+              "en": "Attendance",
+              "fa": "حاضری",
+              "ps": "حاضري"
+            }
+          },
+          {
+            "src": "assets/projects/gym-management/classes.jpg",
+            "caption": {
+              "en": "Classes and trainers",
+              "fa": "صنف‌ها و مربیان",
+              "ps": "ټولګي او روزونکي"
+            }
+          },
+          {
+            "src": "assets/projects/gym-management/workout_plans.jpg",
+            "caption": {
+              "en": "Workout plans",
+              "fa": "پلان‌های تمرین",
+              "ps": "د تمرین پلانونه"
+            }
+          }
+        ],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "content": {
+        "en": {
+          "name": "Gym Management System",
+          "tagline": "Members, memberships, attendance and payments for your gym.",
+          "summary": "Keeps track of members, their memberships and payments, class schedules and trainers, with workout plans built in.",
+          "problem": "Expired memberships and unpaid fees slip through when records are kept on paper, and it's hard to see who actually comes to train.",
+          "features": [
+            {
+              "title": "Members and memberships",
+              "text": "Register members, sell memberships and see who is due to renew."
+            },
+            {
+              "title": "Attendance",
+              "text": "Record check-ins and see attendance patterns over time."
+            },
+            {
+              "title": "Trainers and classes",
+              "text": "Schedule classes and assign trainers."
+            },
+            {
+              "title": "Workout plans",
+              "text": "Build plans for members from a ready exercise library."
+            }
+          ],
+          "whoFor": "Gyms, fitness centers and sports clubs."
+        },
+        "fa": {
+          "tagline": "اعضا، عضویت‌ها، حاضری و پرداخت‌ها برای جمنازیوم شما.",
+          "summary": "اعضا، عضویت‌ها و پرداخت‌های آن‌ها، تقسیم‌اوقات کلاس‌ها و مربیان را پیگیری می‌کند و پلان‌های تمرینی نیز در آن موجود است.",
+          "problem": "وقتی سوابق روی کاغذ نگه داشته شوند، عضویت‌های ختم‌شده و فیس‌های پرداخت‌نشده از نظر می‌افتند و دانستن اینکه چه کسی واقعاً برای تمرین می‌آید دشوار است.",
+          "features": [
+            {
+              "title": "اعضا و عضویت‌ها",
+              "text": "اعضا را ثبت کنید، عضویت بفروشید و ببینید چه کسی باید عضویت خود را تمدید کند."
+            },
+            {
+              "title": "حاضری",
+              "text": "ورود اعضا را ثبت کنید و الگوی حاضری را در طول زمان ببینید."
+            },
+            {
+              "title": "مربیان و کلاس‌ها",
+              "text": "کلاس‌ها را تقسیم‌اوقات کنید و مربی تعیین کنید."
+            },
+            {
+              "title": "پلان‌های تمرینی",
+              "text": "از یک کتابخانه آماده تمرین‌ها، برای اعضا پلان بسازید."
+            }
+          ],
+          "whoFor": "جمنازیوم‌ها، مراکز فتنس و کلپ‌های ورزشی."
+        },
+        "ps": {
+          "tagline": "غړي، غړیتوبونه، حاضري او تادیات ستاسو د جم لپاره.",
+          "summary": "غړي، د هغوی غړیتوبونه او تادیات، د ټولګیو مهالوېش او روزونکي تعقیبوي، او د تمرین پلانونه هم پکې شته.",
+          "problem": "کله چې ریکارډونه په کاغذ ساتل کېږي، پای ته رسېدلي غړیتوبونه او نه ورکړل شوې فیسونه له پامه غورځي، او دا معلومول ستونزمن وي چې څوک په رښتیا تمرین ته راځي.",
+          "features": [
+            {
+              "title": "غړي او غړیتوبونه",
+              "text": "غړي ثبت کړئ، غړیتوب وپلورئ او وګورئ چې څوک باید غړیتوب نوی کړي."
+            },
+            {
+              "title": "حاضري",
+              "text": "د غړو راتګ ثبت کړئ او د وخت په تېرېدو سره د حاضرۍ بڼه وګورئ."
+            },
+            {
+              "title": "روزونکي او ټولګي",
+              "text": "ټولګي مهالوېش کړئ او روزونکي وټاکئ."
+            },
+            {
+              "title": "د تمرین پلانونه",
+              "text": "له چمتو تمریني کتابتون څخه د غړو لپاره پلانونه جوړ کړئ."
+            }
+          ],
+          "whoFor": "جمونه، د فټنس مرکزونه او ورزشي کلبونه."
+        }
+      },
+      "tech": {
+        "stack": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JSON"
+        ],
+        "notes": {
+          "en": "The live demo runs entirely in your browser with sample data.",
+          "fa": "دموی زنده به‌طور کامل در مرورگر شما با معلومات نمونه اجرا می‌شود.",
+          "ps": "ژوندی ډیمو په بشپړ ډول ستاسو په براوزر کې د نمونې معلوماتو سره چلېږي."
+        }
+      }
+    },
+    {
+      "id": "meal-dashboard",
+      "type": "product",
+      "category": "monitoring",
+      "audience": [
+        "ngo"
+      ],
+      "status": "live-demo",
+      "featured": true,
+      "order": 9,
+      "links": {
+        "demo": "https://ahmad0908-psr.github.io/Humanitarian-MEAL-Dashboard/",
+        "repo": ""
+      },
+      "media": {
+        "cover": "assets/projects/meal-dashboard/cover.jpg",
+        "screenshots": [
+          {
+            "src": "assets/projects/meal-dashboard/indicators_targets.jpg",
+            "caption": {
+              "en": "Indicators vs targets",
+              "fa": "شاخص‌ها در برابر اهداف",
+              "ps": "شاخصونه د موخو په پرتله"
+            }
+          },
+          {
+            "src": "assets/projects/meal-dashboard/result_by_province.jpg",
+            "caption": {
+              "en": "Results by province",
+              "fa": "نتایج بر اساس ولایت",
+              "ps": "پایلې د ولایت له مخې"
+            }
+          },
+          {
+            "src": "assets/projects/meal-dashboard/geo_data.jpg",
+            "caption": {
+              "en": "Map view",
+              "fa": "نمای نقشه",
+              "ps": "د نقشې لید"
+            }
+          },
+          {
+            "src": "assets/projects/meal-dashboard/reports.jpg",
+            "caption": {
+              "en": "Reports",
+              "fa": "گزارش‌ها",
+              "ps": "راپورونه"
+            }
+          }
+        ],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "content": {
+        "en": {
+          "name": "Live MEAL Dashboard",
+          "tagline": "Your program's results, always up to date and ready for donors.",
+          "summary": "A monitoring, evaluation, accountability and learning dashboard that turns field data into clear indicators by sector, location and time.",
+          "problem": "Program data is collected in the field but ends up in scattered spreadsheets, and preparing donor reports takes days of manual work.",
+          "features": [
+            {
+              "title": "Indicator tracking",
+              "text": "Follow progress against targets for every indicator and sector."
+            },
+            {
+              "title": "Beneficiary breakdowns",
+              "text": "See results by province, district, gender and age group."
+            },
+            {
+              "title": "Works with your data collection",
+              "text": "Uses data from KoboToolbox, SurveyCTO or ActivityInfo."
+            },
+            {
+              "title": "Donor-ready views",
+              "text": "Clear charts and tables you can share or export for reports."
+            }
+          ],
+          "whoFor": "NGOs, UN agencies and humanitarian programs."
+        },
+        "fa": {
+          "tagline": "نتایج برنامه شما، همیشه به‌روز و آماده برای تمویل‌کنندگان.",
+          "summary": "یک داشبورد نظارت، ارزیابی، حساب‌دهی و آموزش (MEAL) که معلومات ساحوی را به شاخص‌های روشن بر اساس سکتور، موقعیت و زمان تبدیل می‌کند.",
+          "problem": "معلومات برنامه در ساحه جمع‌آوری می‌شود اما در صفحات اکسل پراکنده می‌ماند، و آماده کردن گزارش برای تمویل‌کنندگان روزها کار دستی می‌گیرد.",
+          "features": [
+            {
+              "title": "پیگیری شاخص‌ها",
+              "text": "پیشرفت هر شاخص و سکتور را در برابر اهداف دنبال کنید."
+            },
+            {
+              "title": "تفکیک مستفیدین",
+              "text": "نتایج را بر اساس ولایت، ولسوالی، جنسیت و گروه سنی ببینید."
+            },
+            {
+              "title": "هماهنگ با جمع‌آوری معلومات شما",
+              "text": "از معلومات KoboToolbox، SurveyCTO یا ActivityInfo استفاده می‌کند."
+            },
+            {
+              "title": "نماهای آماده برای تمویل‌کنندگان",
+              "text": "چارت‌ها و جدول‌های روشن که می‌توانید برای گزارش‌ها شریک یا صادر کنید."
+            }
+          ],
+          "whoFor": "موسسات غیردولتی، ادارات سازمان ملل و برنامه‌های بشردوستانه."
+        },
+        "ps": {
+          "tagline": "ستاسو د پروګرام پایلې، تل تازه او د تمویلوونکو لپاره چمتو.",
+          "summary": "د څارنې، ارزونې، حساب ورکونې او زده کړې (MEAL) ډشبورډ چې ساحوي معلومات د سکتور، ځای او وخت له مخې په روښانه شاخصونو اړوي.",
+          "problem": "د پروګرام معلومات په ساحه کې راټولېږي خو په ویشلو ایکسل پاڼو کې پاتې کېږي، او د تمویلوونکو لپاره د راپور چمتو کول څو ورځې لاسي کار غواړي.",
+          "features": [
+            {
+              "title": "د شاخصونو تعقیب",
+              "text": "د هر شاخص او سکتور پرمختګ د موخو په پرتله وڅارئ."
+            },
+            {
+              "title": "د ګټه اخیستونکو وېش",
+              "text": "پایلې د ولایت، ولسوالۍ، جنسیت او عمر ډلې له مخې وګورئ."
+            },
+            {
+              "title": "ستاسو د معلوماتو راټولولو سره برابر",
+              "text": "د KoboToolbox، SurveyCTO یا ActivityInfo معلومات کاروي."
+            },
+            {
+              "title": "د تمویلوونکو لپاره چمتو بڼې",
+              "text": "روښانه چارټونه او جدولونه چې د راپورونو لپاره یې شریکولی یا صادرولی شئ."
+            }
+          ],
+          "whoFor": "نادولتي موسسې، د ملګرو ملتونو ادارې او بشري پروګرامونه."
+        }
+      },
+      "tech": {
+        "stack": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JSON"
+        ],
+        "notes": {
+          "en": "The live demo runs entirely in your browser with sample data.",
+          "fa": "دموی زنده به‌طور کامل در مرورگر شما با معلومات نمونه اجرا می‌شود.",
+          "ps": "ژوندی ډیمو په بشپړ ډول ستاسو په براوزر کې د نمونې معلوماتو سره چلېږي."
+        }
+      }
+    },
+    {
+      "id": "covid-dashboard",
+      "type": "product",
+      "category": "data",
+      "audience": [
+        "ngo",
+        "business"
+      ],
+      "status": "live-demo",
+      "featured": true,
+      "order": 10,
+      "links": {
+        "demo": "https://ahmad0908-psr.github.io/Covid-19-Intelligence-Dashboard/",
+        "repo": ""
+      },
+      "media": {
+        "cover": "assets/projects/covid-dashboard/cover.jpg",
+        "screenshots": [
+          {
+            "src": "assets/projects/covid-dashboard/world_map.jpg",
+            "caption": {
+              "en": "Global map",
+              "fa": "نقشه جهانی",
+              "ps": "نړیواله نقشه"
+            }
+          },
+          {
+            "src": "assets/projects/covid-dashboard/afghanistan_data.jpg",
+            "caption": {
+              "en": "Afghanistan country profile",
+              "fa": "پروفایل کشور افغانستان",
+              "ps": "د افغانستان د هېواد پروفایل"
+            }
+          },
+          {
+            "src": "assets/projects/covid-dashboard/trends.jpg",
+            "caption": {
+              "en": "Trends",
+              "fa": "روندها",
+              "ps": "رجحانونه"
+            }
+          },
+          {
+            "src": "assets/projects/covid-dashboard/comparison_countries.jpg",
+            "caption": {
+              "en": "Country comparison",
+              "fa": "مقایسه کشورها",
+              "ps": "د هېوادونو پرتله"
+            }
+          },
+          {
+            "src": "assets/projects/covid-dashboard/data_explorer.jpg",
+            "caption": {
+              "en": "Data explorer",
+              "fa": "جستجوگر معلومات",
+              "ps": "د معلوماتو لټوونکی"
+            }
+          }
+        ],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "content": {
+        "en": {
+          "name": "COVID-19 Intelligence Dashboard",
+          "tagline": "Pandemic data from global to country level, on an interactive map, charts and tables.",
+          "summary": "A public-health analytics dashboard with ten connected views: a 3D globe map, country profiles, trends, comparisons, vaccination, rankings, a data explorer and data-quality checks. It opens on Afghanistan by default.",
+          "problem": "Health data usually arrives as large tables that are hard to read, compare across countries or trust, so decisions wait for someone to build the charts by hand.",
+          "features": [
+            {
+              "title": "Interactive globe map",
+              "text": "Color countries by eight measures, play the timeline day by day, and add point, label and heat-map layers."
+            },
+            {
+              "title": "Country profiles",
+              "text": "Cases, deaths, rates per million, case fatality and vaccination for each country, with charts and automatic observations."
+            },
+            {
+              "title": "Trends and comparisons",
+              "text": "Zoomable trend charts with daily, weekly or monthly views, and side-by-side comparison of up to five countries."
+            },
+            {
+              "title": "Rankings and vaccination",
+              "text": "Rank countries by seven measures, filter by region, and follow vaccination progress."
+            },
+            {
+              "title": "Data explorer",
+              "text": "Search, sort and filter more than 43,000 daily records, then export them to CSV."
+            },
+            {
+              "title": "Data-quality checks",
+              "text": "Completeness, validity and consistency scores calculated from real checks on the data."
+            }
+          ],
+          "whoFor": "Health ministries, NGOs, researchers and any team that needs to explore large datasets on a map."
+        },
+        "fa": {
+          "tagline": "معلومات همه‌گیری از سطح جهانی تا سطح کشور، روی نقشه، چارت‌ها و جدول‌های تعاملی.",
+          "summary": "یک داشبورد تحلیل صحت عامه با ده بخش مرتبط: نقشه سه‌بعدی کره زمین، پروفایل کشورها، روندها، مقایسه‌ها، واکسیناسیون، رده‌بندی‌ها، جستجوگر معلومات و بررسی کیفیت معلومات. به‌طور پیش‌فرض با افغانستان باز می‌شود.",
+          "problem": "معلومات صحی معمولاً به شکل جدول‌های بزرگ می‌رسد که خواندن، مقایسه بین کشورها و اعتماد به آن دشوار است، و تصمیم‌ها منتظر می‌مانند تا کسی چارت‌ها را دستی بسازد.",
+          "features": [
+            {
+              "title": "نقشه تعاملی کره زمین",
+              "text": "کشورها را بر اساس هشت شاخص رنگ کنید، خط زمانی را روز به روز اجرا کنید و لایه‌های نقطه، برچسب و نقشه حرارتی اضافه کنید."
+            },
+            {
+              "title": "پروفایل کشورها",
+              "text": "واقعات، فوت‌ها، نرخ‌ها در هر میلیون، نرخ مرگ و میر و واکسیناسیون هر کشور، با چارت‌ها و مشاهدات خودکار."
+            },
+            {
+              "title": "روندها و مقایسه‌ها",
+              "text": "چارت‌های روند قابل زوم با نمای روزانه، هفته‌وار یا ماهوار، و مقایسه تا پنج کشور در کنار هم."
+            },
+            {
+              "title": "رده‌بندی و واکسیناسیون",
+              "text": "کشورها را بر اساس هفت معیار رده‌بندی کنید، بر اساس منطقه فلتر کنید و پیشرفت واکسیناسیون را دنبال کنید."
+            },
+            {
+              "title": "جستجوگر معلومات",
+              "text": "بیش از ۴۳٬۰۰۰ ریکارد روزانه را جستجو، مرتب و فلتر کنید و به CSV صادر کنید."
+            },
+            {
+              "title": "بررسی کیفیت معلومات",
+              "text": "نمره‌های کامل بودن، اعتبار و هماهنگی که از بررسی‌های واقعی روی معلومات محاسبه می‌شوند."
+            }
+          ],
+          "whoFor": "وزارت‌های صحت، موسسات، محققان و هر تیمی که نیاز دارد معلومات بزرگ را روی نقشه بررسی کند."
+        },
+        "ps": {
+          "tagline": "د وبا معلومات له نړیوالې کچې تر هېواد پورې، په متقابل نقشه، چارټونو او جدولونو کې.",
+          "summary": "د عامې روغتیا د تحلیل یو ډشبورډ له لسو تړلو برخو سره: د ځمکې درې‌اړخیزه نقشه، د هېوادونو پروفایلونه، رجحانونه، پرتلې، واکسین، درجه‌بندي، د معلوماتو لټوونکی او د معلوماتو د کیفیت ازموینې. په ډیفالټ ډول له افغانستان سره پرانیستل کېږي.",
+          "problem": "روغتیایي معلومات معمولاً د لویو جدولونو په بڼه راځي چې لوستل، د هېوادونو ترمنځ پرتله او پرې باور کول یې ستونزمن وي، او پرېکړې تر هغه ځنډېږي چې څوک په لاس چارټونه جوړ کړي.",
+          "features": [
+            {
+              "title": "د ځمکې متقابله نقشه",
+              "text": "هېوادونه د اتو شاخصونو له مخې رنګ کړئ، مهال‌وېش ورځ په ورځ وچلوئ، او د ټکو، نښو او تودوخې نقشې پاڼې ورزیاتې کړئ."
+            },
+            {
+              "title": "د هېوادونو پروفایلونه",
+              "text": "د هر هېواد پېښې، مړینې، په میلیون کې کچې، د مړینې کچه او واکسین، له چارټونو او اتومات کتنو سره."
+            },
+            {
+              "title": "رجحانونه او پرتلې",
+              "text": "د زوم وړ رجحان چارټونه له ورځني، اونیز یا میاشتني لید سره، او تر پنځو هېوادونو پورې څنګ په څنګ پرتله."
+            },
+            {
+              "title": "درجه‌بندي او واکسین",
+              "text": "هېوادونه د اوو معیارونو له مخې درجه‌بندي کړئ، د سیمې له مخې یې فلټر کړئ، او د واکسین پرمختګ وڅارئ."
+            },
+            {
+              "title": "د معلوماتو لټوونکی",
+              "text": "له ۴۳٬۰۰۰ څخه ډېر ورځني ریکارډونه ولټوئ، ترتیب او فلټر یې کړئ، او CSV ته یې صادر کړئ."
+            },
+            {
+              "title": "د معلوماتو د کیفیت ازموینې",
+              "text": "د بشپړتیا، اعتبار او همغږۍ نمرې چې په معلوماتو د ریښتینو ازموینو له مخې محاسبه کېږي."
+            }
+          ],
+          "whoFor": "د روغتیا وزارتونه، موسسې، څېړونکي او هر هغه ټیم چې لوی معلومات په نقشه کې څېړي."
+        }
+      },
+      "tech": {
+        "stack": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JSON",
+          "GeoJSON",
+          "MapLibre GL JS",
+          "deck.gl",
+          "Apache ECharts",
+          "Chart.js"
+        ],
+        "notes": {
+          "en": "Built with MapLibre GL JS, deck.gl, Apache ECharts and Chart.js, all running in the browser with no server. Country borders are real map data; the case, death and vaccination figures are a clearly labeled demonstration dataset, and the dashboard is not a medical decision-making tool.",
+          "fa": "با MapLibre GL JS، deck.gl، Apache ECharts و Chart.js ساخته شده و بدون سرور در مرورگر اجرا می‌شود. سرحدات کشورها معلومات واقعی نقشه است؛ ارقام واقعات، فوت‌ها و واکسیناسیون یک مجموعه معلومات نمایشی با برچسب روشن است، و این داشبورد ابزار تصمیم‌گیری طبی نیست.",
+          "ps": "د MapLibre GL JS، deck.gl، Apache ECharts او Chart.js په مرسته جوړ شوی او پرته له سرور په براوزر کې چلېږي. د هېوادونو پولې د نقشې ریښتیني معلومات دي؛ د پېښو، مړینو او واکسین شمېرې د ښودنې لپاره په روښانه ډول نښه شوي معلومات دي، او دا ډشبورډ د طبي پرېکړو وسیله نه ده."
+        }
+      }
+    },
+    {
+      "id": "looker-humanitarian-dashboard",
+      "type": "product",
+      "category": "monitoring",
+      "audience": [
+        "ngo"
+      ],
+      "status": "live-demo",
+      "featured": true,
+      "order": 11,
+      "links": {
+        "demo": "https://datastudio.google.com/s/nMx7YrZ9Bm0",
+        "repo": ""
+      },
+      "media": {
+        "cover": "assets/projects/looker-studio-dashboard/executive_overview.png",
+        "screenshots": [
+          {
+            "src": "assets/projects/looker-studio-dashboard/executive_overview.png",
+            "caption": {
+              "en": "Executive overview",
+              "fa": "نمای کلی مدیریتی",
+              "ps": "اجرائیوي لنډیز"
+            }
+          },
+          {
+            "src": "assets/projects/looker-studio-dashboard/assistance_delivery.png",
+            "caption": {
+              "en": "Assistance delivery",
+              "fa": "توزیع کمک‌ها",
+              "ps": "د مرستو وېش"
+            }
+          },
+          {
+            "src": "assets/projects/looker-studio-dashboard/geographic_coverage.png",
+            "caption": {
+              "en": "Geographic coverage",
+              "fa": "پوشش جغرافیایی",
+              "ps": "جغرافیایي پوښښ"
+            }
+          },
+          {
+            "src": "assets/projects/looker-studio-dashboard/vulnerability&targetting.png",
+            "caption": {
+              "en": "Vulnerability and targeting",
+              "fa": "آسیب‌پذیری و هدف‌گیری",
+              "ps": "زیانمننه او هدف ټاکنه"
+            }
+          },
+          {
+            "src": "assets/projects/looker-studio-dashboard/pdm&quality.png",
+            "caption": {
+              "en": "Post-distribution monitoring and quality",
+              "fa": "نظارت پس از توزیع و کیفیت",
+              "ps": "له وېش وروسته څارنه او کیفیت"
+            }
+          },
+          {
+            "src": "assets/projects/looker-studio-dashboard/outcome&impact.jpg",
+            "caption": {
+              "en": "Outcomes and impact",
+              "fa": "نتایج و اثرات",
+              "ps": "پایلې او اغېز"
+            }
+          },
+          {
+            "src": "assets/projects/looker-studio-dashboard/accountability_crm.png",
+            "caption": {
+              "en": "Accountability and complaints",
+              "fa": "حساب‌دهی و شکایات",
+              "ps": "حساب ورکونه او شکایتونه"
+            }
+          },
+          {
+            "src": "assets/projects/looker-studio-dashboard/donor_reporting.png",
+            "caption": {
+              "en": "Donor reporting",
+              "fa": "گزارش‌دهی به تمویل‌کنندگان",
+              "ps": "تمویلوونکو ته راپور"
+            }
+          }
+        ],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "content": {
+        "en": {
+          "name": "Humanitarian Program Dashboard (Looker Studio)",
+          "tagline": "One dashboard for delivery, coverage, quality and donor reporting.",
+          "summary": "An eight-page Google Looker Studio dashboard for NGO and humanitarian programs: from the executive overview to assistance delivery, geographic coverage, targeting, post-distribution monitoring, outcomes, complaints and donor reporting. Every page filters by date, displacement status, modality and province.",
+          "problem": "Program data sits in separate spreadsheets for distributions, post-distribution surveys and complaints, so answering one donor question means hours of copying and recalculating.",
+          "features": [
+            {
+              "title": "Executive overview",
+              "text": "Total beneficiaries, assistance value, outcome success and satisfaction rates at a glance, broken down by sector and modality."
+            },
+            {
+              "title": "Assistance delivery",
+              "text": "Distribution completion, beneficiaries by sector and modality (cash, voucher, in-kind), and a full distribution log."
+            },
+            {
+              "title": "Geographic coverage",
+              "text": "Beneficiaries by province on a map and in charts, down to district level."
+            },
+            {
+              "title": "Vulnerability and targeting",
+              "text": "Female-headed households, disability, displacement status, priority levels and children under five."
+            },
+            {
+              "title": "Quality, outcomes and accountability",
+              "text": "Post-distribution monitoring, food-security scores before and after, and complaints tracked until they're resolved."
+            },
+            {
+              "title": "Donor reporting",
+              "text": "Ready-made summary tables by province, sector and modality, with beneficiaries over time."
+            }
+          ],
+          "whoFor": "NGOs, UN agencies, clusters and M&E teams running cash, voucher or in-kind assistance."
+        },
+        "fa": {
+          "tagline": "یک داشبورد برای توزیع، پوشش، کیفیت و گزارش‌دهی به تمویل‌کنندگان.",
+          "summary": "یک داشبورد هشت‌صفحه‌ای در Google Looker Studio برای موسسات و برنامه‌های بشردوستانه: از نمای کلی مدیریتی تا توزیع کمک‌ها، پوشش جغرافیایی، هدف‌گیری، نظارت پس از توزیع، نتایج، شکایات و گزارش‌دهی به تمویل‌کنندگان. هر صفحه بر اساس تاریخ، وضعیت بیجاشدگی، نوع کمک و ولایت فلتر می‌شود.",
+          "problem": "معلومات برنامه در صفحات جداگانه برای توزیع‌ها، سروی‌های پس از توزیع و شکایات نگهداری می‌شود، پس پاسخ دادن به یک سوال تمویل‌کننده ساعت‌ها کاپی و محاسبه دوباره می‌گیرد.",
+          "features": [
+            {
+              "title": "نمای کلی مدیریتی",
+              "text": "مجموع مستفیدین، ارزش کمک‌ها، نرخ موفقیت نتایج و نرخ رضایت در یک نگاه، با تفکیک بر اساس سکتور و نوع کمک."
+            },
+            {
+              "title": "توزیع کمک‌ها",
+              "text": "میزان تکمیل توزیع، مستفیدین بر اساس سکتور و نوع کمک (نقدی، واوچر، جنسی) و فهرست کامل توزیع‌ها."
+            },
+            {
+              "title": "پوشش جغرافیایی",
+              "text": "مستفیدین بر اساس ولایت روی نقشه و چارت‌ها، تا سطح ولسوالی."
+            },
+            {
+              "title": "آسیب‌پذیری و هدف‌گیری",
+              "text": "خانواده‌های زن‌سرپرست، معلولیت، وضعیت بیجاشدگی، سطح اولویت و کودکان زیر پنج سال."
+            },
+            {
+              "title": "کیفیت، نتایج و حساب‌دهی",
+              "text": "نظارت پس از توزیع، نمره امنیت غذایی قبل و بعد، و پیگیری شکایات تا حل شدن."
+            },
+            {
+              "title": "گزارش‌دهی به تمویل‌کنندگان",
+              "text": "جدول‌های خلاصه آماده بر اساس ولایت، سکتور و نوع کمک، همراه با مستفیدین در طول زمان."
+            }
+          ],
+          "whoFor": "موسسات غیردولتی، ادارات سازمان ملل، کلسترها و تیم‌های نظارت و ارزیابی که کمک نقدی، واوچر یا جنسی ارائه می‌کنند."
+        },
+        "ps": {
+          "tagline": "یو ډشبورډ د وېش، پوښښ، کیفیت او تمویلوونکو ته د راپور ورکولو لپاره.",
+          "summary": "په Google Looker Studio کې اته‌پاڼیز ډشبورډ د موسسو او بشري پروګرامونو لپاره: له اجرائیوي لنډیز څخه نیولې د مرستو وېش، جغرافیایي پوښښ، هدف ټاکنې، له وېش وروسته څارنې، پایلو، شکایتونو او تمویلوونکو ته د راپور ورکولو پورې. هره پاڼه د نېټې، بې‌ځایه کېدو حالت، د مرستې ډول او ولایت له مخې فلټر کېږي.",
+          "problem": "د پروګرام معلومات د وېشونو، له وېش وروسته سروې ګانو او شکایتونو لپاره په جلا پاڼو کې ساتل کېږي، نو د یو تمویلوونکي یوې پوښتنې ته ځواب ورکول څو ساعته کاپي او بیا محاسبه غواړي.",
+          "features": [
+            {
+              "title": "اجرائیوي لنډیز",
+              "text": "ټول ګټه اخیستونکي، د مرستو ارزښت، د پایلو د بریا کچه او د رضایت کچه په یوه نظر، د سکتور او مرستې ډول له مخې وېش سره."
+            },
+            {
+              "title": "د مرستو وېش",
+              "text": "د وېش بشپړتیا، ګټه اخیستونکي د سکتور او مرستې ډول (نغدي، واوچر، جنسي) له مخې، او د وېشونو بشپړ لیست."
+            },
+            {
+              "title": "جغرافیایي پوښښ",
+              "text": "ګټه اخیستونکي د ولایت له مخې په نقشه او چارټونو کې، تر ولسوالۍ پورې."
+            },
+            {
+              "title": "زیانمننه او هدف ټاکنه",
+              "text": "ښځینه سرپرسته کورنۍ، معلولیت، د بې‌ځایه کېدو حالت، د لومړیتوب کچه او له پنځو کلونو کم ماشومان."
+            },
+            {
+              "title": "کیفیت، پایلې او حساب ورکونه",
+              "text": "له وېش وروسته څارنه، د خوړو د خوندیتوب نمره مخکې او وروسته، او شکایتونه تر حل پورې تعقیب."
+            },
+            {
+              "title": "تمویلوونکو ته راپور",
+              "text": "د ولایت، سکتور او مرستې ډول له مخې چمتو لنډیز جدولونه، د وخت په تېرېدو سره د ګټه اخیستونکو سره."
+            }
+          ],
+          "whoFor": "نادولتي موسسې، د ملګرو ملتونو ادارې، کلسترونه او د څارنې او ارزونې ټیمونه چې نغدي، واوچر یا جنسي مرسته وړاندې کوي."
+        }
+      },
+      "tech": {
+        "stack": [
+          "Google Looker Studio",
+          "Google BigQuery",
+          "Google Sheets"
+        ],
+        "notes": {
+          "en": "Built in Google Looker Studio on data from Google BigQuery and Google Sheets, and opens there in a new tab. It runs on a made-up demonstration dataset: the figures are not real program data.",
+          "fa": "در Google Looker Studio با معلومات Google BigQuery و Google Sheets ساخته شده و در یک تب جدید همان‌جا باز می‌شود. با یک مجموعه معلومات نمایشی ساختگی کار می‌کند: ارقام آن معلومات واقعی برنامه نیستند.",
+          "ps": "په Google Looker Studio کې د Google BigQuery او Google Sheets له معلوماتو سره جوړ شوی، او هلته په نوې ټب کې پرانیستل کېږي. د ښودنې لپاره په جوړو شویو معلوماتو چلېږي: شمېرې یې د پروګرام ریښتیني معلومات نه دي."
+        }
+      }
+    },
+    {
+      "id": "streamlit-meal-dashboard",
+      "type": "product",
+      "category": "monitoring",
+      "audience": [
+        "ngo"
+      ],
+      "status": "live-demo",
+      "featured": true,
+      "order": 12,
+      "links": {
+        "demo": "https://humanitarian-monitoring-dashboard.streamlit.app/",
+        "repo": ""
+      },
+      "media": {
+        "cover": "assets/projects/streamlit-dashboard/executive_overview.jpg",
+        "screenshots": [
+          {
+            "src": "assets/projects/streamlit-dashboard/executive_overview.jpg",
+            "caption": {
+              "en": "Overview and key indicators",
+              "fa": "نمای کلی و شاخص‌های کلیدی",
+              "ps": "عمومي کتنه او کلیدي شاخصونه"
+            }
+          },
+          {
+            "src": "assets/projects/streamlit-dashboard/distribution_analysis.jpg",
+            "caption": {
+              "en": "Distribution analysis",
+              "fa": "تحلیل توزیع",
+              "ps": "د وېش تحلیل"
+            }
+          },
+          {
+            "src": "assets/projects/streamlit-dashboard/assistance_analysis.jpg",
+            "caption": {
+              "en": "Assistance analysis",
+              "fa": "تحلیل کمک‌ها",
+              "ps": "د مرستو تحلیل"
+            }
+          },
+          {
+            "src": "assets/projects/streamlit-dashboard/average_indicators.jpg",
+            "caption": {
+              "en": "Average indicators by province",
+              "fa": "شاخص‌های اوسط بر اساس ولایت",
+              "ps": "د ولایت له مخې منځني شاخصونه"
+            }
+          },
+          {
+            "src": "assets/projects/streamlit-dashboard/time_trends.jpg",
+            "caption": {
+              "en": "Trends over time",
+              "fa": "روندها در طول زمان",
+              "ps": "د وخت په تېرېدو سره رجحانونه"
+            }
+          },
+          {
+            "src": "assets/projects/streamlit-dashboard/data_explorer.jpg",
+            "caption": {
+              "en": "Data explorer",
+              "fa": "جستجوگر معلومات",
+              "ps": "د معلوماتو لټوونکی"
+            }
+          }
+        ],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "content": {
+        "en": {
+          "name": "Humanitarian Monitoring Dashboard (Streamlit)",
+          "tagline": "Household survey results, explored with live filters in a Python web app.",
+          "summary": "A Python and Streamlit MEAL dashboard for household monitoring surveys: key indicators at the top, then analysis, monthly trends and the full dataset in three tabs. Filter everything by province, district, survey round (baseline or endline), gender of household head and donor.",
+          "problem": "Data from baseline and endline surveys usually ends up in large spreadsheets, so comparing provinces, survey rounds or donors means building new pivot tables every time.",
+          "features": [
+            {
+              "title": "Key indicators",
+              "text": "Households surveyed, provinces covered, total assistance and average satisfaction, updated instantly by every filter."
+            },
+            {
+              "title": "Distribution analysis",
+              "text": "Households by province, gender of household head, sector and survey round."
+            },
+            {
+              "title": "Assistance analysis",
+              "text": "Assistance value by province, implementing partner and sector."
+            },
+            {
+              "title": "Average indicators",
+              "text": "Satisfaction, household size, WASH access and food security scores compared across provinces."
+            },
+            {
+              "title": "Monthly trends",
+              "text": "Assessments, assistance and satisfaction month by month."
+            },
+            {
+              "title": "Data explorer",
+              "text": "The filtered dataset in a scrollable table, ready to check row by row."
+            }
+          ],
+          "whoFor": "NGOs and M&E teams running household surveys with baseline and endline rounds."
+        },
+        "fa": {
+          "tagline": "نتایج سروی خانواده‌ها، با فلترهای زنده در یک اپلیکیشن ویب پایتون.",
+          "summary": "یک داشبورد MEAL ساخته‌شده با پایتون و Streamlit برای سروی‌های نظارتی خانواده‌ها: شاخص‌های کلیدی در بالا، سپس تحلیل، روندهای ماهوار و کل معلومات در سه تب. همه چیز بر اساس ولایت، ولسوالی، دور سروی (ابتدایی یا نهایی)، جنسیت سرپرست خانواده و تمویل‌کننده فلتر می‌شود.",
+          "problem": "معلومات سروی‌های ابتدایی و نهایی معمولاً در صفحات اکسل بزرگ می‌ماند، پس مقایسه ولایت‌ها، دورهای سروی یا تمویل‌کنندگان هر بار نیاز به ساختن جدول‌های جدید دارد.",
+          "features": [
+            {
+              "title": "شاخص‌های کلیدی",
+              "text": "تعداد خانواده‌های سروی‌شده، ولایت‌های تحت پوشش، مجموع کمک‌ها و اوسط رضایت، که با هر فلتر فوراً به‌روز می‌شوند."
+            },
+            {
+              "title": "تحلیل توزیع",
+              "text": "خانواده‌ها بر اساس ولایت، جنسیت سرپرست خانواده، سکتور و دور سروی."
+            },
+            {
+              "title": "تحلیل کمک‌ها",
+              "text": "ارزش کمک‌ها بر اساس ولایت، شریک تطبیقی و سکتور."
+            },
+            {
+              "title": "شاخص‌های اوسط",
+              "text": "نمره‌های رضایت، اندازه خانواده، دسترسی به آب و حفظ‌الصحه و امنیت غذایی در مقایسه بین ولایت‌ها."
+            },
+            {
+              "title": "روندهای ماهوار",
+              "text": "ارزیابی‌ها، کمک‌ها و رضایت ماه به ماه."
+            },
+            {
+              "title": "جستجوگر معلومات",
+              "text": "معلومات فلترشده در یک جدول قابل پیمایش، آماده برای بررسی ردیف به ردیف."
+            }
+          ],
+          "whoFor": "موسسات و تیم‌های نظارت و ارزیابی که سروی خانواده‌ها را با دورهای ابتدایی و نهایی انجام می‌دهند."
+        },
+        "ps": {
+          "tagline": "د کورنیو د سروې پایلې، د پایتون په یوه ویب اپلیکیشن کې له ژوندیو فلټرونو سره.",
+          "summary": "د پایتون او Streamlit په مرسته جوړ شوی MEAL ډشبورډ د کورنیو د څارنې سروې ګانو لپاره: کلیدي شاخصونه پورته، بیا تحلیل، میاشتني رجحانونه او ټول معلومات په دریو ټبونو کې. هر څه د ولایت، ولسوالۍ، د سروې دور (لومړنی یا وروستی)، د کورنۍ د سرپرست جنسیت او تمویلوونکي له مخې فلټر کېږي.",
+          "problem": "د لومړنیو او وروستیو سروې ګانو معلومات معمولاً په لویو ایکسل پاڼو کې پاتې کېږي، نو د ولایتونو، د سروې دورونو یا تمویلوونکو پرتله هر ځل د نویو جدولونو جوړول غواړي.",
+          "features": [
+            {
+              "title": "کلیدي شاخصونه",
+              "text": "سروې شوې کورنۍ، تر پوښښ لاندې ولایتونه، ټولې مرستې او منځنی رضایت، چې له هر فلټر سره سمدلاسه تازه کېږي."
+            },
+            {
+              "title": "د وېش تحلیل",
+              "text": "کورنۍ د ولایت، د کورنۍ د سرپرست جنسیت، سکتور او د سروې دور له مخې."
+            },
+            {
+              "title": "د مرستو تحلیل",
+              "text": "د مرستو ارزښت د ولایت، پلي کوونکي شریک او سکتور له مخې."
+            },
+            {
+              "title": "منځني شاخصونه",
+              "text": "د رضایت، د کورنۍ اندازې، اوبو او حفظ الصحې ته لاسرسي او د خوړو د خوندیتوب نمرې د ولایتونو ترمنځ پرتله."
+            },
+            {
+              "title": "میاشتني رجحانونه",
+              "text": "ارزونې، مرستې او رضایت میاشت په میاشت."
+            },
+            {
+              "title": "د معلوماتو لټوونکی",
+              "text": "فلټر شوي معلومات په یوه جدول کې، د قطار په قطار کتنې لپاره چمتو."
+            }
+          ],
+          "whoFor": "موسسې او د څارنې او ارزونې ټیمونه چې د کورنیو سروې د لومړني او وروستي دور سره ترسره کوي."
+        }
+      },
+      "tech": {
+        "stack": [
+          "Python",
+          "Pandas",
+          "Plotly",
+          "Streamlit"
+        ],
+        "notes": {
+          "en": "Built in Python with Pandas, Plotly and Streamlit, and hosted on Streamlit Community Cloud. It runs on a made-up demonstration dataset. If nobody has opened it for a while, the app may take a few seconds to wake up.",
+          "fa": "با پایتون، Pandas، Plotly و Streamlit ساخته شده و روی Streamlit Community Cloud میزبانی می‌شود. با یک مجموعه معلومات نمایشی ساختگی کار می‌کند. اگر مدتی کسی آن را باز نکرده باشد، ممکن است چند ثانیه طول بکشد تا اپلیکیشن فعال شود.",
+          "ps": "د پایتون، Pandas، Plotly او Streamlit په مرسته جوړ شوی او په Streamlit Community Cloud کې کوربه شوی. د ښودنې لپاره په جوړو شویو معلوماتو چلېږي. که څه موده چا پرانیستی نه وي، کېدای شي اپلیکیشن د فعالېدو لپاره څو ثانیې ونیسي."
+        }
+      }
+    },
+    {
+      "id": "apps-script-evoucher",
+      "type": "product",
+      "category": "automation",
+      "audience": [
+        "ngo"
+      ],
+      "status": "live-demo",
+      "featured": true,
+      "order": 13,
+      "links": {
+        "demo": "https://script.google.com/macros/s/AKfycbxv540wKCSLxJ_mry4ugWQolC6L2hZNv1PzajVLK6w-8kQwNuv4yY_-05FtMMDPhjeGJA/exec",
+        "repo": ""
+      },
+      "media": {
+        "cover": "assets/projects/app-script-app/3. overview_dashboard.jpg",
+        "screenshots": [
+          {
+            "src": "assets/projects/app-script-app/1. register_tab.jpg",
+            "caption": {
+              "en": "Register a beneficiary",
+              "fa": "ثبت یک مستفید",
+              "ps": "د ګټه اخیستونکي ثبتول"
+            }
+          },
+          {
+            "src": "assets/projects/app-script-app/2. redeem_tab.jpg",
+            "caption": {
+              "en": "Redeem a voucher",
+              "fa": "استفاده از واوچر",
+              "ps": "د واوچر کارول"
+            }
+          },
+          {
+            "src": "assets/projects/app-script-app/3. overview_dashboard.jpg",
+            "caption": {
+              "en": "Programme overview",
+              "fa": "نمای کلی برنامه",
+              "ps": "د پروګرام لنډیز"
+            }
+          },
+          {
+            "src": "assets/projects/app-script-app/4. recent_issued_vouchers_dashbard.jpg",
+            "caption": {
+              "en": "Recently issued vouchers",
+              "fa": "واوچرهای اخیراً صادرشده",
+              "ps": "وروستي صادر شوي واوچرونه"
+            }
+          }
+        ],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "content": {
+        "en": {
+          "name": "E-Voucher Distribution System (Google Apps Script)",
+          "tagline": "Register beneficiaries, issue QR-code vouchers and redeem each one only once.",
+          "summary": "A web app for humanitarian e-voucher programs, built entirely on Google Apps Script. Registering a beneficiary issues a one-time voucher with a QR code, saves a PDF copy to Google Drive and e-mails it. A vendor scans the QR code and redeems it with a PIN, and a live overview shows vouchers issued, redeemed, active and expired by province.",
+          "problem": "With paper vouchers and spreadsheets it's easy to issue duplicates, redeem the same voucher twice and lose track of who received what, and reconciling with vendors takes days.",
+          "features": [
+            {
+              "title": "Beneficiary registration",
+              "text": "A validated form with a duplicate check by beneficiary ID, consent, and an entitlement calculated from household size."
+            },
+            {
+              "title": "PDF vouchers with QR codes",
+              "text": "Each voucher is generated from an editable Google Docs template, saved to Drive and e-mailed to the beneficiary."
+            },
+            {
+              "title": "One-time redemption",
+              "text": "Vendors look up or scan the QR code and confirm with a PIN. A voucher can never be redeemed twice, and wrong PINs lock out after five tries."
+            },
+            {
+              "title": "Live programme overview",
+              "text": "Vouchers issued, redeemed, active and expired, redemption rates by province, and the latest redemption attempts."
+            },
+            {
+              "title": "Automatic jobs",
+              "text": "A nightly job expires old vouchers, and a weekly summary report is e-mailed automatically."
+            },
+            {
+              "title": "Audit trail and data protection",
+              "text": "Every redemption attempt is logged, names are masked and the PDFs stay private."
+            }
+          ],
+          "whoFor": "NGOs and humanitarian programs delivering cash or voucher assistance, and any team already working in Google Workspace.",
+          "demoNote": "Opens in a new tab. Register a made-up beneficiary, then redeem the voucher on the Redeem tab with a demo vendor PIN (shown on the page). All data is fictional."
+        },
+        "fa": {
+          "tagline": "ثبت مستفیدین، صدور واوچر با کد QR و استفاده فقط یک‌باره از هر واوچر.",
+          "summary": "یک اپلیکیشن ویب برای برنامه‌های واوچر الکترونیکی بشردوستانه که کاملاً روی Google Apps Script ساخته شده است. ثبت یک مستفید، یک واوچر یک‌باره با کد QR صادر می‌کند، نسخه PDF آن را در Google Drive ذخیره کرده و ایمیل می‌کند. فروشنده کد QR را اسکن کرده و با یک PIN آن را استفاده می‌کند، و یک نمای کلی زنده واوچرهای صادرشده، استفاده‌شده، فعال و منقضی را بر اساس ولایت نشان می‌دهد.",
+          "problem": "با واوچرهای کاغذی و صفحات اکسل، صدور تکراری، استفاده دوباره از یک واوچر و گم کردن ریکارد اینکه چه کسی چه دریافت کرده آسان است، و تطبیق حساب با فروشندگان روزها وقت می‌گیرد.",
+          "features": [
+            {
+              "title": "ثبت مستفیدین",
+              "text": "فورم تأییدشده با بررسی تکرار بر اساس شناسه مستفید، رضایت‌نامه و مقدار استحقاق که از اندازه خانواده محاسبه می‌شود."
+            },
+            {
+              "title": "واوچر PDF با کد QR",
+              "text": "هر واوچر از یک قالب قابل ویرایش Google Docs ساخته شده، در Drive ذخیره و به مستفید ایمیل می‌شود."
+            },
+            {
+              "title": "استفاده یک‌باره",
+              "text": "فروشندگان کد QR را جستجو یا اسکن کرده و با PIN تأیید می‌کنند. یک واوچر هرگز دو بار استفاده نمی‌شود و پس از پنج PIN اشتباه قفل می‌شود."
+            },
+            {
+              "title": "نمای کلی زنده برنامه",
+              "text": "واوچرهای صادرشده، استفاده‌شده، فعال و منقضی، نرخ استفاده بر اساس ولایت و آخرین تلاش‌های استفاده."
+            },
+            {
+              "title": "کارهای خودکار",
+              "text": "یک کار شبانه واوچرهای کهنه را منقضی می‌کند و یک گزارش خلاصه هفته‌وار به‌طور خودکار ایمیل می‌شود."
+            },
+            {
+              "title": "ثبت فعالیت‌ها و حفاظت معلومات",
+              "text": "هر تلاش استفاده ثبت می‌شود، نام‌ها پوشیده می‌مانند و فایل‌های PDF خصوصی نگه داشته می‌شوند."
+            }
+          ],
+          "whoFor": "موسسات و برنامه‌های بشردوستانه که کمک نقدی یا واوچری ارائه می‌کنند، و هر تیمی که با Google Workspace کار می‌کند.",
+          "demoNote": "در یک تب جدید باز می‌شود. یک مستفید خیالی ثبت کنید، سپس واوچر را در تب Redeem با PIN نمایشی فروشنده (که در صفحه نشان داده شده) استفاده کنید. همه معلومات خیالی است."
+        },
+        "ps": {
+          "tagline": "ګټه اخیستونکي ثبت کړئ، د QR کوډ لرونکي واوچرونه صادر کړئ او هر یو یوازې یوځل وکاروئ.",
+          "summary": "د بشري برېښنايي واوچر پروګرامونو لپاره یو ویب اپلیکیشن چې په بشپړ ډول په Google Apps Script جوړ شوی. د یو ګټه اخیستونکي ثبتول یو یوځلی واوچر د QR کوډ سره صادروي، د هغه PDF نسخه په Google Drive کې ساتي او برېښنالیک یې کوي. پلورونکی QR کوډ سکن کوي او د PIN په مرسته یې کاروي، او یو ژوندی لنډیز د ولایت له مخې صادر شوي، کارول شوي، فعال او تېر شوي واوچرونه ښيي.",
+          "problem": "د کاغذي واوچرونو او ایکسل پاڼو سره تکراري صادرول، د یو واوچر دوه ځله کارول او د دې ورکول چې چا څه ترلاسه کړي اسانه وي، او له پلورونکو سره د حساب برابرول څو ورځې نیسي.",
+          "features": [
+            {
+              "title": "د ګټه اخیستونکو ثبت",
+              "text": "تایید شوی فورم د ګټه اخیستونکي د پېژند له مخې د تکرار ازموینې، رضایت او د کورنۍ له اندازې محاسبه شوې ونډې سره."
+            },
+            {
+              "title": "د QR کوډ لرونکي PDF واوچرونه",
+              "text": "هر واوچر د Google Docs له یو د سمون وړ قالب څخه جوړېږي، په Drive کې ساتل کېږي او ګټه اخیستونکي ته برېښنالیک کېږي."
+            },
+            {
+              "title": "یوځلی کارونه",
+              "text": "پلورونکي QR کوډ لټوي یا سکن کوي او د PIN په مرسته یې تاییدوي. یو واوچر هېڅکله دوه ځله نه کارول کېږي، او له پنځو غلطو PIN وروسته قفل کېږي."
+            },
+            {
+              "title": "د پروګرام ژوندی لنډیز",
+              "text": "صادر شوي، کارول شوي، فعال او تېر شوي واوچرونه، د ولایت له مخې د کارونې کچه او وروستۍ هڅې."
+            },
+            {
+              "title": "اتومات دندې",
+              "text": "یوه شپنۍ دنده زاړه واوچرونه تېروي، او یو اونیز لنډیز راپور په اتومات ډول برېښنالیک کېږي."
+            },
+            {
+              "title": "د فعالیتونو ثبت او د معلوماتو ساتنه",
+              "text": "د کارونې هره هڅه ثبتېږي، نومونه پټ پاتې کېږي او PDF فایلونه خصوصي ساتل کېږي."
+            }
+          ],
+          "whoFor": "موسسې او بشري پروګرامونه چې نغدي یا واوچري مرسته وړاندې کوي، او هر هغه ټیم چې په Google Workspace کې کار کوي.",
+          "demoNote": "په نوې ټب کې پرانیستل کېږي. یو خیالي ګټه اخیستونکی ثبت کړئ، بیا واوچر د Redeem په ټب کې د پلورونکي د ډیمو PIN په مرسته وکاروئ (چې په پاڼه کې ښودل شوی). ټول معلومات خیالي دي."
+        }
+      },
+      "tech": {
+        "stack": [
+          "Google Apps Script",
+          "Google Sheets",
+          "Google Docs",
+          "Google Drive",
+          "Gmail",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "jsQR"
+        ],
+        "notes": {
+          "en": "Built entirely on Google Apps Script: Sheets as the database, Docs and Drive for the PDF vouchers, Gmail for notifications, time-driven triggers for the nightly and weekly jobs, and LockService so a voucher can never be redeemed twice. QR codes are read in the browser with jsQR. Runs on fictional demo data.",
+          "fa": "کاملاً روی Google Apps Script ساخته شده است: Sheets به‌عنوان دیتابیس، Docs و Drive برای واوچرهای PDF، Gmail برای اطلاع‌رسانی، تریگرهای زمانی برای کارهای شبانه و هفته‌وار، و LockService تا یک واوچر هرگز دو بار استفاده نشود. کدهای QR در مرورگر با jsQR خوانده می‌شوند. با معلومات نمایشی خیالی کار می‌کند.",
+          "ps": "په بشپړ ډول په Google Apps Script جوړ شوی: Sheets د ډیټابیس په توګه، Docs او Drive د PDF واوچرونو لپاره، Gmail د خبرتیاوو لپاره، د وخت پر بنسټ ټریګرونه د شپنیو او اونیزو دندو لپاره، او LockService څو یو واوچر هېڅکله دوه ځله ونه کارول شي. QR کوډونه په براوزر کې د jsQR په مرسته لوستل کېږي. په خیالي ډیمو معلوماتو چلېږي."
+        }
+      }
+    },
+    {
+      "id": "powerbi-hr-analytics",
+      "type": "product",
+      "category": "people",
+      "audience": [
+        "business",
+        "ngo"
+      ],
+      "status": "screenshots",
+      "featured": true,
+      "order": 14,
+      "links": {
+        "demo": "",
+        "repo": ""
+      },
+      "media": {
+        "cover": "assets/projects/powerbi_one/employees.jpg",
+        "screenshots": [
+          {
+            "src": "assets/projects/powerbi_one/employees.jpg",
+            "caption": {
+              "en": "Employees page",
+              "fa": "صفحه کارمندان",
+              "ps": "د کارکوونکو پاڼه"
+            }
+          },
+          {
+            "src": "assets/projects/powerbi_one/finance.jpg",
+            "caption": {
+              "en": "Finance page: salaries and pay gap",
+              "fa": "صفحه مالی: معاشات و فاصله معاش",
+              "ps": "مالي پاڼه: معاشونه او د معاش توپیر"
+            }
+          }
+        ],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "content": {
+        "en": {
+          "name": "HR Analytics Dashboard (Power BI)",
+          "tagline": "Headcount, turnover and pay equity, all in one interactive report.",
+          "summary": "A two-page Power BI report for HR teams. The Employees page tracks hires, separations, retention and turnover, broken down by ethnicity, age, tenure, bonus, department, gender and country. The Finance page compares salaries across departments, job titles, age and tenure groups, and follows the gender pay gap year by year.",
+          "problem": "HR data lives in exports from different systems, so answering simple questions (who is leaving, where are we hiring, are men and women paid fairly) takes a new spreadsheet every time.",
+          "features": [
+            {
+              "title": "HR headline figures",
+              "text": "Hired, separated and net employees, plus retention and turnover rates, at the top of the page."
+            },
+            {
+              "title": "Workforce breakdowns",
+              "text": "Net employees by ethnicity, age group, tenure, bonus category, department and job title, with drill-down."
+            },
+            {
+              "title": "Hiring and separation trends",
+              "text": "Annual and cumulative hires and separations by gender, from the 1990s to today."
+            },
+            {
+              "title": "Employees on a map",
+              "text": "Net employees by country on an interactive map."
+            },
+            {
+              "title": "Salary and pay-gap analysis",
+              "text": "Maximum, average and minimum salaries, average pay by department, job title, age and tenure, and a year-by-year gender pay gap chart."
+            },
+            {
+              "title": "Easy filtering",
+              "text": "Page navigation, a search bar, slicers for salary category, business unit, country and city, a panel listing the active filters, and one-click \"Clear all slicers\"."
+            }
+          ],
+          "whoFor": "HR departments, people-analytics teams and managers of organizations with many staff."
+        },
+        "fa": {
+          "tagline": "تعداد کارمندان، ترک کار و برابری معاش، همه در یک گزارش تعاملی.",
+          "summary": "یک گزارش دوصفحه‌ای Power BI برای تیم‌های منابع بشری. صفحه کارمندان، استخدام‌ها، جدایی‌ها، ماندگاری و ترک کار را با تفکیک بر اساس قومیت، سن، سابقه کار، پاداش، دیپارتمنت، جنسیت و کشور پیگیری می‌کند. صفحه مالی معاشات را بین دیپارتمنت‌ها، عناوین وظیفه، گروه‌های سنی و سابقه کار مقایسه کرده و فاصله معاش بین زن و مرد را سال به سال دنبال می‌کند.",
+          "problem": "معلومات منابع بشری در فایل‌های صادرشده از سیستم‌های مختلف پراکنده است، پس پاسخ به سوالات ساده (چه کسی کار را ترک می‌کند، کجا استخدام می‌کنیم، آیا زنان و مردان معاش برابر می‌گیرند) هر بار یک صفحه اکسل جدید می‌خواهد.",
+          "features": [
+            {
+              "title": "ارقام اصلی منابع بشری",
+              "text": "کارمندان استخدام‌شده، جداشده و خالص، همراه با نرخ ماندگاری و ترک کار در بالای صفحه."
+            },
+            {
+              "title": "تفکیک نیروی کار",
+              "text": "کارمندان خالص بر اساس قومیت، گروه سنی، سابقه کار، کتگوری پاداش، دیپارتمنت و عنوان وظیفه، با امکان دیدن جزئیات بیشتر."
+            },
+            {
+              "title": "روند استخدام و جدایی",
+              "text": "استخدام‌ها و جدایی‌های سالانه و تجمعی بر اساس جنسیت، از دهه ۱۹۹۰ تا امروز."
+            },
+            {
+              "title": "کارمندان روی نقشه",
+              "text": "کارمندان خالص بر اساس کشور روی یک نقشه تعاملی."
+            },
+            {
+              "title": "تحلیل معاش و فاصله معاش",
+              "text": "بالاترین، اوسط و پایین‌ترین معاش، اوسط معاش بر اساس دیپارتمنت، عنوان وظیفه، سن و سابقه کار، و چارت سال به سال فاصله معاش بین زن و مرد."
+            },
+            {
+              "title": "فلتر آسان",
+              "text": "رهنمای صفحات، جستجو، فلترهای کتگوری معاش، واحد کاری، کشور و شهر، فهرست فلترهای فعال و پاک کردن همه فلترها با یک کلیک."
+            }
+          ],
+          "whoFor": "دیپارتمنت‌های منابع بشری، تیم‌های تحلیل کارمندان و مدیران سازمان‌هایی با کارمندان زیاد."
+        },
+        "ps": {
+          "tagline": "د کارکوونکو شمېر، د دندې پرېښودل او د معاش برابري، ټول په یوه متقابل راپور کې.",
+          "summary": "د بشري سرچینو ټیمونو لپاره د Power BI دوه‌پاڼیز راپور. د کارکوونکو پاڼه ګومارنې، جلاکېدنې، پاتې کېدل او د دندې پرېښودل د قومیت، عمر، د کار سابقې، بونس، څانګې، جنسیت او هېواد له مخې تعقیبوي. مالي پاڼه د څانګو، دندو، عمر او سابقې ډلو ترمنځ معاشونه پرتله کوي او د نارینه او ښځینه د معاش توپیر کال په کال څاري.",
+          "problem": "د بشري سرچینو معلومات د بېلابېلو سیسټمونو په صادر شویو فایلونو کې دي، نو ساده پوښتنو ته ځواب (څوک دنده پرېږدي، چېرته ګومارنه کوو، ایا ښځې او نارینه برابر معاش اخلي) هر ځل نوې ایکسل پاڼه غواړي.",
+          "features": [
+            {
+              "title": "د بشري سرچینو اصلي شمېرې",
+              "text": "ګومارل شوي، جلا شوي او خالص کارکوونکي، د پاتې کېدو او دندې پرېښودو له کچو سره، د پاڼې په سر کې."
+            },
+            {
+              "title": "د کاري ځواک وېش",
+              "text": "خالص کارکوونکي د قومیت، عمر ډلې، سابقې، د بونس کټګورۍ، څانګې او دندې له مخې، د لا جزئیاتو له امکان سره."
+            },
+            {
+              "title": "د ګومارنې او جلاکېدو رجحانونه",
+              "text": "کلنۍ او ټولیزې ګومارنې او جلاکېدنې د جنسیت له مخې، له ۱۹۹۰ لسیزې تر نن ورځې."
+            },
+            {
+              "title": "کارکوونکي په نقشه کې",
+              "text": "خالص کارکوونکي د هېواد له مخې په یوه متقابله نقشه کې."
+            },
+            {
+              "title": "د معاش او معاش د توپیر تحلیل",
+              "text": "تر ټولو لوړ، منځنی او ټیټ معاش، د څانګې، دندې، عمر او سابقې له مخې منځنی معاش، او د نارینه او ښځینه د معاش د توپیر کال په کال چارټ."
+            },
+            {
+              "title": "اسانه فلټر",
+              "text": "د پاڼو لارښود، لټون، د معاش کټګورۍ، کاري واحد، هېواد او ښار فلټرونه، د فعالو فلټرونو لیست او په یوه کلیک د ټولو فلټرونو پاکول."
+            }
+          ],
+          "whoFor": "د بشري سرچینو څانګې، د کارکوونکو د تحلیل ټیمونه او د ډېرو کارکوونکو لرونکو سازمانونو مدیران."
+        }
+      },
+      "tech": {
+        "stack": [
+          "Power BI Desktop",
+          "DAX",
+          "Power Query"
+        ],
+        "notes": {
+          "en": "Built in Power BI Desktop on a sample HR dataset. The report isn't published online; the screenshots show both of its pages.",
+          "fa": "در Power BI Desktop با یک مجموعه معلومات نمونه منابع بشری ساخته شده است. این گزارش آنلاین نشر نشده است؛ تصاویر هر دو صفحه آن را نشان می‌دهند.",
+          "ps": "په Power BI Desktop کې د بشري سرچینو د نمونې معلوماتو سره جوړ شوی. دا راپور آنلاین نه دی خپور شوی؛ انځورونه یې دواړه پاڼې ښيي."
+        }
+      }
+    },
+    {
+      "id": "powerbi-sales-profit",
+      "type": "product",
+      "category": "data",
+      "audience": [
+        "business"
+      ],
+      "status": "screenshots",
+      "featured": true,
+      "order": 15,
+      "links": {
+        "demo": "",
+        "repo": ""
+      },
+      "media": {
+        "cover": "assets/projects/powerbi_two/sales_overview.jpg",
+        "screenshots": [
+          {
+            "src": "assets/projects/powerbi_two/sales_overview.jpg",
+            "caption": {
+              "en": "Sales overview by brand and region",
+              "fa": "نمای فروش بر اساس برند و منطقه",
+              "ps": "د برانډ او سیمې له مخې د پلور لنډیز"
+            }
+          },
+          {
+            "src": "assets/projects/powerbi_two/profit_overview.jpg",
+            "caption": {
+              "en": "Profit overview",
+              "fa": "نمای مفاد",
+              "ps": "د ګټې لنډیز"
+            }
+          },
+          {
+            "src": "assets/projects/powerbi_two/profit_by_products.jpg",
+            "caption": {
+              "en": "Top and bottom 10 products",
+              "fa": "۱۰ محصول برتر و ضعیف",
+              "ps": "۱۰ غوره او کمزوري محصولات"
+            }
+          }
+        ],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "content": {
+        "en": {
+          "name": "Sales and Profit Dashboard (Power BI)",
+          "tagline": "Sales, profit and year-on-year growth by brand, product and region.",
+          "summary": "A Power BI sales report for a business selling many brands in many countries. Headline cards show total sales, profit and year-on-year growth against the previous period, monthly trend charts compare each month with last year, and an interactive world map breaks sales and profit down by region and brand. Three views switch between sales, profit and the top or bottom 10 products.",
+          "problem": "When sales data covers many countries, brands and products, managers see the totals but can't tell which brands, regions or products are growing and which are falling behind.",
+          "features": [
+            {
+              "title": "Headline figures",
+              "text": "Total sales, profit and year-on-year growth, each compared with the previous period."
+            },
+            {
+              "title": "Monthly trends",
+              "text": "Sales and profit month by month, against the same months last year, with zoom and drill-down."
+            },
+            {
+              "title": "Sales and profit by location",
+              "text": "An interactive world map with a brand breakdown for every region."
+            },
+            {
+              "title": "Brand performance",
+              "text": "The top 10 brands by sales or profit, with growth or decline arrows."
+            },
+            {
+              "title": "Product ranking",
+              "text": "Switch between the top 10 and bottom 10 products by profit."
+            },
+            {
+              "title": "Built for presenting",
+              "text": "Dark and light themes, a one-click filter reset, and views that switch with a button."
+            }
+          ],
+          "whoFor": "Retailers, distributors and sales teams who sell many products across regions."
+        },
+        "fa": {
+          "tagline": "فروش، مفاد و رشد سالانه بر اساس برند، محصول و منطقه.",
+          "summary": "یک گزارش فروش Power BI برای کسب‌وکاری که برندهای زیادی را در کشورهای زیادی می‌فروشد. کارت‌های اصلی مجموع فروش، مفاد و رشد سالانه را در مقایسه با دوره قبل نشان می‌دهند، چارت‌های روند ماهوار هر ماه را با سال گذشته مقایسه می‌کنند، و یک نقشه تعاملی جهان فروش و مفاد را بر اساس منطقه و برند تفکیک می‌کند. سه نما بین فروش، مفاد و ۱۰ محصول برتر یا ضعیف جابه‌جا می‌شوند.",
+          "problem": "وقتی معلومات فروش کشورها، برندها و محصولات زیادی را در بر می‌گیرد، مدیران مجموع را می‌بینند اما نمی‌دانند کدام برندها، مناطق یا محصولات رشد می‌کنند و کدام عقب می‌مانند.",
+          "features": [
+            {
+              "title": "ارقام اصلی",
+              "text": "مجموع فروش، مفاد و رشد سالانه، هر کدام در مقایسه با دوره قبل."
+            },
+            {
+              "title": "روندهای ماهوار",
+              "text": "فروش و مفاد ماه به ماه در برابر همان ماه‌های سال گذشته، با امکان زوم و دیدن جزئیات بیشتر."
+            },
+            {
+              "title": "فروش و مفاد بر اساس موقعیت",
+              "text": "یک نقشه تعاملی جهان با تفکیک برندها برای هر منطقه."
+            },
+            {
+              "title": "عملکرد برندها",
+              "text": "۱۰ برند برتر بر اساس فروش یا مفاد، با نشانه‌های رشد یا کاهش."
+            },
+            {
+              "title": "رده‌بندی محصولات",
+              "text": "جابه‌جایی بین ۱۰ محصول برتر و ۱۰ محصول ضعیف بر اساس مفاد."
+            },
+            {
+              "title": "مناسب برای ارائه",
+              "text": "حالت تاریک و روشن، پاک کردن فلترها با یک کلیک، و نماهایی که با یک دکمه عوض می‌شوند."
+            }
+          ],
+          "whoFor": "خرده‌فروشان، توزیع‌کنندگان و تیم‌های فروش که محصولات زیادی را در مناطق مختلف می‌فروشند."
+        },
+        "ps": {
+          "tagline": "پلور، ګټه او کلنۍ وده د برانډ، محصول او سیمې له مخې.",
+          "summary": "د Power BI د پلور راپور د داسې کاروبار لپاره چې په ډېرو هېوادونو کې ډېر برانډونه پلوري. اصلي کارتونه ټول پلور، ګټه او کلنۍ وده د تېرې دورې په پرتله ښيي، د میاشتني رجحان چارټونه هره میاشت له تېر کال سره پرتله کوي، او د نړۍ یوه متقابله نقشه پلور او ګټه د سیمې او برانډ له مخې وېشي. درې لیدونه د پلور، ګټې او د ۱۰ غوره یا کمزورو محصولاتو ترمنځ بدلېږي.",
+          "problem": "کله چې د پلور معلومات ډېر هېوادونه، برانډونه او محصولات رانغاړي، مدیران ټولیزې شمېرې ویني خو نه پوهېږي چې کوم برانډونه، سیمې یا محصولات وده کوي او کوم شاته پاتې دي.",
+          "features": [
+            {
+              "title": "اصلي شمېرې",
+              "text": "ټول پلور، ګټه او کلنۍ وده، هر یو د تېرې دورې په پرتله."
+            },
+            {
+              "title": "میاشتني رجحانونه",
+              "text": "پلور او ګټه میاشت په میاشت د تېر کال د همدې میاشتو په پرتله، د زوم او لا جزئیاتو سره."
+            },
+            {
+              "title": "پلور او ګټه د ځای له مخې",
+              "text": "د نړۍ یوه متقابله نقشه چې د هرې سیمې لپاره د برانډونو وېش ښيي."
+            },
+            {
+              "title": "د برانډونو کړنه",
+              "text": "د پلور یا ګټې له مخې ۱۰ غوره برانډونه، د ودې یا کمښت له نښو سره."
+            },
+            {
+              "title": "د محصولاتو درجه‌بندي",
+              "text": "د ګټې له مخې د ۱۰ غوره او ۱۰ کمزورو محصولاتو ترمنځ بدلون."
+            },
+            {
+              "title": "د وړاندې کولو لپاره جوړ",
+              "text": "تیاره او روښانه بڼه، په یوه کلیک د فلټرونو بیا پیلول، او لیدونه چې په یوه تڼۍ بدلېږي."
+            }
+          ],
+          "whoFor": "پرچون پلورونکي، وېشونکي او د پلور ټیمونه چې په بېلابېلو سیمو کې ډېر محصولات پلوري."
+        }
+      },
+      "tech": {
+        "stack": [
+          "Power BI Desktop",
+          "DAX",
+          "Power Query",
+          "ZoomCharts"
+        ],
+        "notes": {
+          "en": "Built in Power BI Desktop on a sample sales dataset, with ZoomCharts custom visuals for the drill-down charts and the map. The report isn't published online; the screenshots show its three views.",
+          "fa": "در Power BI Desktop با یک مجموعه معلومات نمونه فروش ساخته شده و برای چارت‌های قابل جزئیات و نقشه از ویژوال‌های سفارشی ZoomCharts استفاده می‌کند. این گزارش آنلاین نشر نشده است؛ تصاویر سه نمای آن را نشان می‌دهند.",
+          "ps": "په Power BI Desktop کې د پلور د نمونې معلوماتو سره جوړ شوی، او د جزئیاتو وړ چارټونو او نقشې لپاره د ZoomCharts ځانګړي ویژوالونه کاروي. دا راپور آنلاین نه دی خپور شوی؛ انځورونه یې درې لیدونه ښيي."
+        }
+      }
+    },
+    {
+      "id": "power-bi-dashboards",
+      "type": "service",
+      "category": "data",
+      "audience": [
+        "business",
+        "ngo"
+      ],
+      "status": "available",
+      "featured": false,
+      "order": 10,
+      "links": {
+        "demo": "",
+        "repo": ""
+      },
+      "media": {
+        "cover": "assets/projects/powerbi_one/employees.jpg",
+        "screenshots": [],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "samples": [
+        {
+          "title": {
+            "en": "HR analytics dashboard",
+            "fa": "داشبورد تحلیل منابع بشری",
+            "ps": "د بشري سرچینو د تحلیل ډشبورډ"
+          },
+          "url": "product.html?id=powerbi-hr-analytics",
+          "image": "assets/projects/powerbi_one/employees.jpg"
+        },
+        {
+          "title": {
+            "en": "Sales and profit dashboard",
+            "fa": "داشبورد فروش و مفاد",
+            "ps": "د پلور او ګټې ډشبورډ"
+          },
+          "url": "product.html?id=powerbi-sales-profit",
+          "image": "assets/projects/powerbi_two/sales_overview.jpg"
+        }
+      ],
+      "content": {
+        "en": {
+          "name": "Power BI Dashboards",
+          "tagline": "Interactive reports built on the data you already have.",
+          "summary": "Power BI dashboards that connect to your spreadsheets or databases and update as your data changes.",
+          "problem": "Important numbers are buried in large Excel files, and rebuilding the same report every month takes time away from decisions.",
+          "features": [
+            {
+              "title": "Connected to your data",
+              "text": "Excel files, SharePoint lists, SQL databases and more."
+            },
+            {
+              "title": "Clear key figures",
+              "text": "The numbers that matter most, on one screen."
+            },
+            {
+              "title": "Automatic refresh",
+              "text": "Reports update on a schedule, with no copy-pasting."
+            },
+            {
+              "title": "Secure sharing",
+              "text": "Share with managers and donors, with access control."
+            }
+          ],
+          "whoFor": "Management teams, finance units and M&E departments."
+        },
+        "fa": {
+          "tagline": "گزارش‌های تعاملی بر اساس معلوماتی که از قبل دارید.",
+          "summary": "داشبوردهای Power BI که به فایل‌های اکسل یا دیتابیس‌های شما وصل می‌شوند و با تغییر معلومات به‌روز می‌شوند.",
+          "problem": "ارقام مهم در فایل‌های بزرگ اکسل گم شده‌اند، و ساختن دوباره همان گزارش در هر ماه، وقتی را که باید صرف تصمیم‌گیری شود می‌گیرد.",
+          "features": [
+            {
+              "title": "وصل به معلومات شما",
+              "text": "فایل‌های اکسل، لیست‌های SharePoint، دیتابیس‌های SQL و موارد دیگر."
+            },
+            {
+              "title": "ارقام کلیدی روشن",
+              "text": "مهم‌ترین ارقام در یک صفحه."
+            },
+            {
+              "title": "به‌روزرسانی خودکار",
+              "text": "گزارش‌ها طبق برنامه به‌روز می‌شوند، بدون کاپی و پیست."
+            },
+            {
+              "title": "شریک‌سازی امن",
+              "text": "با مدیران و تمویل‌کنندگان شریک کنید، با کنترول دسترسی."
+            }
+          ],
+          "whoFor": "تیم‌های مدیریتی، بخش‌های مالی و بخش‌های نظارت و ارزیابی."
+        },
+        "ps": {
+          "tagline": "متقابل راپورونه، د هغو معلوماتو پر بنسټ چې دمخه یې لرئ.",
+          "summary": "د Power BI ډشبورډونه چې ستاسو له ایکسل فایلونو یا ډیټابېسونو سره نښلي او د معلوماتو په بدلون سره تازه کېږي.",
+          "problem": "مهمې شمېرې په لویو ایکسل فایلونو کې ورکې دي، او هره میاشت د ورته راپور بیا جوړول هغه وخت نیسي چې باید د پرېکړو لپاره وي.",
+          "features": [
+            {
+              "title": "ستاسو له معلوماتو سره نښلول",
+              "text": "ایکسل فایلونه، د SharePoint لیستونه، SQL ډیټابېسونه او نور."
+            },
+            {
+              "title": "روښانه مهمې شمېرې",
+              "text": "تر ټولو مهمې شمېرې په یوه پاڼه کې."
+            },
+            {
+              "title": "اتومات تازه کېدل",
+              "text": "راپورونه د مهالوېش له مخې تازه کېږي، پرته له کاپي او پیسټ."
+            },
+            {
+              "title": "خوندي شریکول",
+              "text": "له مدیرانو او تمویلوونکو سره یې د لاسرسي له کنټرول سره شریک کړئ."
+            }
+          ],
+          "whoFor": "مدیریتي ټیمونه، مالي څانګې او د څارنې او ارزونې څانګې."
+        }
+      },
+      "tech": {
+        "stack": [
+          "Power BI",
+          "Power Query",
+          "DAX",
+          "Excel",
+          "SQL"
+        ],
+        "notes": ""
+      }
+    },
+    {
+      "id": "looker-studio-dashboards",
+      "type": "service",
+      "category": "data",
+      "audience": [
+        "business",
+        "ngo"
+      ],
+      "status": "available",
+      "featured": false,
+      "order": 11,
+      "links": {
+        "demo": "",
+        "repo": ""
+      },
+      "media": {
+        "cover": "assets/projects/looker-studio-dashboard/executive_overview.png",
+        "screenshots": [],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "samples": [
+        {
+          "title": {
+            "en": "Humanitarian program dashboard",
+            "fa": "داشبورد برنامه بشردوستانه",
+            "ps": "د بشري پروګرام ډشبورډ"
+          },
+          "url": "https://datastudio.google.com/s/nMx7YrZ9Bm0",
+          "image": "assets/projects/looker-studio-dashboard/executive_overview.png"
+        }
+      ],
+      "content": {
+        "en": {
+          "name": "Google Looker Studio Dashboards",
+          "tagline": "Free, shareable dashboards connected to Google Sheets.",
+          "summary": "Looker Studio dashboards that anyone can open with a link, built on the Google Sheets and forms your team already uses.",
+          "problem": "Teams collect data in Google Sheets, but turning it into something managers can read means hours of manual charts.",
+          "features": [
+            {
+              "title": "No license cost",
+              "text": "Looker Studio is free, and viewers only need a link."
+            },
+            {
+              "title": "Live from Google Sheets",
+              "text": "Charts update as soon as new data arrives."
+            },
+            {
+              "title": "Filters for every audience",
+              "text": "Viewers can filter by location, date, sector and more."
+            },
+            {
+              "title": "Automated data pipelines",
+              "text": "Python scripts clean and prepare data before it reaches the dashboard."
+            }
+          ],
+          "whoFor": "NGOs and small businesses working in Google Workspace."
+        },
+        "fa": {
+          "tagline": "داشبوردهای رایگان و قابل شریک‌سازی، وصل به Google Sheets.",
+          "summary": "داشبوردهای Looker Studio که هر کسی با یک لینک می‌تواند باز کند، ساخته‌شده بر اساس Google Sheets و فورم‌هایی که تیم شما از قبل استفاده می‌کند.",
+          "problem": "تیم‌ها معلومات را در Google Sheets جمع می‌کنند، اما تبدیل آن به چیزی که مدیران بتوانند بخوانند، ساعت‌ها چارت‌سازی دستی می‌خواهد.",
+          "features": [
+            {
+              "title": "بدون هزینه لایسنس",
+              "text": "Looker Studio رایگان است و بینندگان فقط به یک لینک نیاز دارند."
+            },
+            {
+              "title": "زنده از Google Sheets",
+              "text": "چارت‌ها به محض رسیدن معلومات جدید به‌روز می‌شوند."
+            },
+            {
+              "title": "فلتر برای هر بیننده",
+              "text": "بینندگان می‌توانند بر اساس موقعیت، تاریخ، سکتور و موارد دیگر فلتر کنند."
+            },
+            {
+              "title": "آماده‌سازی خودکار معلومات",
+              "text": "اسکریپت‌های Python معلومات را پیش از رسیدن به داشبورد پاک و آماده می‌کنند."
+            }
+          ],
+          "whoFor": "موسسات و کسب‌وکارهای کوچکی که در Google Workspace کار می‌کنند."
+        },
+        "ps": {
+          "tagline": "وړیا او د شریکولو وړ ډشبورډونه، له Google Sheets سره نښلول شوي.",
+          "summary": "د Looker Studio ډشبورډونه چې هر څوک یې په یوه لینک پرانیستلی شي، د هغو Google Sheets او فورمونو پر بنسټ جوړ شوي چې ستاسو ټیم یې دمخه کاروي.",
+          "problem": "ټیمونه معلومات په Google Sheets کې راټولوي، خو د داسې شي جوړول چې مدیران یې ولوستلی شي، څو ساعته لاسي چارټ جوړول غواړي.",
+          "features": [
+            {
+              "title": "د لایسنس لګښت نشته",
+              "text": "Looker Studio وړیا دی او لیدونکو ته یوازې یو لینک په کار دی."
+            },
+            {
+              "title": "ژوندی له Google Sheets څخه",
+              "text": "چارټونه د نویو معلوماتو په رسېدو سره سمدلاسه تازه کېږي."
+            },
+            {
+              "title": "د هر لیدونکي لپاره فلټرونه",
+              "text": "لیدونکي کولی شي د ځای، نېټې، سکتور او نورو له مخې فلټر کړي."
+            },
+            {
+              "title": "د معلوماتو اتومات چمتو کول",
+              "text": "د Python سکریپټونه معلومات د ډشبورډ ته له رسېدو مخکې پاکوي او چمتو کوي."
+            }
+          ],
+          "whoFor": "هغه موسسې او کوچني کاروبارونه چې په Google Workspace کې کار کوي."
+        }
+      },
+      "tech": {
+        "stack": [
+          "Looker Studio",
+          "Google Sheets",
+          "Python",
+          "SurveyCTO"
+        ],
+        "notes": ""
+      }
+    },
+    {
+      "id": "streamlit-apps",
+      "type": "service",
+      "category": "data",
+      "audience": [
+        "business",
+        "ngo"
+      ],
+      "status": "available",
+      "featured": false,
+      "order": 12,
+      "links": {
+        "demo": "",
+        "repo": ""
+      },
+      "media": {
+        "cover": "assets/projects/streamlit-dashboard/executive_overview.jpg",
+        "screenshots": [],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "samples": [
+        {
+          "title": {
+            "en": "Humanitarian monitoring dashboard",
+            "fa": "داشبورد نظارت بشردوستانه",
+            "ps": "د بشري څارنې ډشبورډ"
+          },
+          "url": "https://humanitarian-monitoring-dashboard.streamlit.app/",
+          "image": "assets/projects/streamlit-dashboard/executive_overview.jpg"
+        }
+      ],
+      "content": {
+        "en": {
+          "name": "Streamlit Dashboards and Data Apps",
+          "tagline": "Python-powered dashboards and tools for serious data work.",
+          "summary": "Interactive web apps built in Python, for analysis that goes beyond what spreadsheet dashboards can handle.",
+          "problem": "Large or messy datasets are too heavy for spreadsheets, and off-the-shelf dashboard tools can't do the calculations you need.",
+          "features": [
+            {
+              "title": "Handles large datasets",
+              "text": "Clean, combine and analyze data that would slow a spreadsheet down."
+            },
+            {
+              "title": "Custom calculations",
+              "text": "Any indicator or formula your program or business needs."
+            },
+            {
+              "title": "Interactive tools",
+              "text": "Filters, maps, downloads and upload forms in one app."
+            },
+            {
+              "title": "Easy to share",
+              "text": "Runs in the browser with a simple link."
+            }
+          ],
+          "whoFor": "M&E teams, analysts and managers working with large datasets."
+        },
+        "fa": {
+          "tagline": "داشبوردها و ابزارهای ساخته‌شده با Python برای کار جدی با معلومات.",
+          "summary": "اپلیکیشن‌های تعاملی ویب که با Python ساخته می‌شوند، برای تحلیل‌هایی که فراتر از توان داشبوردهای اکسلی است.",
+          "problem": "معلومات بزرگ یا نامنظم برای صفحات اکسل سنگین است، و ابزارهای آماده داشبورد نمی‌توانند محاسباتی را که نیاز دارید انجام دهند.",
+          "features": [
+            {
+              "title": "مدیریت معلومات بزرگ",
+              "text": "معلوماتی را که اکسل را کند می‌سازد، پاک، ترکیب و تحلیل کنید."
+            },
+            {
+              "title": "محاسبات سفارشی",
+              "text": "هر شاخص یا فورمولی که برنامه یا کسب‌وکار شما نیاز دارد."
+            },
+            {
+              "title": "ابزارهای تعاملی",
+              "text": "فلترها، نقشه‌ها، دانلودها و فورم‌های آپلود در یک اپلیکیشن."
+            },
+            {
+              "title": "شریک‌سازی آسان",
+              "text": "در مرورگر با یک لینک ساده کار می‌کند."
+            }
+          ],
+          "whoFor": "تیم‌های نظارت و ارزیابی، تحلیلگران و مدیرانی که با معلومات بزرگ کار می‌کنند."
+        },
+        "ps": {
+          "tagline": "د Python پر بنسټ ډشبورډونه او وسایل، د معلوماتو د جدي کار لپاره.",
+          "summary": "متقابل ویب اپلیکیشنونه چې په Python جوړېږي، د هغو تحلیلونو لپاره چې د ایکسل ډشبورډونو له وس څخه وتلي دي.",
+          "problem": "لوی یا ګډوډ معلومات د ایکسل پاڼو لپاره ډېر دروند دي، او چمتو ډشبورډ وسایل هغه محاسبې نه شي کولی چې تاسو ورته اړتیا لرئ.",
+          "features": [
+            {
+              "title": "د لویو معلوماتو اداره",
+              "text": "هغه معلومات پاک، یوځای او تحلیل کړئ چې ایکسل ورو کوي."
+            },
+            {
+              "title": "ځانګړې محاسبې",
+              "text": "هر شاخص یا فورمول چې ستاسو پروګرام یا کاروبار ورته اړتیا لري."
+            },
+            {
+              "title": "متقابل وسایل",
+              "text": "فلټرونه، نقشې، ډاونلوډونه او د اپلوډ فورمونه په یوه اپلیکیشن کې."
+            },
+            {
+              "title": "اسانه شریکول",
+              "text": "په براوزر کې د یوه ساده لینک سره کار کوي."
+            }
+          ],
+          "whoFor": "د څارنې او ارزونې ټیمونه، شنونکي او هغه مدیران چې له لویو معلوماتو سره کار کوي."
+        }
+      },
+      "tech": {
+        "stack": [
+          "Python",
+          "Pandas",
+          "Plotly",
+          "Streamlit"
+        ],
+        "notes": ""
+      }
+    },
+    {
+      "id": "apps-script-tools",
+      "type": "service",
+      "category": "data",
+      "audience": [
+        "business",
+        "ngo"
+      ],
+      "status": "available",
+      "featured": false,
+      "order": 13,
+      "links": {
+        "demo": "",
+        "repo": ""
+      },
+      "media": {
+        "cover": "assets/projects/app-script-app/3. overview_dashboard.jpg",
+        "screenshots": [],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "samples": [
+        {
+          "title": {
+            "en": "E-voucher distribution system",
+            "fa": "سیستم توزیع واوچر الکترونیکی",
+            "ps": "د برېښنايي واوچر د وېش سیسټم"
+          },
+          "url": "https://script.google.com/macros/s/AKfycbxv540wKCSLxJ_mry4ugWQolC6L2hZNv1PzajVLK6w-8kQwNuv4yY_-05FtMMDPhjeGJA/exec",
+          "image": "assets/projects/app-script-app/3. overview_dashboard.jpg"
+        }
+      ],
+      "content": {
+        "en": {
+          "name": "Google Apps Script Apps and Dashboards",
+          "tagline": "Custom tools inside Google Sheets, Forms and Drive.",
+          "summary": "Small web apps, forms and dashboards that run on Google's platform, with no servers to pay for or maintain.",
+          "problem": "Your team lives in Google Sheets, but routine tasks like approvals, attendance or field reporting still happen by hand.",
+          "features": [
+            {
+              "title": "Web apps on Google",
+              "text": "Simple apps your team opens with a link, backed by Google Sheets."
+            },
+            {
+              "title": "Field data tools",
+              "text": "Attendance, check-ins and reporting forms for staff in the field."
+            },
+            {
+              "title": "Connected to your forms",
+              "text": "Pull submissions from KoboToolbox or Google Forms automatically."
+            },
+            {
+              "title": "No hosting costs",
+              "text": "Everything runs inside your Google account."
+            }
+          ],
+          "whoFor": "Teams that already work in Google Workspace."
+        },
+        "fa": {
+          "tagline": "ابزارهای سفارشی درون Google Sheets، Forms و Drive.",
+          "summary": "اپلیکیشن‌های کوچک ویب، فورم‌ها و داشبوردهایی که روی پلتفورم گوگل اجرا می‌شوند، بدون سروری که برای آن پول بپردازید یا نگهداری کنید.",
+          "problem": "تیم شما در Google Sheets کار می‌کند، اما کارهای روزمره مانند تأییدها، حاضری یا گزارش‌دهی ساحوی هنوز دستی انجام می‌شوند.",
+          "features": [
+            {
+              "title": "اپلیکیشن‌های ویب روی گوگل",
+              "text": "اپلیکیشن‌های ساده که تیم شما با یک لینک باز می‌کند و معلومات آن در Google Sheets است."
+            },
+            {
+              "title": "ابزارهای معلومات ساحوی",
+              "text": "حاضری، ثبت ورود و فورم‌های گزارش‌دهی برای کارمندان ساحوی."
+            },
+            {
+              "title": "وصل به فورم‌های شما",
+              "text": "معلومات ارسال‌شده را از KoboToolbox یا Google Forms به‌طور خودکار دریافت کنید."
+            },
+            {
+              "title": "بدون هزینه هاستینگ",
+              "text": "همه چیز درون حساب گوگل شما اجرا می‌شود."
+            }
+          ],
+          "whoFor": "تیم‌هایی که از قبل در Google Workspace کار می‌کنند."
+        },
+        "ps": {
+          "tagline": "ځانګړي وسایل د Google Sheets، Forms او Drive دننه.",
+          "summary": "کوچني ویب اپلیکیشنونه، فورمونه او ډشبورډونه چې د ګوګل په پلاتفورم چلېږي، پرته له دې چې د سرور لپاره پیسې ورکړئ یا یې وساتئ.",
+          "problem": "ستاسو ټیم په Google Sheets کې کار کوي، خو ورځني کارونه لکه تاییدونه، حاضري یا ساحوي راپور ورکول لا هم په لاس ترسره کېږي.",
+          "features": [
+            {
+              "title": "په ګوګل ویب اپلیکیشنونه",
+              "text": "ساده اپلیکیشنونه چې ستاسو ټیم یې په یوه لینک پرانیزي او معلومات یې په Google Sheets کې دي."
+            },
+            {
+              "title": "د ساحوي معلوماتو وسایل",
+              "text": "حاضري، د راتګ ثبت او د ساحوي کارکوونکو لپاره د راپور فورمونه."
+            },
+            {
+              "title": "ستاسو له فورمونو سره نښلول",
+              "text": "له KoboToolbox یا Google Forms څخه لېږل شوي معلومات په اتومات ډول ترلاسه کړئ."
+            },
+            {
+              "title": "د کوربه توب لګښت نشته",
+              "text": "هر څه ستاسو د ګوګل حساب دننه چلېږي."
+            }
+          ],
+          "whoFor": "هغه ټیمونه چې دمخه په Google Workspace کې کار کوي."
+        }
+      },
+      "tech": {
+        "stack": [
+          "Google Apps Script",
+          "Google Sheets",
+          "KoboToolbox"
+        ],
+        "notes": ""
+      }
+    },
+    {
+      "id": "automation",
+      "type": "service",
+      "category": "automation",
+      "audience": [
+        "business",
+        "ngo"
+      ],
+      "status": "available",
+      "featured": false,
+      "order": 14,
+      "links": {
+        "demo": "",
+        "repo": ""
+      },
+      "media": {
+        "cover": "",
+        "screenshots": [],
+        "previewVideo": "",
+        "youtubeId": ""
+      },
+      "samples": [],
+      "content": {
+        "en": {
+          "name": "Python and Apps Script Automation",
+          "tagline": "Let routine data work run itself.",
+          "summary": "Automations that collect, clean, combine and report your data on a schedule, so your team can focus on the work itself.",
+          "problem": "Every week someone downloads data, cleans it, copies it between files and builds the same report again.",
+          "features": [
+            {
+              "title": "Automated reports",
+              "text": "Weekly or monthly reports produced and sent without manual work."
+            },
+            {
+              "title": "Data cleaning",
+              "text": "Duplicates, errors and formatting problems fixed automatically."
+            },
+            {
+              "title": "Tools talking to each other",
+              "text": "Move data between KoboToolbox, SurveyCTO, Google Sheets and databases."
+            },
+            {
+              "title": "Alerts",
+              "text": "Email notifications when something needs attention."
+            }
+          ],
+          "whoFor": "Any team that repeats the same data tasks every week."
+        },
+        "fa": {
+          "tagline": "بگذارید کارهای تکراری معلومات خودبه‌خود انجام شوند.",
+          "summary": "خودکارسازی‌هایی که معلومات شما را طبق برنامه جمع‌آوری، پاک، ترکیب و گزارش می‌کنند، تا تیم شما روی کار اصلی تمرکز کند.",
+          "problem": "هر هفته کسی معلومات را دانلود می‌کند، پاک می‌کند، بین فایل‌ها کاپی می‌کند و همان گزارش را دوباره می‌سازد.",
+          "features": [
+            {
+              "title": "گزارش‌های خودکار",
+              "text": "گزارش‌های هفته‌وار یا ماهوار بدون کار دستی تهیه و ارسال می‌شوند."
+            },
+            {
+              "title": "پاک‌سازی معلومات",
+              "text": "تکرارها، اشتباهات و مشکلات فارمت به‌طور خودکار اصلاح می‌شوند."
+            },
+            {
+              "title": "ارتباط ابزارها با یکدیگر",
+              "text": "انتقال معلومات بین KoboToolbox، SurveyCTO، Google Sheets و دیتابیس‌ها."
+            },
+            {
+              "title": "هشدارها",
+              "text": "اطلاعیه ایمیلی وقتی چیزی به توجه نیاز دارد."
+            }
+          ],
+          "whoFor": "هر تیمی که هر هفته کارهای تکراری معلومات انجام می‌دهد."
+        },
+        "ps": {
+          "tagline": "پرېږدئ چې د معلوماتو تکراري کارونه پخپله ترسره شي.",
+          "summary": "اتومات بهیرونه چې ستاسو معلومات د مهالوېش له مخې راټولوي، پاکوي، یوځای کوي او راپور ورکوي، څو ستاسو ټیم په اصلي کار تمرکز وکړي.",
+          "problem": "هره اونۍ یو څوک معلومات ډاونلوډ کوي، پاکوي یې، د فایلونو ترمنځ یې کاپي کوي او همغه راپور بیا جوړوي.",
+          "features": [
+            {
+              "title": "اتومات راپورونه",
+              "text": "اونیز یا میاشتني راپورونه پرته له لاسي کار چمتو او لېږل کېږي."
+            },
+            {
+              "title": "د معلوماتو پاکول",
+              "text": "تکرارونه، تېروتنې او د فارمټ ستونزې په اتومات ډول سمېږي."
+            },
+            {
+              "title": "د وسایلو ترمنځ اړیکه",
+              "text": "د KoboToolbox، SurveyCTO، Google Sheets او ډیټابېسونو ترمنځ د معلوماتو لېږد."
+            },
+            {
+              "title": "خبرتیاوې",
+              "text": "کله چې یو شی پاملرنې ته اړتیا ولري، د برېښنالیک له لارې خبرتیا."
+            }
+          ],
+          "whoFor": "هر هغه ټیم چې هره اونۍ د معلوماتو ورته کارونه تکراروي."
+        }
+      },
+      "tech": {
+        "stack": [
+          "Python",
+          "Pandas",
+          "Google Apps Script",
+          "KoboToolbox",
+          "SurveyCTO"
+        ],
+        "notes": ""
+      }
+    }
+  ]
+}

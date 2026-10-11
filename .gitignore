@@ -1,2 +1,13 @@
+# Editor and tool settings: not part of the website
 .idea/
-README.md
+.claude/
+.vscode/
+
+# Python caches (from the tools/ scripts)
+__pycache__/
+*.pyc
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+desktop.ini

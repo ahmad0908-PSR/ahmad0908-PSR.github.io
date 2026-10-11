@@ -1,241 +1,653 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" dir="ltr" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-  <meta name="description" content="Portfolio website" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-  <!-- Google Font: Space Grotesk for headings/brand, Inter for body text -->
+  <!-- Real title and description in the HTML itself, so search engines and
+       link previews see them even before JavaScript runs. i18n.js replaces
+       them with the translated versions when the visitor switches language. -->
+  <title>Ahmad Akbary | Custom software and data dashboards</title>
+  <meta name="description" content="I build custom management systems, web apps and data dashboards for businesses and humanitarian organizations, in English, Dari and Pashto. Try the live demos." />
+  <meta name="theme-color" content="#F7F4EC" />
+  <!-- Icons: SVG for modern browsers, PNG fallback, and the iPhone home-screen icon -->
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/brand/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+
+  <!-- ==========================================================================
+       SEARCH ENGINES + SHARE PREVIEWS
+       WhatsApp, Facebook, LinkedIn, Telegram and X read these tags (they don't
+       run JavaScript) to build the preview card when someone shares a link.
+       If your site address changes, run:  python tools/update-site-files.py
+  =========================================================================== -->
+  <link rel="canonical" href="https://ahmad0908-psr.github.io/" />
+  <link rel="alternate" hreflang="en" href="https://ahmad0908-psr.github.io/" />
+  <link rel="alternate" hreflang="fa-AF" href="https://ahmad0908-psr.github.io/?lang=fa" />
+  <link rel="alternate" hreflang="ps-AF" href="https://ahmad0908-psr.github.io/?lang=ps" />
+  <link rel="alternate" hreflang="x-default" href="https://ahmad0908-psr.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ahmad Akbary" />
+  <meta property="og:title" content="Ahmad Akbary | Custom software and data dashboards" />
+  <meta property="og:description" content="I build custom management systems, web apps and data dashboards for businesses and humanitarian organizations, in English, Dari and Pashto. Try the live demos." />
+  <meta property="og:url" content="https://ahmad0908-psr.github.io/" />
+  <meta property="og:image" content="https://ahmad0908-psr.github.io/assets/brand/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Ahmad Akbary: custom software and data dashboards for businesses and NGOs" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="fa_AF" />
+  <meta property="og:locale:alternate" content="ps_AF" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ahmad Akbary | Custom software and data dashboards" />
+  <meta name="twitter:description" content="I build custom management systems, web apps and data dashboards for businesses and humanitarian organizations, in English, Dari and Pashto. Try the live demos." />
+  <meta name="twitter:image" content="https://ahmad0908-psr.github.io/assets/brand/og-image.jpg" />
+
+  <!-- Structured data: helps Google understand who you are and what you offer -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Ahmad Akbary",
+    "url": "https://ahmad0908-psr.github.io/",
+    "image": "https://ahmad0908-psr.github.io/assets/brand/og-image.jpg",
+    "logo": "https://ahmad0908-psr.github.io/assets/brand/apple-touch-icon.png",
+    "description": "I build custom management systems, web apps and data dashboards for businesses and humanitarian organizations, in English, Dari and Pashto. Try the live demos.",
+    "email": "ahmadakbary0908@gmail.com",
+    "availableLanguage": ["English", "Dari", "Pashto"],
+    "founder": {
+      "@type": "Person",
+      "name": "Ahmad Akbary",
+      "jobTitle": "Full-stack developer and data analyst"
+    },
+    "knowsAbout": ["Custom software development", "Management systems", "Point of sale", "Inventory management", "HR management", "Monitoring and evaluation", "Power BI", "Looker Studio", "Streamlit", "Google Apps Script"]
+  }
+  </script>
+
+  <!-- ==========================================================================
+       PRE-PAINT SETUP
+       Runs before the page is drawn, so returning visitors never see a flash
+       of the wrong theme or a left-to-right layout that suddenly flips.
+       - Applies the saved theme (light is the default, dark is optional).
+       - If the language is Dari or Pashto (from ?lang= or a saved choice),
+         switches the page to right-to-left immediately and hides the text
+         until the translations load (see "i18n pending" in style.css).
+  =========================================================================== -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      try {
+        var theme = localStorage.getItem("aa-theme");
+        if (theme === "light" || theme === "dark") root.setAttribute("data-theme", theme);
+
+        var lang = new URLSearchParams(window.location.search).get("lang") || localStorage.getItem("aa-lang");
+        if (lang === "fa" || lang === "ps") {
+          root.setAttribute("dir", "rtl");
+          root.setAttribute("lang", lang === "fa" ? "fa-AF" : "ps-AF");
+          root.setAttribute("data-i18n-pending", "");
+        }
+      } catch (e) {
+        /* localStorage can be blocked in private mode; defaults are fine. */
+      }
+    })();
+  </script>
+
+  <!-- Fonts for English. Vazirmatn (Dari / Pashto) is loaded on demand by
+       js/i18n.js only when a visitor switches to one of those languages. -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- GSAP animation library, saved locally in vendor/ so the site never
+       depends on an outside server. "defer" keeps them in order and makes
+       sure they're ready before main.js runs. If they ever fail to load,
+       the site still works, just without animation. -->
+  <script src="vendor/gsap/gsap.min.js" defer></script>
+  <script src="vendor/gsap/ScrollTrigger.min.js" defer></script>
+  <script src="vendor/gsap/Flip.min.js" defer></script>
+
+  <!-- Native ES module: no build step, works on GitHub Pages as-is. -->
+  <script type="module" src="js/main.js"></script>
+
+  <!-- Speed: download every script module and the data files at once,
+       instead of discovering them one import at a time. -->
+  <link rel="modulepreload" href="js/common.js" />
+  <link rel="modulepreload" href="js/i18n.js" />
+  <link rel="modulepreload" href="js/utils.js" />
+  <link rel="modulepreload" href="js/state.js" />
+  <link rel="modulepreload" href="js/theme.js" />
+  <link rel="modulepreload" href="js/nav.js" />
+  <link rel="modulepreload" href="js/icons.js" />
+  <link rel="modulepreload" href="js/links.js" />
+  <link rel="modulepreload" href="js/hero.js" />
+  <link rel="modulepreload" href="js/particles.js" />
+  <link rel="modulepreload" href="js/catalog.js" />
+  <link rel="modulepreload" href="js/cards.js" />
+  <link rel="modulepreload" href="js/services.js" />
+  <link rel="modulepreload" href="js/sections.js" />
+  <link rel="modulepreload" href="js/stack.js" />
+  <link rel="modulepreload" href="js/testimonials.js" />
+  <link rel="modulepreload" href="js/quote-form.js" />
+  <link rel="modulepreload" href="js/motion.js" />
+  <link rel="preload" href="data/config.json" as="fetch" crossorigin="anonymous" />
+  <link rel="preload" href="data/products.json" as="fetch" crossorigin="anonymous" />
+  <link rel="preload" href="data/faq.json" as="fetch" crossorigin="anonymous" />
+  <link rel="preload" href="i18n/en.json" as="fetch" crossorigin="anonymous" />
 </head>
 <body>
+  <!-- Shown only if JavaScript is turned off -->
+  <noscript>
+    <p class="noscript">This website needs JavaScript to show its content. | این ویب‌سایت برای نمایش محتوا به JavaScript نیاز دارد. | دا ویبپاڼه د منځپانګې د ښودلو لپاره JavaScript ته اړتیا لري.</p>
+  </noscript>
 
-  <!-- ============================================
-       SKIP LINK (accessibility)
-  ============================================ -->
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
 
-  <!-- ============================================
-       NAVIGATION — centered, transparent, sticky
-  ============================================ -->
+  <!-- ==========================================================================
+       NAVIGATION
+  =========================================================================== -->
   <header class="nav-wrap" id="nav-wrap">
-    <nav class="nav" aria-label="Primary">
-      <a class="nav__brand" href="#hero" id="nav-brand">
-        <span class="nav__brand-name">Brand</span><span class="nav__brand-suffix">.dev</span>
+    <nav class="nav container" data-i18n-attr="aria-label:nav.label" aria-label="Main">
+      <a class="brand" href="#hero">
+        <span class="brand__code" aria-hidden="true">&lt;</span><span data-i18n="brand.first">Ahmad</span>
+        <span class="brand__accent" data-i18n="brand.last">Akbary</span><span class="brand__code" aria-hidden="true">/&gt;</span>
       </a>
 
-      <ul class="nav__links" id="nav-links"><!-- injected by script.js --></ul>
+      <ul class="nav__links">
+        <li><a href="#products" data-i18n="nav.products">Demos</a></li>
+        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#how-it-works" data-i18n="nav.how">How it works</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
 
       <div class="nav__actions">
-        <!-- Theme toggle -->
-        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle light and dark mode" title="Toggle theme">
-          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <!-- Language switcher. Each label is written in its own script so
+             people can find their language whatever language the page is in. -->
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.label">
+          <button class="lang-switch__btn" type="button" data-lang="en" lang="en" aria-pressed="true">EN</button>
+          <button class="lang-switch__btn" type="button" data-lang="fa" lang="fa" aria-pressed="false">دری</button>
+          <button class="lang-switch__btn" type="button" data-lang="ps" lang="ps" aria-pressed="false">پښتو</button>
+        </div>
+
+        <!-- Theme toggle: the sun shows in dark mode, the moon in light mode. -->
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch between light and dark mode" data-i18n-attr="aria-label:theme.toggle;title:theme.toggle">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
         </button>
 
-        <!-- Brand color customizer -->
-        <button class="icon-btn" id="customize-toggle" type="button" aria-label="Customize brand colors" title="Customize colors">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-        </button>
+        <!-- Round "let's talk" button (the phone button in the reference design) -->
+        <a class="icon-btn icon-btn--round nav__talk" href="#contact" aria-label="Let's talk" data-i18n-attr="aria-label:nav.letsTalk;title:nav.letsTalk">
+          <span data-icon="message" aria-hidden="true"></span>
+        </a>
 
-        <button class="nav__burger" id="nav-burger" type="button" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
+        <button class="icon-btn nav__burger" id="nav-burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg class="icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
         </button>
       </div>
     </nav>
   </header>
 
-  <!-- Mobile menu panel -->
-  <div class="mobile-menu" id="mobile-menu">
-    <ul class="mobile-menu__links" id="mobile-menu-links"><!-- injected --></ul>
+  <!-- Mobile menu (shown below 960px by the burger button) -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true" inert>
+    <ul class="mobile-menu__links">
+      <li><a href="#products" data-i18n="nav.products">Demos</a></li>
+      <li><a href="#services" data-i18n="nav.services">Services</a></li>
+      <li><a href="#how-it-works" data-i18n="nav.how">How it works</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="lang-switch lang-switch--wide" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.label">
+      <button class="lang-switch__btn" type="button" data-lang="en" lang="en" aria-pressed="true">English</button>
+      <button class="lang-switch__btn" type="button" data-lang="fa" lang="fa" aria-pressed="false">دری</button>
+      <button class="lang-switch__btn" type="button" data-lang="ps" lang="ps" aria-pressed="false">پښتو</button>
+    </div>
   </div>
-
-  <!-- ============================================
-       BRAND CUSTOMIZER PANEL
-  ============================================ -->
-  <aside class="customize-panel" id="customize-panel" aria-hidden="true">
-    <div class="customize-panel__header">
-      <h2>Customize</h2>
-      <button class="icon-btn" id="customize-close" type="button" aria-label="Close customize panel">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
-      </button>
-    </div>
-    <p class="customize-panel__hint">Live-preview your brand colors. Changes save to this browser. Click "Copy JSON" to update <code>data/config.json</code> permanently.</p>
-
-    <div class="customize-panel__field">
-      <label for="color-accent-primary">Primary accent</label>
-      <input type="color" id="color-accent-primary" />
-    </div>
-    <div class="customize-panel__field">
-      <label for="color-accent-secondary">Secondary accent</label>
-      <input type="color" id="color-accent-secondary" />
-    </div>
-    <div class="customize-panel__field">
-      <label for="color-particles">Particle color</label>
-      <input type="color" id="color-particles" />
-    </div>
-
-    <div class="customize-panel__actions">
-      <button class="btn btn--ghost" id="customize-reset" type="button">Reset</button>
-      <button class="btn btn--primary" id="customize-copy" type="button">Copy JSON</button>
-    </div>
-    <pre class="customize-panel__output" id="customize-output" hidden></pre>
-  </aside>
-  <div class="customize-backdrop" id="customize-backdrop"></div>
 
   <main id="main">
 
-    <!-- ============================================
-         1. HERO — animated particle background + typewriter
-    ============================================ -->
-    <section class="hero" id="hero">
-      <canvas class="hero__canvas" id="particle-canvas" aria-hidden="true"></canvas>
-      <div class="hero__glow"></div>
+    <!-- ========================================================================
+         HERO: greeting + cut-out portrait over a brush stroke + code card.
+         Desktop layout:   intro | portrait | tagline
+                           stat  | portrait | code card
+         The portrait comes from config.json "person.heroPhoto" (sections.js),
+         the code card from "person.codeCard" (stack.js).
+    ========================================================================= -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero__fade" aria-hidden="true"></div>
 
-      <div class="hero__content">
-        <p class="hero__badge" id="hero-badge"><span class="hero__badge-dot"></span></p>
-        <h1 class="hero__title">
-          <span class="hero__title-line" id="hero-greeting-line"></span>
-          <span class="hero__title-line hero__title-line--accent" id="hero-name-line"></span>
-        </h1>
-        <p class="hero__role">
-          <span id="typewriter-text"></span><span class="hero__caret" aria-hidden="true">|</span>
+      <div class="container hero__inner">
+        <div class="hero__intro">
+          <p class="hero__status" id="hero-status" data-hero-intro>
+            <span class="hero__status-dot" aria-hidden="true"></span>
+            <span data-i18n="hero.status">Available for new projects</span>
+          </p>
+
+          <h1 class="hero__title" id="hero-title" data-hero-intro>
+            <span class="hero__hello" data-i18n="hero.hello">Hey there,</span>
+            <span class="hero__name" data-i18n="hero.name">I'm Ahmad</span>
+          </h1>
+
+          <!-- The animated line is hidden from screen readers; they read the
+               full sentence in #hero-for-sr instead (filled by hero.js). -->
+          <p class="hero__for" aria-hidden="true" data-hero-intro><span class="hero__prompt" dir="ltr">&gt;_</span><span id="hero-for-before"></span><span class="hero__for-item" id="hero-for-item"></span><span class="hero__caret"></span><span id="hero-for-after"></span></p>
+          <p class="sr-only" id="hero-for-sr"></p>
+
+          <!-- Email link, filled in from config.json by sections.js -->
+          <a class="hero__email" id="hero-email" href="#contact" dir="ltr" data-hero-intro hidden></a>
+
+          <div class="hero__actions" data-hero-intro>
+            <a class="btn btn--primary" href="#products" data-i18n="hero.ctaPrimary">See what I can build</a>
+            <a class="btn btn--ghost" href="#contact" data-i18n="hero.ctaSecondary">Talk to me</a>
+          </div>
+        </div>
+
+        <!-- Big number (counted from products.json) -->
+        <p class="hero__stat" data-hero-intro>
+          <span class="hero__stat-value" data-stat="products">0</span>
+          <span class="hero__stat-label" data-i18n="about.stats.products">example systems</span>
         </p>
-        <p class="hero__desc" id="hero-desc"></p>
-        <div class="hero__actions">
-          <a class="btn btn--primary" id="hero-btn-primary" href="#projects">View Projects</a>
-          <a class="btn btn--outline" id="hero-btn-secondary" href="#contact">Contact Me</a>
+
+        <!-- Portrait over a painted brush stroke -->
+        <div class="hero__visual" id="hero-visual">
+          <img class="hero__brush" src="assets/brand/brush.svg" alt="" aria-hidden="true" decoding="async" fetchpriority="high" />
+          <!-- Silhouette shown until the photo (assets/me.png) exists -->
+          <svg class="hero__placeholder" viewBox="0 0 400 460" aria-hidden="true" focusable="false">
+            <circle cx="200" cy="170" r="78" />
+            <path d="M48 460 C 48 330 116 272 200 272 C 284 272 352 330 352 460 Z" />
+          </svg>
+        </div>
+
+        <!-- Right column: the tagline sits just above the code card, clear of
+             the brush stroke (on tablets/phones the two are placed separately) -->
+        <div class="hero__aside">
+          <p class="hero__side" data-hero-intro data-i18n="hero.side">I build custom software for businesses and NGOs, shaped around how your team really works.</p>
+
+          <!-- Developer touch: a tiny code editor. Decorative: the Tech stack
+               section says the same thing in words. -->
+          <div class="code-card hero__code" dir="ltr" aria-hidden="true" data-hero-intro>
+            <div class="code-card__bar">
+              <span class="code-card__dot"></span><span class="code-card__dot"></span><span class="code-card__dot"></span>
+              <span class="code-card__file" id="code-card-file">ahmad.js</span>
+            </div>
+            <pre class="code-card__body"><code id="code-card-code"></code></pre>
+          </div>
         </div>
       </div>
-
-      <a class="hero__scroll" href="#about" aria-label="Scroll to About section">
-        <span>Scroll</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
-      </a>
     </section>
 
-    <!-- ============================================
-         2. ABOUT
-    ============================================ -->
-    <section class="section about" id="about">
-      <div class="container about__grid">
+    <!-- ========================================================================
+         AUDIENCE PATHS: businesses vs NGOs.
+         Each button filters the catalog below and scrolls to it (catalog.js).
+    ========================================================================= -->
+    <section class="section section--tight" id="paths" aria-labelledby="paths-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow" aria-hidden="true" dir="ltr">// start here</p>
+          <h2 class="section__title" id="paths-title" data-i18n="paths.title">Where do you want to start?</h2>
+          <p class="section__lead" data-i18n="paths.lead">Choose your world, and I'll show you examples of what I can build for it.</p>
+        </header>
+
+        <div class="paths section__body">
+          <article class="path-card">
+            <span class="path-card__icon" data-icon="store" aria-hidden="true"></span>
+            <h3 class="path-card__title" data-i18n="paths.business.title">For businesses</h3>
+            <p class="path-card__text" data-i18n="paths.business.text">Shops, pharmacies, clinics, gyms, warehouses and growing companies.</p>
+            <ul class="path-card__examples">
+              <li data-i18n="paths.business.examples.0">Sales and stock</li>
+              <li data-i18n="paths.business.examples.1">Patients and appointments</li>
+              <li data-i18n="paths.business.examples.2">Staff and payroll</li>
+            </ul>
+            <button class="path-card__cta" type="button" data-set-audience="business">
+              <span data-i18n="paths.business.cta">See business examples</span>
+              <span class="icon-flip" data-icon="arrowRight" aria-hidden="true"></span>
+            </button>
+          </article>
+
+          <article class="path-card">
+            <span class="path-card__icon" data-icon="globe" aria-hidden="true"></span>
+            <h3 class="path-card__title" data-i18n="paths.ngo.title">For NGOs and humanitarian programs</h3>
+            <p class="path-card__text" data-i18n="paths.ngo.text">Programs, M&amp;E teams and operations departments.</p>
+            <ul class="path-card__examples">
+              <li data-i18n="paths.ngo.examples.0">Indicators and donor reports</li>
+              <li data-i18n="paths.ngo.examples.1">Field data from KoboToolbox and SurveyCTO</li>
+              <li data-i18n="paths.ngo.examples.2">Supplies and logistics</li>
+            </ul>
+            <button class="path-card__cta" type="button" data-set-audience="ngo">
+              <span data-i18n="paths.ngo.cta">See NGO examples</span>
+              <span class="icon-flip" data-icon="arrowRight" aria-hidden="true"></span>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PRODUCTS: filterable catalog (catalog.js)
+    ========================================================================= -->
+    <section class="section section--alt" id="products" aria-labelledby="products-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow" aria-hidden="true" dir="ltr">// demos</p>
+          <h2 class="section__title" id="products-title" data-i18n="sections.products.title">What I can build for you</h2>
+          <p class="section__lead" data-i18n="sections.products.lead">Working demos of systems I build. Open one, add your own test data and click around, then I'll build the real version for your work.</p>
+          <p class="demo-note">
+            <span class="demo-note__tag" aria-hidden="true" dir="ltr">// note</span>
+            <span data-i18n="catalog.demoNote">These are demos, not ready-made products. Each one shows a type of system I can build; yours is made from scratch around your own work, data and language.</span>
+          </p>
+        </header>
+
+        <div class="catalog section__body">
+          <div class="catalog__controls">
+            <h3 class="catalog__question" id="needs-title" data-i18n="catalog.needsTitle">What do you need to manage?</h3>
+
+            <div class="segmented" role="group" aria-label="Show systems for" data-i18n-attr="aria-label:catalog.audienceLabel" id="catalog-audience">
+              <button class="segmented__btn" type="button" data-audience="all" aria-pressed="true" data-i18n="catalog.all">All</button>
+              <button class="segmented__btn" type="button" data-audience="business" aria-pressed="false" data-i18n="audience.businessShort">Businesses</button>
+              <button class="segmented__btn" type="button" data-audience="ngo" aria-pressed="false" data-i18n="audience.ngoShort">NGOs</button>
+            </div>
+          </div>
+
+          <div class="needs" id="catalog-needs" role="group" aria-labelledby="needs-title"><!-- need tiles rendered by catalog.js --></div>
+
+          <p class="catalog__count" id="catalog-count" aria-live="polite"></p>
+
+          <div class="catalog-grid" id="catalog-grid"><!-- product cards rendered by catalog.js --></div>
+
+          <div class="catalog__empty is-hidden" id="catalog-empty">
+            <p data-i18n="catalog.empty">Nothing here yet for this combination.</p>
+            <button class="btn btn--ghost" type="button" id="catalog-reset" data-i18n="catalog.emptyAction">Show all examples</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SERVICES: custom work on a platform (services.js)
+    ========================================================================= -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow" aria-hidden="true" dir="ltr">// services</p>
+          <h2 class="section__title" id="services-title" data-i18n="sections.services.title">Custom dashboards and automation</h2>
+          <p class="section__lead" data-i18n="sections.services.lead">Built around your data, on the platform your team already uses.</p>
+        </header>
+
+        <div class="tools section__body">
+          <p class="tools__label" data-i18n="services.tools">Works with the tools you already use</p>
+          <ul class="tools__list" id="tools-list"><!-- from config.json "tools" --></ul>
+        </div>
+
+        <div class="services" id="service-list"><!-- rendered by services.js --></div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         TECH STACK: groups from config.json "stack" (stack.js)
+    ========================================================================= -->
+    <section class="section" id="stack" aria-labelledby="stack-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow" aria-hidden="true" dir="ltr">// stack</p>
+          <h2 class="section__title" id="stack-title" data-i18n="stack.title">The tools behind the work</h2>
+          <p class="section__lead" data-i18n="stack.lead">Proven, well-supported technologies, chosen so your system is reliable and easy to hand over.</p>
+        </header>
+        <div class="stack section__body" id="stack-list"><!-- rendered by stack.js --></div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         HOW IT WORKS: four steps with a scroll-driven progress line (motion.js)
+    ========================================================================= -->
+    <section class="section section--alt" id="how-it-works" aria-labelledby="how-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow" aria-hidden="true" dir="ltr">// process</p>
+          <h2 class="section__title" id="how-title" data-i18n="sections.how.title">How it works</h2>
+          <p class="section__lead" data-i18n="sections.how.lead">From our first conversation to launch and ongoing support.</p>
+        </header>
+
+        <div class="steps section__body" id="how-steps">
+          <div class="steps__track" aria-hidden="true"><span class="steps__fill"></span></div>
+          <ol class="steps__list">
+            <li class="step">
+              <span class="step__num" data-number="1">1</span>
+              <h3 class="step__title" data-i18n="how.steps.0.title">We talk</h3>
+              <p class="step__text" data-i18n="how.steps.0.text">Tell me how your business or program works today and what's slowing you down.</p>
+            </li>
+            <li class="step">
+              <span class="step__num" data-number="2">2</span>
+              <h3 class="step__title" data-i18n="how.steps.1.title">You try it</h3>
+              <p class="step__text" data-i18n="how.steps.1.text">Explore a live demo with your own test data, or see a quick prototype built around your needs.</p>
+            </li>
+            <li class="step">
+              <span class="step__num" data-number="3">3</span>
+              <h3 class="step__title" data-i18n="how.steps.2.title">I build it</h3>
+              <p class="step__text" data-i18n="how.steps.2.text">Your fields, your reports, your language and your way of working.</p>
+            </li>
+            <li class="step">
+              <span class="step__num" data-number="4">4</span>
+              <h3 class="step__title" data-i18n="how.steps.3.title">Launch and support</h3>
+              <p class="step__text" data-i18n="how.steps.3.text">Setup, training for your team, and help whenever you need it.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         ABOUT: the person behind the work + reasons to work together
+    ========================================================================= -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about">
         <div class="about__media">
-          <div class="about__image-frame">
-            <img id="about-image" src="" alt="Portrait" />
+          <div class="about__photo" id="about-photo">
+            <!-- img inserted by sections.js from config.json "person.photo";
+                 initials show if the photo is missing -->
+            <span class="about__initials" aria-hidden="true">AA</span>
           </div>
         </div>
-        <div class="about__copy">
-          <p class="eyebrow" id="about-eyebrow"></p>
-          <h2 class="section-title" id="about-title"></h2>
-          <div id="about-paragraphs" class="about__paragraphs"></div>
-          <ul class="tag-row" id="about-tags"></ul>
+
+        <div class="about__content">
+          <p class="eyebrow" aria-hidden="true" dir="ltr">// about</p>
+          <h2 class="section__title" id="about-title" data-i18n="about.title">Who's behind this</h2>
+          <p class="about__role" data-i18n="about.role">Full-stack developer and data analyst</p>
+          <p class="about__text" data-i18n="about.text.0">I'm Ahmad Akbary. I build software for businesses and humanitarian organizations, from sales and HR systems to monitoring and evaluation dashboards.</p>
+          <p class="about__text" data-i18n="about.text.1">My goal is simple: tools your team actually uses, in the language you work in.</p>
+
+          <dl class="stats" id="about-stats">
+            <div class="stats__item"><dt class="stats__label" data-i18n="about.stats.products">example systems</dt><dd class="stats__value" data-stat="products">0</dd></div>
+            <div class="stats__item"><dt class="stats__label" data-i18n="about.stats.demos">live demos to try</dt><dd class="stats__value" data-stat="demos">0</dd></div>
+            <div class="stats__item"><dt class="stats__label" data-i18n="about.stats.languages">languages</dt><dd class="stats__value" data-stat="languages">0</dd></div>
+          </dl>
+
+          <ul class="reasons">
+            <li class="reason"><span class="reason__icon" data-icon="play" aria-hidden="true"></span><div><h3 class="reason__title" data-i18n="about.reasons.0.title">Try before you decide</h3><p class="reason__text" data-i18n="about.reasons.0.text">Open a live demo and add your own test data before we even talk.</p></div></li>
+            <li class="reason"><span class="reason__icon" data-icon="languages" aria-hidden="true"></span><div><h3 class="reason__title" data-i18n="about.reasons.1.title">In your language</h3><p class="reason__text" data-i18n="about.reasons.1.text">We can talk, and your system can work, in Dari, Pashto or English.</p></div></li>
+            <li class="reason"><span class="reason__icon" data-icon="mapPin" aria-hidden="true"></span><div><h3 class="reason__title" data-i18n="about.reasons.2.title">Built from field experience</h3><p class="reason__text" data-i18n="about.reasons.2.text">Hands-on monitoring and evaluation work shapes every dashboard.</p></div></li>
+            <li class="reason"><span class="reason__icon" data-icon="lifebuoy" aria-hidden="true"></span><div><h3 class="reason__title" data-i18n="about.reasons.3.title">Support after launch</h3><p class="reason__text" data-i18n="about.reasons.3.text">Training for your team, and help when something needs to change.</p></div></li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- ============================================
-         3. TECH STACK
-    ============================================ -->
-    <section class="section" id="tech-stack">
+    <!-- ========================================================================
+         TESTIMONIALS: carousel from data/testimonials.json (testimonials.js).
+         Stays hidden until there's at least one testimonial to show.
+    ========================================================================= -->
+    <section class="section section--alt" id="testimonials" aria-labelledby="testimonials-title" hidden>
       <div class="container">
-        <div class="section-heading">
-          <span class="section-heading__bar"></span>
-          <h2 class="section-title">Tech Stack</h2>
-        </div>
-        <div class="tech-grid" id="tech-grid"><!-- injected by script.js --></div>
-      </div>
-    </section>
+        <header class="section__head section__head--center">
+          <p class="eyebrow" aria-hidden="true" dir="ltr">// testimonials</p>
+          <h2 class="section__title" id="testimonials-title" data-i18n="testimonials.title">What clients say</h2>
+          <p class="section__lead" data-i18n="testimonials.lead">Feedback from the teams I've built systems for.</p>
+        </header>
 
-    <!-- ============================================
-         4. PROJECTS
-    ============================================ -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-heading section-heading--center">
-          <p class="eyebrow">Portfolio</p>
-          <h2 class="section-title">Projects</h2>
-          <p class="section-subtitle">A selection of things I've built.</p>
-        </div>
-
-        <div class="filter-row" id="project-filters"><!-- injected --></div>
-        <div class="project-grid" id="project-grid"><!-- injected --></div>
-      </div>
-    </section>
-
-    <!-- ============================================
-         5. EXPERIENCE — timeline
-    ============================================ -->
-    <section class="section" id="experience">
-      <div class="container">
-        <div class="section-heading section-heading--center">
-          <p class="eyebrow">Experience</p>
-          <h2 class="section-title">Career timeline</h2>
-        </div>
-        <div class="timeline" id="timeline"><!-- injected --></div>
-      </div>
-    </section>
-
-    <!-- ============================================
-         6. CERTIFICATIONS
-    ============================================ -->
-    <section class="section" id="certifications">
-      <div class="container">
-        <div class="section-heading section-heading--center">
-          <p class="eyebrow">Certifications</p>
-          <h2 class="section-title">Credentials &amp; courses</h2>
-        </div>
-        <div class="cert-grid" id="cert-grid"><!-- injected --></div>
-      </div>
-    </section>
-
-    <!-- ============================================
-         7. CONTACT
-    ============================================ -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section-heading section-heading--center">
-          <p class="eyebrow">Contact</p>
-          <h2 class="section-title">Let's build something</h2>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-card__info">
-            <p id="contact-intro"></p>
-            <ul class="contact-links" id="contact-links"><!-- injected --></ul>
+        <div class="quotes section__body" role="region" aria-roledescription="carousel" aria-label="Client testimonials" data-i18n-attr="aria-label:testimonials.label">
+          <ul class="quotes__track" id="quotes-track"><!-- rendered by testimonials.js --></ul>
+          <div class="quotes__controls" id="quotes-controls">
+            <button class="icon-btn icon-btn--round" type="button" id="quotes-prev" aria-label="Previous testimonial" data-i18n-attr="aria-label:testimonials.prev">
+              <span class="icon-back" data-icon="arrowRight" aria-hidden="true"></span>
+            </button>
+            <button class="icon-btn icon-btn--round icon-btn--accent" type="button" id="quotes-next" aria-label="Next testimonial" data-i18n-attr="aria-label:testimonials.next">
+              <span class="icon-flip" data-icon="arrowRight" aria-hidden="true"></span>
+            </button>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <form class="contact-form" id="contact-form" novalidate>
-            <input class="input" type="text" name="name" id="form-name" placeholder="Your name" autocomplete="name" required />
-            <input class="input" type="email" name="email" id="form-email" placeholder="your@email.com" autocomplete="email" required />
-            <textarea class="input" name="message" id="form-message" rows="4" placeholder="Tell me about your project..." required></textarea>
+    <!-- ========================================================================
+         FAQ (rendered from data/faq.json by sections.js)
+    ========================================================================= -->
+    <section class="section section--alt" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow" aria-hidden="true" dir="ltr">// faq</p>
+          <h2 class="section__title" id="faq-title" data-i18n="faq.title">Common questions</h2>
+          <p class="section__lead" data-i18n="faq.lead">Straight answers to what people ask most.</p>
+        </header>
+        <div class="faq section__body" id="faq-list"></div>
+      </div>
+    </section>
 
-            <button class="btn btn--primary btn--full" type="submit" id="form-submit">
-              <span id="form-submit-text">Send message</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    <!-- ========================================================================
+         CONTACT: quote request form (js/quote-form.js) + direct contact
+    ========================================================================= -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact">
+
+        <!-- Left: intro and direct contact buttons -->
+        <div class="contact__intro">
+          <p class="eyebrow" aria-hidden="true" dir="ltr">// contact</p>
+          <h2 class="section__title" id="contact-title" data-i18n="sections.contact.title">Let's talk about your project</h2>
+          <p class="section__lead" data-i18n="sections.contact.lead">Tell me what you need to manage, and I'll plan the right software for it.</p>
+          <p class="contact-cta__note" data-i18n="contactCta.reply">I usually reply within a day.</p>
+
+          <div class="contact__direct">
+            <p class="contact__direct-label" data-i18n="quote.directLabel">Prefer to talk directly?</p>
+            <div class="contact-cta__actions" id="contact-actions"><!-- sections.js --></div>
+          </div>
+        </div>
+
+        <!-- Right: the form. "novalidate" because quote-form.js shows its own,
+             translated error messages instead of the browser's English ones. -->
+        <div class="form-card" id="quote-card">
+          <form class="quote-form" id="quote-form" novalidate>
+            <h3 class="form-card__title" data-i18n="quote.title">Request a quote</h3>
+
+            <!-- Name -->
+            <div class="field">
+              <label class="field__label" for="q-name" data-i18n="quote.name">Your name</label>
+              <input class="input" id="q-name" name="name" type="text" autocomplete="name" required maxlength="100" aria-describedby="q-name-error" />
+              <p class="field__error" id="q-name-error" hidden></p>
+            </div>
+
+            <!-- Organization (optional) -->
+            <div class="field">
+              <label class="field__label" for="q-org">
+                <span data-i18n="quote.org">Business or organization</span>
+                <span class="field__optional" data-i18n="quote.optional">optional</span>
+              </label>
+              <input class="input" id="q-org" name="organization" type="text" autocomplete="organization" maxlength="150" />
+            </div>
+
+            <!-- Business / NGO / other -->
+            <fieldset class="field choice">
+              <legend class="field__label" data-i18n="quote.audience">This is for</legend>
+              <div class="choice__options">
+                <label class="choice__option">
+                  <input type="radio" name="audience" value="business" checked />
+                  <span data-i18n="quote.audienceBusiness">A business</span>
+                </label>
+                <label class="choice__option">
+                  <input type="radio" name="audience" value="ngo" />
+                  <span data-i18n="quote.audienceNgo">An NGO or program</span>
+                </label>
+                <label class="choice__option">
+                  <input type="radio" name="audience" value="other" />
+                  <span data-i18n="quote.audienceOther">Something else</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Email + phone: at least one is required -->
+            <div class="field-row">
+              <div class="field">
+                <label class="field__label" for="q-email" data-i18n="quote.email">Email</label>
+                <input class="input input--ltr" id="q-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="150" dir="ltr" aria-describedby="q-contact-hint q-email-error" />
+                <p class="field__error" id="q-email-error" hidden></p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="q-phone" data-i18n="quote.phone">Phone or WhatsApp</label>
+                <input class="input input--ltr" id="q-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="25" dir="ltr" placeholder="+93 7XX XXX XXX" aria-describedby="q-contact-hint q-phone-error" />
+                <p class="field__error" id="q-phone-error" hidden></p>
+              </div>
+            </div>
+            <p class="field__hint" id="q-contact-hint" data-i18n="quote.contactHint">Give at least one, so I can reply.</p>
+
+            <!-- Product / service (options filled in from products.json) -->
+            <div class="field">
+              <label class="field__label" for="q-item" data-i18n="quote.item">What are you interested in?</label>
+              <div class="select">
+                <select class="input" id="q-item" name="interest"></select>
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="field">
+              <label class="field__label" for="q-message" data-i18n="quote.message">Tell me about your needs</label>
+              <textarea class="input" id="q-message" name="message" rows="5" required maxlength="3000" aria-describedby="q-message-error"
+                data-i18n-attr="placeholder:quote.messagePlaceholder"></textarea>
+              <p class="field__error" id="q-message-error" hidden></p>
+            </div>
+
+            <!-- Spam trap: hidden from people, but simple bots fill it in -->
+            <div class="field--trap" aria-hidden="true">
+              <label for="q-website">Website</label>
+              <input id="q-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <button class="btn btn--primary btn--full" type="submit" id="q-submit">
+              <span class="btn__spinner" aria-hidden="true"></span>
+              <span id="q-submit-label" data-i18n="quote.submit">Send request</span>
             </button>
 
-            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <p class="form-status" id="q-status" role="status" aria-live="polite" hidden></p>
+            <p class="form-card__privacy" data-i18n="quote.privacy">Your details are only used to reply to you.</p>
           </form>
+
+          <!-- Shown after a successful send (quote-form.js) -->
+          <div class="form-success" id="quote-success" hidden tabindex="-1">
+            <span class="form-success__icon" data-icon="check" aria-hidden="true"></span>
+            <h3 class="form-success__title" id="quote-success-title"></h3>
+            <p class="form-success__text" id="quote-success-text"></p>
+            <button class="btn btn--ghost" type="button" id="quote-again" data-i18n="quote.again">Send another message</button>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ============================================
+  <!-- ==========================================================================
        FOOTER
-  ============================================ -->
+  =========================================================================== -->
   <footer class="footer">
-    <div class="container footer__row">
-      <p id="footer-text"></p>
-      <ul class="footer__socials" id="footer-socials"><!-- injected --></ul>
+    <div class="container footer__grid">
+      <div>
+        <a class="brand" href="#hero">
+          <span class="brand__code" aria-hidden="true">&lt;</span><span data-i18n="brand.first">Ahmad</span>
+          <span class="brand__accent" data-i18n="brand.last">Akbary</span><span class="brand__code" aria-hidden="true">/&gt;</span>
+        </a>
+        <p class="footer__tagline" data-i18n="footer.tagline">Custom management systems, web apps and data dashboards for businesses and humanitarian organizations.</p>
+      </div>
+      <ul class="footer__links" id="footer-links"><!-- rendered from data/config.json --></ul>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; <span id="footer-year"></span> <span data-i18n="brand.full">Ahmad Akbary</span>. <span data-i18n="footer.rights">All rights reserved.</span></p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>

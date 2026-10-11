@@ -1,0 +1,37 @@
+{
+  "_comment": "Client testimonials for the 'What clients say' carousel. The section stays HIDDEN until 'items' has at least one entry. Only add real words from real clients, with their permission. Fields: name (shown as written), role and quote (per language: en, fa, ps; an empty fa/ps falls back to English), organization (optional), photo (optional, a square image such as assets/testimonials/name.jpg; initials are shown without one). showExamples: true shows the clearly-marked example cards below while 'items' is empty, so you can see the design. Set it to false before launch.",
+  "showExamples": false,
+  "items": [],
+  "examples": [
+    {
+      "name": "Client name",
+      "organization": "Organization",
+      "role": {
+        "en": "Their role"
+      },
+      "quote": {
+        "en": "This is an example card. Your client's real words will appear here once you add them to data/testimonials.json."
+      }
+    },
+    {
+      "name": "Second client",
+      "organization": "Organization",
+      "role": {
+        "en": "Their role"
+      },
+      "quote": {
+        "en": "Example: a sentence or two about the system you built, and what changed for their team after it went live."
+      }
+    },
+    {
+      "name": "Third client",
+      "organization": "Organization",
+      "role": {
+        "en": "Their role"
+      },
+      "quote": {
+        "en": "Example: short and specific works best, such as the problem they had, how you solved it, and how it feels to use."
+      }
+    }
+  ]
+}

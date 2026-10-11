@@ -1,0 +1,158 @@
+{
+  "_comment": "Frequently asked questions, shown in this order, in English, Dari (fa) and Pashto (ps). If a 'fa' or 'ps' entry is left empty, the English text is shown instead. PLEASE REVIEW: these answers describe how you work (pricing, data ownership, weak internet, hosting), so make sure each one matches what you actually offer.",
+  "items": [
+    {
+      "id": "demos",
+      "content": {
+        "en": {
+          "question": "Are the demos ready-made products I can buy?",
+          "answer": "No. They're working examples that show what I can build. They run on sample data, so you can add and change records freely. Your real system is built for you, with your own fields, reports, users and language, and proper storage for your data."
+        },
+        "fa": {
+          "question": "آیا دموها محصولات آماده‌ای هستند که بتوانم بخرم؟",
+          "answer": "نه. آن‌ها نمونه‌های کاری هستند که نشان می‌دهند چه چیزی می‌توانم بسازم. با معلومات نمونه کار می‌کنند، پس می‌توانید آزادانه ریکارد اضافه یا تغییر دهید. سیستم واقعی شما مخصوص شما ساخته می‌شود؛ با فیلدها، گزارش‌ها، کاربران و زبان خود شما، و ذخیره‌سازی مطمئن برای معلومات‌تان."
+        },
+        "ps": {
+          "question": "ایا ډیموګانې چمتو محصولات دي چې وې پېرم؟",
+          "answer": "نه. دا کاري بېلګې دي چې ښيي زه څه جوړولی شم. د نمونې معلوماتو سره کار کوي، نو تاسو کولی شئ په ازاده توګه ریکارډونه زیات یا بدل کړئ. ستاسو اصلي سیسټم ستاسو لپاره جوړېږي؛ ستاسو د خپلو فیلډونو، راپورونو، کاروونکو او ژبې سره، او ستاسو د معلوماتو لپاره د باوري ساتنې سره."
+        }
+      }
+    },
+    {
+      "id": "cost",
+      "content": {
+        "en": {
+          "question": "How much does a custom system cost?",
+          "answer": "Every project is priced individually, based on the modules you need, how much customization is involved, and the number of users. Send a short description of what you need and I'll reply with a clear quote."
+        },
+        "fa": {
+          "question": "قیمت یک سیستم سفارشی چقدر است؟",
+          "answer": "قیمت هر پروژه جداگانه تعیین می‌شود؛ بر اساس بخش‌هایی که نیاز دارید، میزان تنظیمات سفارشی و تعداد استفاده‌کنندگان. توضیح کوتاهی از نیازهای خود بفرستید تا با یک قیمت روشن پاسخ دهم."
+        },
+        "ps": {
+          "question": "د یو ځانګړي سیسټم بیه څومره ده؟",
+          "answer": "د هرې پروژې بیه جلا ټاکل کېږي؛ د هغو برخو پر بنسټ چې ورته اړتیا لرئ، د ځانګړو بدلونونو اندازه او د کاروونکو شمېر. د خپلو اړتیاوو لنډ تشریح راولېږئ، زه به یو روښانه قیمت درته ولېږم."
+        }
+      }
+    },
+    {
+      "id": "language",
+      "content": {
+        "en": {
+          "question": "Can the system work in Dari or Pashto?",
+          "answer": "Yes. Systems can be set up with Dari, Pashto or English screens, including right-to-left layouts, so everyone on your team can use them comfortably."
+        },
+        "fa": {
+          "question": "آیا سیستم می‌تواند به دری یا پښتو کار کند؟",
+          "answer": "بله. سیستم‌ها را می‌توان با صفحات دری، پښتو یا انگلیسی، همراه با ترتیب راست به چپ، تنظیم کرد تا همه اعضای تیم شما به‌راحتی از آن استفاده کنند."
+        },
+        "ps": {
+          "question": "ایا سیسټم په دري یا پښتو کار کولی شي؟",
+          "answer": "هو. سیسټمونه د دري، پښتو یا انګلیسي پاڼو سره، له ښي څخه کیڼ لور ته د ترتیب په ګډون، برابرېدای شي، څو ستاسو د ټیم ټول غړي یې په اسانۍ وکاروي."
+        }
+      }
+    },
+    {
+      "id": "internet",
+      "content": {
+        "en": {
+          "question": "What if our internet connection is weak?",
+          "answer": "Tell me about your connectivity when we talk. Where it's needed, a system can be designed to keep working on poor connections and send its data once the internet is back."
+        },
+        "fa": {
+          "question": "اگر اتصال انترنت ما ضعیف باشد چه؟",
+          "answer": "هنگام گفتگو درباره وضعیت انترنت خود بگویید. در صورت نیاز، سیستم را می‌توان طوری طراحی کرد که با اتصال ضعیف هم کار کند و معلومات را پس از وصل شدن انترنت ارسال کند."
+        },
+        "ps": {
+          "question": "که زموږ د انټرنیټ اړیکه کمزورې وي څه به کېږي؟",
+          "answer": "د خبرو پر مهال د خپل انټرنیټ د حالت په اړه راته ووایاست. د اړتیا په صورت کې، سیسټم داسې جوړېدای شي چې په کمزورې اړیکه هم کار وکړي او معلومات د انټرنیټ له راتګ وروسته ولېږي."
+        }
+      }
+    },
+    {
+      "id": "data",
+      "content": {
+        "en": {
+          "question": "Who owns our data?",
+          "answer": "You do. Your data belongs to your business or organization, and you can export it whenever you want."
+        },
+        "fa": {
+          "question": "معلومات ما متعلق به کیست؟",
+          "answer": "متعلق به شماست. معلومات شما به کسب‌وکار یا موسسه شما تعلق دارد و هر زمانی که بخواهید می‌توانید آن را صادر کنید."
+        },
+        "ps": {
+          "question": "زموږ معلومات د چا دي؟",
+          "answer": "ستاسو دي. ستاسو معلومات ستاسو کاروبار یا موسسې پورې اړه لري، او هر وخت چې وغواړئ صادرولی یې شئ."
+        }
+      }
+    },
+    {
+      "id": "timeline",
+      "content": {
+        "en": {
+          "question": "How long does it take to get started?",
+          "answer": "It depends on what you need. The demos show the starting point, so we can agree quickly on what to build, and your quote includes a realistic timeline."
+        },
+        "fa": {
+          "question": "شروع کار چقدر وقت می‌گیرد؟",
+          "answer": "بستگی به نیاز شما دارد. دموها نقطه شروع را نشان می‌دهند، پس زود توافق می‌کنیم که چه چیزی ساخته شود، و قیمت پیشنهادی شما یک جدول زمانی واقعی دارد."
+        },
+        "ps": {
+          "question": "د کار پیل څومره وخت نیسي؟",
+          "answer": "دا ستاسو په اړتیا پورې اړه لري. ډیموګانې د پیل ټکی ښيي، نو ژر به موافقه وکړو چې څه جوړ شي، او ستاسو په وړاندیز شوې بیه کې یو واقعي مهالوېش شامل وي."
+        }
+      }
+    },
+    {
+      "id": "support",
+      "content": {
+        "en": {
+          "question": "Do you provide training and support?",
+          "answer": "Yes. Every system comes with training for your team, and support after launch to fix problems and make changes as your needs grow."
+        },
+        "fa": {
+          "question": "آیا آموزش و پشتیبانی ارائه می‌کنید؟",
+          "answer": "بله. هر سیستم همراه با آموزش برای تیم شما و پشتیبانی پس از راه‌اندازی ارائه می‌شود، تا مشکلات حل شوند و با رشد نیازهای شما تغییرات لازم ایجاد شود."
+        },
+        "ps": {
+          "question": "ایا روزنه او ملاتړ وړاندې کوئ؟",
+          "answer": "هو. هر سیسټم ستاسو د ټیم لپاره له روزنې او له پیل وروسته له ملاتړ سره راځي، څو ستونزې حل شي او ستاسو د اړتیاوو د ودې سره سم بدلونونه راشي."
+        }
+      }
+    },
+    {
+      "id": "integrations",
+      "content": {
+        "en": {
+          "question": "Can you work with KoboToolbox, SurveyCTO or ActivityInfo?",
+          "answer": "Yes. Dashboards and automations can pull data directly from these platforms, as well as from Excel, Google Sheets and databases."
+        },
+        "fa": {
+          "question": "آیا با KoboToolbox، SurveyCTO یا ActivityInfo کار می‌کنید؟",
+          "answer": "بله. داشبوردها و خودکارسازی‌ها می‌توانند معلومات را مستقیماً از این پلتفورم‌ها، و همچنین از اکسل، Google Sheets و دیتابیس‌ها دریافت کنند."
+        },
+        "ps": {
+          "question": "ایا له KoboToolbox، SurveyCTO یا ActivityInfo سره کار کوئ؟",
+          "answer": "هو. ډشبورډونه او اتومات بهیرونه کولی شي معلومات مستقیم له دې پلاتفورمونو، او همداراز له ایکسل، Google Sheets او ډیټابېسونو څخه واخلي."
+        }
+      }
+    },
+    {
+      "id": "hosting",
+      "content": {
+        "en": {
+          "question": "Where will the system be hosted?",
+          "answer": "It depends on your needs and budget: on your own server, on a cloud service, or, for some tools, free inside your Google account. I'll recommend the simplest option that works for you."
+        },
+        "fa": {
+          "question": "سیستم در کجا هاست می‌شود؟",
+          "answer": "بستگی به نیازها و بودجه شما دارد: روی سرور خود شما، روی یک سرویس ابری، یا برای برخی ابزارها، به‌طور رایگان درون حساب گوگل شما. ساده‌ترین گزینه مناسب را به شما پیشنهاد می‌کنم."
+        },
+        "ps": {
+          "question": "سیسټم به چېرته کوربه کېږي؟",
+          "answer": "دا ستاسو په اړتیاوو او بودیجې پورې اړه لري: ستاسو په خپل سرور، په یوه کلاوډ خدمت، یا د ځینو وسایلو لپاره، وړیا ستاسو د ګوګل حساب دننه. زه به تاسو ته تر ټولو ساده مناسب انتخاب وړاندیز کړم."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,324 @@
+{
+  "meta": {
+    "title": "Ahmad Akbary | Custom software and data dashboards",
+    "description": "I build custom management systems, web apps and data dashboards for businesses and humanitarian organizations, in English, Dari and Pashto. Try the live demos."
+  },
+  "brand": {
+    "first": "Ahmad",
+    "last": "Akbary",
+    "full": "Ahmad Akbary"
+  },
+  "nav": {
+    "label": "Main",
+    "skip": "Skip to content",
+    "products": "Demos",
+    "services": "Services",
+    "how": "How it works",
+    "contact": "Contact",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "letsTalk": "Let's talk"
+  },
+  "lang": {
+    "label": "Language"
+  },
+  "theme": {
+    "toggle": "Switch between light and dark mode"
+  },
+  "hero": {
+    "status": "Available for new projects",
+    "title": "Software that runs your business",
+    "forTemplate": "Building for {item}",
+    "forItems": [
+      "pharmacies",
+      "clinics",
+      "shops",
+      "warehouses",
+      "HR teams",
+      "NGO programs"
+    ],
+    "listSeparator": ", ",
+    "lead": "I build custom management systems, web apps and data dashboards for businesses and humanitarian organizations, around how you work and in English, Dari or Pashto.",
+    "ctaPrimary": "See what I can build",
+    "ctaSecondary": "Talk to me",
+    "scroll": "Scroll",
+    "hello": "Hey there,",
+    "name": "I'm Ahmad",
+    "side": "I build custom software for businesses and NGOs, shaped around how your team really works.",
+    "emailLabel": "Email me",
+    "photoAlt": "Ahmad Akbary"
+  },
+  "sections": {
+    "products": {
+      "title": "What I can build for you",
+      "lead": "Working demos of systems I build. Open one, add your own test data and click around, then I'll build the real version for your work."
+    },
+    "services": {
+      "title": "Custom dashboards and automation",
+      "lead": "Built around your data, on the platform your team already uses."
+    },
+    "how": {
+      "title": "How it works",
+      "lead": "From our first conversation to launch and ongoing support."
+    },
+    "contact": {
+      "title": "Let's talk about your project",
+      "lead": "Tell me what you need to manage, and I'll plan the right software for it."
+    }
+  },
+  "status": {
+    "live-demo": "Live demo",
+    "coming-soon": "Demo coming soon",
+    "available": "Available",
+    "screenshots": "Screenshot preview"
+  },
+  "audience": {
+    "business": "For businesses",
+    "ngo": "For NGOs",
+    "businessShort": "Businesses",
+    "ngoShort": "NGOs",
+    "both": "For businesses and NGOs"
+  },
+  "categories": {
+    "retail": "Sales and shops",
+    "health": "Health and fitness",
+    "inventory": "Stock and warehouses",
+    "people": "Staff and HR",
+    "operations": "Operations",
+    "projects": "Projects and tasks",
+    "monitoring": "Monitoring and evaluation",
+    "data": "Dashboards and data",
+    "automation": "Automation"
+  },
+  "contact": {
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "telegram": "Telegram",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "x": "X (Twitter)"
+  },
+  "footer": {
+    "tagline": "Custom management systems, web apps and data dashboards for businesses and humanitarian organizations.",
+    "rights": "All rights reserved."
+  },
+  "paths": {
+    "title": "Where do you want to start?",
+    "lead": "Choose your world, and I'll show you examples of what I can build for it.",
+    "business": {
+      "title": "For businesses",
+      "text": "Shops, pharmacies, clinics, gyms, warehouses and growing companies.",
+      "examples": [
+        "Sales and stock",
+        "Patients and appointments",
+        "Staff and payroll"
+      ],
+      "cta": "See business examples"
+    },
+    "ngo": {
+      "title": "For NGOs and humanitarian programs",
+      "text": "Programs, M&E teams and operations departments.",
+      "examples": [
+        "Indicators and donor reports",
+        "Field data from KoboToolbox and SurveyCTO",
+        "Supplies and logistics"
+      ],
+      "cta": "See NGO examples"
+    }
+  },
+  "catalog": {
+    "needsTitle": "What do you need to manage?",
+    "audienceLabel": "Show examples for",
+    "all": "All",
+    "allNeeds": "Everything",
+    "countShort": "{n}",
+    "countOne": "Showing {n} example",
+    "countMany": "Showing {n} examples",
+    "empty": "Nothing here yet for this combination.",
+    "emptyAction": "Show all examples",
+    "tryDemo": "Try live demo",
+    "demoNote": "These are demos, not ready-made products. Each one shows a type of system I can build; yours is made from scratch around your own work, data and language."
+  },
+  "services": {
+    "tools": "Works with the tools you already use",
+    "quote": "Request a quote",
+    "sample": "See an example",
+    "details": "Learn more"
+  },
+  "how": {
+    "steps": [
+      {
+        "title": "We talk",
+        "text": "Tell me how your business or program works today and what's slowing you down."
+      },
+      {
+        "title": "You try it",
+        "text": "Explore a live demo with your own test data, or see a quick prototype built around your needs."
+      },
+      {
+        "title": "I build it",
+        "text": "Your fields, your reports, your language and your way of working."
+      },
+      {
+        "title": "Launch and support",
+        "text": "Setup, training for your team, and help whenever you need it."
+      }
+    ]
+  },
+  "about": {
+    "title": "Who's behind this",
+    "role": "Full-stack developer and data analyst",
+    "photoAlt": "Portrait of Ahmad Akbary",
+    "text": [
+      "I'm Ahmad Akbary. I build software for businesses and humanitarian organizations, from sales and HR systems to monitoring and evaluation dashboards.",
+      "My goal is simple: tools your team actually uses, in the language you work in."
+    ],
+    "stats": {
+      "products": "example systems",
+      "demos": "live demos to try",
+      "languages": "languages"
+    },
+    "reasons": [
+      {
+        "title": "Try before you decide",
+        "text": "Open a live demo and add your own test data before we even talk."
+      },
+      {
+        "title": "In your language",
+        "text": "We can talk, and your system can work, in Dari, Pashto or English."
+      },
+      {
+        "title": "Built from field experience",
+        "text": "Hands-on monitoring and evaluation work shapes every dashboard."
+      },
+      {
+        "title": "Support after launch",
+        "text": "Training for your team, and help when something needs to change."
+      }
+    ]
+  },
+  "stack": {
+    "title": "The tools behind the work",
+    "lead": "Proven, well-supported technologies, chosen so your system is reliable and easy to hand over.",
+    "groups": {
+      "web": "Web apps (front-end)",
+      "data": "Dashboards and BI",
+      "python": "Python and databases (back-end)",
+      "automation": "Automation and field data"
+    }
+  },
+  "testimonials": {
+    "title": "What clients say",
+    "lead": "Feedback from the teams I've built systems for.",
+    "label": "Client testimonials",
+    "prev": "Previous testimonial",
+    "next": "Next testimonial",
+    "slide": "{n} of {total}",
+    "example": "Example"
+  },
+  "faq": {
+    "title": "Common questions",
+    "lead": "Straight answers to what people ask most."
+  },
+  "contactCta": {
+    "email": "Email me",
+    "whatsapp": "Message on WhatsApp",
+    "reply": "I usually reply within a day.",
+    "whatsappMessage": "Hello Ahmad, I found your website and I'd like you to build a system for my work.",
+    "telegram": "Message on Telegram"
+  },
+  "common": {
+    "newTab": "(opens in a new tab)"
+  },
+  "product": {
+    "backProducts": "All demos",
+    "backServices": "All services",
+    "notFound": {
+      "title": "This page couldn't be found",
+      "text": "The link may be out of date. Everything that's available is on the homepage.",
+      "action": "See all demos"
+    },
+    "problemTitle": "The problem it solves",
+    "solutionTitle": "What it does",
+    "whoForTitle": "Who it's for",
+    "featuresTitle": "What you get",
+    "videoTitle": "See it in action",
+    "videoPlay": "Play the demo video",
+    "videoFrameTitle": "Demo video: {name}",
+    "galleryTitle": "Screenshots",
+    "samplesTitle": "Examples of my work",
+    "sampleOpen": "Open example",
+    "techTitle": "Under the hood",
+    "techLead": "For technical readers: the tools and technologies behind it.",
+    "repo": "View the source code",
+    "liveDemo": "Try live demo",
+    "demoNote": "Opens in a new tab with sample data. Add, edit and delete records freely: it's a demo.",
+    "demoNoteDashboard": "Opens in a new tab with sample data. Filter, explore and compare freely: it's a demo.",
+    "seeScreenshots": "See the screenshots",
+    "screenshotsNote": "This report isn't published online, so here are screenshots of its pages. I'm happy to walk you through it live on a call.",
+    "earlyDemo": "Request an early demo",
+    "soonNote": "The public demo is on its way. I can show it to you privately in the meantime.",
+    "quote": "Request a quote",
+    "ctaTitle": "Want one built for your work?",
+    "ctaText": "Tell me a little about your business or program, and I'll reply with a clear quote.",
+    "whatsappMessage": "Hello Ahmad, I saw your {name} demo and I'd like something like it built for my work. Can we talk?",
+    "relatedTitle": "You might also need",
+    "relatedServicesTitle": "Other services",
+    "previewLabel": "Short preview of {name}",
+    "demoCallout": "This is a demo, not a ready-made product. It shows the kind of system I build: yours is made around your own work, fields, reports and language."
+  },
+  "gallery": {
+    "open": "View screenshot {n} full size",
+    "close": "Close",
+    "prev": "Previous screenshot",
+    "next": "Next screenshot",
+    "counter": "{n} of {total}"
+  },
+  "quote": {
+    "title": "Request a quote",
+    "directLabel": "Prefer to talk directly?",
+    "name": "Your name",
+    "org": "Business or organization",
+    "optional": "optional",
+    "audience": "This is for",
+    "audienceBusiness": "A business",
+    "audienceNgo": "An NGO or program",
+    "audienceOther": "Something else",
+    "email": "Email",
+    "phone": "Phone or WhatsApp",
+    "contactHint": "Give at least one, so I can reply.",
+    "item": "What are you interested in?",
+    "itemProducts": "Systems like these demos",
+    "itemServices": "Services",
+    "itemOther": "Not sure yet / something else",
+    "message": "Tell me about your needs",
+    "messagePlaceholder": "For example: we're a pharmacy with two branches and want to track stock and expiry dates.",
+    "submit": "Send request",
+    "sending": "Sending…",
+    "privacy": "Your details are only used to reply to you.",
+    "again": "Send another message",
+    "mailSubject": "Quote request: {item}",
+    "mailGeneral": "General question",
+    "errors": {
+      "name": "Please enter your name.",
+      "email": "Please enter a valid email address, like name@example.com.",
+      "phone": "Please enter a valid phone number, using digits and an optional + at the start.",
+      "contactOne": "Please give an email address or a phone number, so I can reply.",
+      "message": "Please tell me a little more (at least {n} characters).",
+      "summary": "Please check the highlighted fields."
+    },
+    "status": {
+      "network": "Your request couldn't be sent. Please check your internet connection and try again, or contact me directly using the buttons on this page.",
+      "mailto": "Your email app should open now with your request ready to send. If nothing happens, please email me directly."
+    },
+    "success": {
+      "title": "Thank you, {name}!",
+      "text": "Your request has arrived. I usually reply within a day."
+    }
+  },
+  "social": {
+    "soon": "Link coming soon"
+  }
+}

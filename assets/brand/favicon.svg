@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Ahmad Akbary favicon: a small particle network, like the site's hero -->
+  <rect width="64" height="64" rx="14" fill="#0B1220"/>
+  <g stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" opacity=".55">
+    <path d="M18 44 32 18 46 40 18 44"/>
+    <path d="M32 18 46 40"/>
+  </g>
+  <g fill="#2DD4BF">
+    <circle cx="18" cy="44" r="6"/>
+    <circle cx="32" cy="18" r="6"/>
+    <circle cx="46" cy="40" r="6"/>
+  </g>
+</svg>

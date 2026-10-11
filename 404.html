@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page not found | Ahmad Akbary</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="https://ahmad0908-psr.github.io/assets/brand/favicon.svg" type="image/svg+xml" />
+
+  <!--
+    GitHub Pages shows this page for any address that doesn't exist.
+    It's fully self-contained (styles inline, absolute links), because it can
+    appear at any depth of the address, where relative links would break.
+    The site address is kept up to date by: python tools/update-site-files.py
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&family=DM+Sans:wght@400;700&family=JetBrains+Mono:wght@500&family=Vazirmatn:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #F7F4EC; --surface: #FFFFFF; --border: #D2C8B3;
+      --text: #102A3A; --muted: #56656F; --accent: #24695C; --on-accent: #FFFFFF;
+      --coral: #B8431F; --mustard: #EDB23F;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0E1B1E; --surface: #162A2D; --border: #31504F;
+        --text: #F3EFE4; --muted: #A5B3AF; --accent: #5BC0A9; --on-accent: #062520;
+        --coral: #F79272;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; display: grid; place-items: center;
+      padding: 2rem 1.25rem; background: var(--bg); color: var(--text);
+      font-family: "DM Sans", system-ui, sans-serif; line-height: 1.6; text-align: center;
+    }
+    main { max-width: 560px; }
+    .code {
+      font-family: "Outfit", system-ui, sans-serif; font-weight: 600;
+      font-size: clamp(5rem, 22vw, 9rem); line-height: 1; letter-spacing: -0.03em; color: var(--accent);
+    }
+    .eyebrow { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.85rem; color: var(--coral); margin: 0 0 0.5rem; }
+    .messages { margin: 2rem 0; display: grid; gap: 1.25rem; }
+    .msg h1, .msg h2 { margin: 0; font-size: 1.25rem; font-weight: 600; }
+    .msg p { margin: 0.25rem 0 0; color: var(--muted); }
+    .rtl { direction: rtl; font-family: "Vazirmatn", Tahoma, sans-serif; line-height: 1.9; }
+    .divider { height: 1px; background: var(--border); }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+    a.btn {
+      display: inline-flex; align-items: center; min-height: 48px; padding: 0.7rem 1.4rem;
+      border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 600; text-decoration: none;
+    }
+    a.btn--ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow" aria-hidden="true">// error: route not found</p>
+    <div class="code" aria-hidden="true">404</div>
+
+    <div class="messages">
+      <div class="msg">
+        <h1>This page doesn't exist</h1>
+        <p>The link may be old or mistyped.</p>
+      </div>
+      <div class="divider"></div>
+      <div class="msg rtl" lang="fa">
+        <h2>این صفحه وجود ندارد</h2>
+        <p>ممکن است لینک قدیمی باشد یا اشتباه نوشته شده باشد.</p>
+      </div>
+      <div class="divider"></div>
+      <div class="msg rtl" lang="ps">
+        <h2>دا پاڼه شتون نه لري</h2>
+        <p>کېدای شي لینک زوړ وي یا په غلطه لیکل شوی وي.</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a class="btn" href="https://ahmad0908-psr.github.io/">Home · صفحه اصلی · کورپاڼه</a>
+      <a class="btn btn--ghost" href="https://ahmad0908-psr.github.io/#products">Products · محصولات</a>
+    </div>
+  </main>
+</body>
+</html>

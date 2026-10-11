@@ -1,96 +1,209 @@
 {
-  "_comment": "Edit this file to change your personal info, colors, and section text. No coding needed.",
-
+  "_comment": "Site settings. Interface text lives in i18n/*.json; products and services live in data/products.json. Colors live in css/style.css (section 1).",
   "site": {
-    "brandFirstName": "Ahmad",
-    "brandLastName": "Akbary",
-    "domainSuffix": ".dev",
-    "pageTitle": "Ahmad Akbary — Full-Stack Developer & Data Analyst",
-    "favicon": "assets/favicon.png"
-  },
-
-  "colors": {
-    "_comment": "These become CSS variables. You can also change them live from the Customize panel on the site (click the gear icon).",
-    "dark": {
-      "bg": "#05070d",
-      "bgSecondary": "#0a0e1a",
-      "surface": "#0d1220",
-      "surfaceHover": "#121828",
-      "border": "#1d2438",
-      "text": "#f3f5f9",
-      "textMuted": "#8b93a7",
-      "accentPrimary": "#6366f1",
-      "accentSecondary": "#22d3ee",
-      "success": "#34d399",
-      "danger": "#f87171"
-    },
-    "light": {
-      "bg": "#f7f8fc",
-      "bgSecondary": "#ffffff",
-      "surface": "#ffffff",
-      "surfaceHover": "#eef0f8",
-      "border": "#e2e5f0",
-      "text": "#12141c",
-      "textMuted": "#5a5f72",
-      "accentPrimary": "#4f46e5",
-      "accentSecondary": "#0891b2",
-      "success": "#059669",
-      "danger": "#dc2626"
-    }
-  },
-
-  "particles": {
-    "_comment": "Controls the animated network background in the hero section.",
-    "color": "#7dd3fc",
-    "lineColor": "125, 211, 252",
-    "count": 90,
-    "maxDistance": 150,
-    "speed": 0.35
-  },
-
-  "nav": {
-    "links": [
-      { "label": "About", "href": "#about" },
-      { "label": "Tech Stack", "href": "#tech-stack" },
-      { "label": "Projects", "href": "#projects" },
-      { "label": "Experience", "href": "#experience" },
-      { "label": "Certifications", "href": "#certifications" },
-      { "label": "Contact", "href": "#contact" }
+    "url": "https://ahmad0908-psr.github.io/",
+    "defaultLanguage": "en",
+    "languages": [
+      "en",
+      "fa",
+      "ps"
     ]
   },
-
-  "hero": {
-    "badge": "Available for new opportunities",
-    "greeting": "Hi, I'm",
-    "nameLine1": "Ahmad",
-    "nameLine2": "AKBARY",
-    "typewriterPrefix": "",
-    "typewriterRoles": ["Full-Stack Developer", "Data Analyst", "M&E Specialist", "System Architect"],
-    "description": "I bridge the gap between engineering and analytics. From writing clean React interfaces to architecting robust Node/Django backends and crafting compelling data visualizations.",
-    "primaryButton": { "text": "View Projects", "href": "#projects" },
-    "secondaryButton": { "text": "Contact Me", "href": "#contact" }
+  "person": {
+    "_comment": "photo: the About section portrait. heroPhoto: the cut-out portrait in the hero, a PNG with a TRANSPARENT background (about 900 x 1100 px, you from the waist or chest up). If a file is missing, a placeholder is shown instead. available: true shows 'Available for new projects' in the hero; set it to false when you're fully booked. codeCard: what the little code editor in the hero says about you.",
+    "photo": "assets/about-placeholder.jpg",
+    "heroPhoto": "assets/me.png",
+    "available": true,
+    "codeCard": {
+      "file": "ahmad.js",
+      "role": "Full-stack developer",
+      "stack": [
+        "JavaScript",
+        "Python",
+        "SQL",
+        "Power BI"
+      ]
+    }
   },
-
-  "about": {
-    "eyebrow": "The Journey",
-    "title": "Evolution of a System Architect",
-    "image": "assets/about-placeholder.jpg",
-    "paragraphs": [
-      "I'm a multidisciplinary tech professional who thrives at the intersection of software engineering, data science, and monitoring & evaluation. My journey has taken me from writing my first lines of Python to architecting enterprise-grade data collection and analytics systems used by organizations worldwide.",
-      "I believe technology should serve a purpose — whether it's building a full-stack platform, designing an interactive Power BI dashboard, or deploying a digital survey system that collects critical data in remote communities. Every project I touch is engineered with precision and purpose."
-    ],
-    "tags": ["Developer", "Data Analyst", "M&E Specialist", "System Architect"]
-  },
-
-  "footer": {
-    "text": "Crafted with care."
-  },
-
   "contact": {
-    "intro": "Have an idea, a project, or a role in mind? I read every message and reply within a day.",
+    "_comment": "Direct ways to reach you. WhatsApp: full international number, digits only, e.g. 93700000000 (93 = Afghanistan). Telegram: your username without @, e.g. ahmadakbary. formEndpoint: the Web App URL of your Google Apps Script (ends in /exec); see the README section 'Quote form'. While it's empty, the form opens the visitor's email app instead.",
     "email": "ahmadakbary0908@gmail.com",
-    "github": "https://github.com/ahmad0908-PSR",
-    "linkedin": "https://linkedin.com/in/your-username",
-    "formEndpoint": "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE"
+    "whatsapp": "93744467052",
+    "telegram": "Ahmad_dataDev",
+    "formEndpoint": "https://script.google.com/macros/s/AKfycbw4Nci4Gto_eqWhRC7UQW0xn8hAnYTpimbqliyjBTiKsud21lwrDgSpBCnEdom-Lwv_Qg/exec"
+  },
+  "social": {
+    "_comment": "Your profile links, each a full https:// address (the README explains where to find each one). previewMode true = buttons with an empty link are still shown (marked 'Link coming soon') so you can see the design. Set previewMode to false before launch: empty ones then disappear.",
+    "previewMode": false,
+    "facebook": "https://www.facebook.com/profile.php?id=61588566437743",
+    "instagram": "https://www.instagram.com/ahmadove2025/",
+    "x": "https://x.com/akbaryahmad007",
+    "linkedin": "",
+    "github": "https://github.com/ahmad0908-PSR"
+  },
+  "tools": [
+    "KoboToolbox",
+    "SurveyCTO",
+    "ActivityInfo",
+    "XLSForm",
+    "Google Sheets",
+    "Excel",
+    "Power BI",
+    "Looker Studio",
+    "PostgreSQL"
+  ],
+  "stack": {
+    "_comment": "The 'Tech stack' section. Each group has an id (its title is translated in i18n/*.json under stack.groups.<id>), a group icon (a name from js/icons.js) and its technologies. For each technology: 'icon' is a Simple Icons slug (search https://simpleicons.org; shown from cdn.simpleicons.org), 'color' is a hex without # (leave empty for the brand's own color). For a tool Simple Icons doesn't have, either set 'iconUrl' to any image address, or leave 'icon' empty and give a short 'badge' (e.g. \"KT\"): a colored badge with those letters is shown. To add a tool, copy a line and change the values.",
+    "groups": [
+      {
+        "id": "web",
+        "icon": "code",
+        "items": [
+          {
+            "name": "HTML5",
+            "icon": "html5",
+            "color": "E34F26"
+          },
+          {
+            "name": "CSS",
+            "icon": "css",
+            "color": "663399"
+          },
+          {
+            "name": "Bootstrap",
+            "icon": "bootstrap",
+            "color": "7952B3"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "javascript",
+            "color": "F7DF1E"
+          },
+          {
+            "name": "React",
+            "icon": "react",
+            "color": "61DAFB"
+          }
+        ]
+      },
+      {
+        "id": "data",
+        "icon": "barChart",
+        "items": [
+          {
+            "name": "Power BI",
+            "icon": "",
+            "color": "F2C811",
+            "iconUrl": "https://api.iconify.design/logos/microsoft-power-bi.svg",
+            "badge": "BI"
+          },
+          {
+            "name": "Google Looker Studio",
+            "icon": "looker",
+            "color": "4285F4"
+          },
+          {
+            "name": "Spreadsheets",
+            "icon": "googlesheets",
+            "color": "34A853"
+          },
+          {
+            "name": "Streamlit",
+            "icon": "streamlit",
+            "color": "FF4B4B"
+          },
+          {
+            "name": "Google Apps Script",
+            "icon": "googleappsscript",
+            "color": "4285F4"
+          }
+        ]
+      },
+      {
+        "id": "automation",
+        "icon": "zap",
+        "items": [
+          {
+            "name": "Google Apps Script",
+            "icon": "googleappsscript",
+            "color": "4285F4"
+          },
+          {
+            "name": "Google Sheets",
+            "icon": "googlesheets",
+            "color": "34A853"
+          },
+          {
+            "name": "KoboToolbox",
+            "icon": "",
+            "color": "2095F3",
+            "badge": "KT"
+          },
+          {
+            "name": "SurveyCTO",
+            "icon": "",
+            "color": "1F6FB2",
+            "badge": "SC"
+          },
+          {
+            "name": "XLSForm",
+            "icon": "",
+            "color": "217346",
+            "badge": "XF"
+          },
+          {
+            "name": "ActivityInfo",
+            "icon": "",
+            "color": "0B6E99",
+            "badge": "AI"
+          }
+        ]
+      },
+      {
+        "id": "python",
+        "icon": "database",
+        "items": [
+          {
+            "name": "Python",
+            "icon": "python",
+            "color": "3776AB"
+          },
+          {
+            "name": "Pandas",
+            "icon": "pandas",
+            "color": "150458"
+          },
+          {
+            "name": "Plotly",
+            "icon": "plotly",
+            "color": "3F4F75"
+          },
+          {
+            "name": "SQLite",
+            "icon": "sqlite",
+            "color": "003B57"
+          },
+          {
+            "name": "PostgreSQL",
+            "icon": "postgresql",
+            "color": "4169E1"
+          },
+          {
+            "name": "Django",
+            "icon": "django",
+            "color": "092E20"
+          }
+        ]
+      }
+    ]
+  },
+  "particles": {
+    "_comment": "Hero background animation. Color follows the theme (--particle-rgb in style.css).",
+    "maxCount": 90,
+    "minCount": 28,
+    "density": 13000,
+    "linkDistance": 140,
+    "speed": 0.35,
+    "pointerLinks": true
   }
 }
