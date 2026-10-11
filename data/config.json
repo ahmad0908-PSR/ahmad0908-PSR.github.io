@@ -11,7 +11,7 @@
   },
   "person": {
     "_comment": "photo: the About section portrait. heroPhoto: the cut-out portrait in the hero, a PNG with a TRANSPARENT background (about 900 x 1100 px, you from the waist or chest up). If a file is missing, a placeholder is shown instead. available: true shows 'Available for new projects' in the hero; set it to false when you're fully booked. codeCard: what the little code editor in the hero says about you.",
-    "photo": "assets/about-placeholder.jpg",
+    "photo": "assets/about.webp",
     "heroPhoto": "assets/me.png",
     "available": true,
     "codeCard": {
